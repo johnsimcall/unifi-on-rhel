@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>UniFi</short>
+  <description>The UniFi Controller allows you to manage your UniFi network devices using a web browser.</description>
+  <port protocol="udp" port="3478"/>
+  <port protocol="tcp" port="8080"/>
+  <port protocol="tcp" port="8443"/>
+</service>
