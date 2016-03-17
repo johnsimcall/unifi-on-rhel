@@ -1,13 +1,12 @@
 #Objective
-Run Unifi Controller on RHEL.  Branched from jacobalberty and rednut.
+Run Unifi Controller on Red Hat Enterpries Linux.  Branched from jacobalberty and rednut.
 
 ## Background
 I've been a long-time RHEL user, and recently became a Ubiquity (UBNT) customer.  I purchased two UAP-AC-PRO to improve the WiFi situation at home.  I deployed one unit upstairs, and the other unit in the basement to provide complete coverage.
 
 ## Description 
 This is a containerized version of the Unifi Access Point controller.
-I have diverged from jacob by not providing support for the previous version (3).
-I also would prefer to not use --net=host because it exposes D-BUS, and rouge stuff could reboot my host.
+I would prefer to not use --net=host because it exposes D-BUS, and rouge stuff could reboot my host.
 
 I need to provide my firewalld rules (/etc/firewalld/services) and systemd (not done yet.)
 
@@ -31,11 +30,11 @@ Run Information
 TimeZone. (i.e America/Chicago)
 
 ## Expose (required):
-3478 - UDP STUN
-8080 - inform (AP -> Controller)
-8443 - WebUI of Controller
+*3478 - UDP STUN
+*8080 - inform (AP -> Controller)
+*8443 - WebUI of Controller
 ## Expose (optional):
-27117 - mongodb (not recommended)
-8843 - Portal HTTPS
-8880 - Portal
+*27117 - mongodb (not recommended)
+*8843 - Portal HTTPS
+*8880 - Portal
 
