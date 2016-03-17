@@ -1,18 +1,21 @@
-#docker UniFi - branched from jacobalberty by John Call with the goal of running on RHEL7
+#Objective
+Run Unifi Controller on RHEL.  Branched from jacobalberty and rednut.
 
-## Supported tags and respective `Dockerfile` links
-
-[`unifi3`, `oldstable` (*unifi3/Dockerfile*)](https://github.com/jacobalberty/unifi-docker/blob/master/unifi3/Dockerfile)
-
-[`unifi4`, `stable`, `latest` (*unifi4/Dockerfile*)](https://github.com/jacobalberty/unifi-docker/blob/master/unifi4/Dockerfile)
+## Background
+I've been a long-time RHEL user, and recently became a Ubiquity (UBNT) customer.  I purchased two UAP-AC-PRO to improve the WiFi situation at home.  I deployed one unit upstairs, and the other unit in the basement to provide complete coverage.
 
 ## Description 
 This is a containerized version of the Unifi Access Point controller.
-I have included tags for unifi4, stable, unifi3 and oldstable. Latest points to the unifi4 version.
+I have diverged from jacob by not providing support for the previous version (3).
+I also would prefer to not use --net=host because it exposes D-BUS, and rouge stuff could reboot my host.
 
-Use `docker run --net=host -d jacobalberty/unifi:rapid` for the quickest setup
+I need to provide my firewalld rules (/etc/firewalld/services) and systemd (not done yet.)
 
-## Volumes:
+See commands.txt for examples
+Use `sudo docker build -t home.lab/unifi:4.8.14 . | tee ./docker-build.log` to begin...
+Followed by `sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14`
+
+## Volumes (out-of-date -- I'm doing this wrong because I'm not host-mounting yet):
 
 ### `/var/lib/unifi`
 Configuration data
@@ -27,10 +30,12 @@ Run Information
 ### `TZ`
 TimeZone. (i.e America/Chicago)
 
-## Expose:
-### 8080/tcp
-### 8081/tcp
-### 8443/tcp
-### 8843/tcp
-### 8880/tcp
-### 3478/udp
+## Expose (required):
+3478 - UDP STUN
+8080 - inform (AP -> Controller)
+8443 - WebUI of Controller
+## Expose (optional):
+27117 - mongodb (not recommended)
+8843 - Portal HTTPS
+8880 - Portal
+
