@@ -21,7 +21,7 @@ RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
 EXPOSE 8080/tcp 8443/tcp 3478/udp
 #VOLUME ["/var/lib/unifi", "/var/log/unifi", "/var/run/unifi", "/usr/lib/unifi/work"]
 WORKDIR /opt/UniFi
-ENV TZ="UTC"
+ENV TZ=UTC
 
 ENTRYPOINT ["/usr/bin/scl", "enable", "rh-mongodb26", "--"]
 CMD ["/usr/bin/java", "-Xmx1024M", "-jar", "lib/ace.jar", "start"]
