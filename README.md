@@ -1,5 +1,5 @@
 #Objective
-Run Unifi Controller on Red Hat Enterpries Linux.  Branched from jacobalberty and rednut.
+Run Unifi Controller in a Docker container on Red Hat Enterpries Linux.  Inspiration from jacobalberty and rednut.
 
 ## Background
 I've been a long-time RHEL user, and recently became a Ubiquity (UBNT) customer.  I purchased two UAP-AC-PRO to improve the WiFi situation at home.  I deployed one unit upstairs, and the other unit in the basement to provide complete coverage.
