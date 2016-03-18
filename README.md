@@ -12,8 +12,15 @@ I need to provide a systemd unit file (not done yet.)
 
 See commands.txt for examples:
 
-Use `sudo docker build -t home.lab/unifi:4.8.14 . | tee ./docker-build.log` to begin...
-Followed by `sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14`
+To begin / build, run:
+```
+sudo docker build -t home.lab/unifi:4.8.14 . | tee ./docker-build.log
+````
+
+Then
+```
+sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14
+```
 
 ## Volumes (out-of-date -- I'm doing this wrong because I'm not host-mounting yet):
 
