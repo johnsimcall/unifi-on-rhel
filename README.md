@@ -8,9 +8,10 @@ I've been a long-time RHEL user, and recently became a Ubiquity (UBNT) customer.
 This is a containerized version of the Unifi Access Point controller.
 I would prefer to not use --net=host because it exposes D-BUS, and rouge stuff could reboot my host.
 
-I need to provide my firewalld rules (/etc/firewalld/services) and systemd (not done yet.)
+I need to provide a systemd unit file (not done yet.)
 
-See commands.txt for examples
+See commands.txt for examples:
+
 Use `sudo docker build -t home.lab/unifi:4.8.14 . | tee ./docker-build.log` to begin...
 Followed by `sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14`
 
