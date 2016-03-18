@@ -31,10 +31,13 @@ TimeZone. (i.e America/Chicago)
 
 ## Network ports exposed:
 ### Required
+
 *3478 - UDP STUN
 *8080 - inform (AP -> Controller)
 *8443 - WebUI of Controller
+
 ### Optional
+
 *27117 - mongodb (not recommended)
 *8843 - Portal HTTPS
 *8880 - Portal
