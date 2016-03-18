@@ -29,10 +29,10 @@ Run Information
 ### `TZ`
 TimeZone. (i.e America/Chicago)
 
-## Network ports exposed:
+## Network ports exposed (tcp, unless noted):
 ### Required
 
-* 3478 - UDP STUN
+* 3478/udp - STUN
 * 8080 - inform (AP -> Controller)
 * 8443 - WebUI of Controller
 
@@ -42,3 +42,5 @@ TimeZone. (i.e America/Chicago)
 * 8843 - Portal HTTPS
 * 8880 - Portal
 
+## Todo
+* It would be nice if ENTRYPOINT or CMD could catch the "docker kill" signal and translate that to a graceful shutdown of the DB -- for example, "pkill --signal=SIGINT java"
