@@ -1,10 +1,10 @@
 FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
-LABEL com.ubnt.controller="4.8.14"
+LABEL com.ubnt.controller="4.8.15"
 
 # wget http://dl.ubnt.com/unifi/4.8.14/UniFi.unix.zip | manually extract ZIP and create TAR archive instead
 # consider changing this to a wget/curl | unzip --if unzip exists in image...--
-ADD Unifi-4_8_14.tgz /opt/
+ADD UniFi.unix.4_8_15.tgz /opt/
 
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
@@ -28,7 +28,10 @@ ENTRYPOINT ["/usr/bin/scl", "enable", "rh-mongodb26", "--"]
 CMD ["/usr/bin/java", "-Xmx1024M", "-jar", "lib/ace.jar", "start"]
 
 
-# ---- Notes and TOD ----
+# ---- Notes and TODO ----
+#
+#VOLUME exports, so I don't have to "docker cp" the "data" dir
+#
 # http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
 # Capture the output (stdout/stderr?) from java -jar ... to a file
 # java -jar ... | awk '{ print strftime("%c: "), $0; fflush(); }' | tee logs/java-output.log
