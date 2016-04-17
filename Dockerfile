@@ -19,7 +19,8 @@ RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
 EXPOSE 8080/tcp 8443/tcp 3478/udp
 
 # You can mount a local path into the container by supplying the `-v` argument like
-# `-v <local_path>:<container_path>` e.g. `-v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data`
+# `-v <local_path>:<container_path>:z` e.g. `-v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z`
+# Don't forget the trailing ":z" on the mount for SELinux
 VOLUME ["/opt/UniFi/data"]
 WORKDIR /opt/UniFi
 ENV TZ=UTC
