@@ -52,3 +52,8 @@ TimeZone. (i.e America/Chicago)
 
 ## Todo
 * It would be nice if ENTRYPOINT or CMD could catch the "docker kill" signal and translate that to a graceful shutdown of the DB -- for example, "pkill --signal=SIGINT java"
+
+
+### Firmware
+cntrl-4.8.14  fw-3.4.16.3435
+cntrl-4.8.15  fw-3.4.17.3440

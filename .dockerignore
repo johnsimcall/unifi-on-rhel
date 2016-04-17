@@ -1,5 +1,7 @@
 commands.txt
 Dockerfile
 README.md
-Unifi-4_8_14.zip
+UniFi-4*
 docker-build.log
+logs*
+backup*
