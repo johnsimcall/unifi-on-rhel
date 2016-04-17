@@ -1,7 +1,5 @@
-commands.txt
-Dockerfile
-README.md
-UniFi-4*
-docker-build.log
 logs*
 backup*
+*
+!UniFi.unix.4_8_15.tgz
+!shutdown-unifi.sh

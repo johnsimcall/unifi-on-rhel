@@ -1,53 +1,61 @@
-Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.42 MBSending build context to Docker daemon 72.97 MBSending build context to Docker daemon 73.53 MBSending build context to Docker daemon 74.09 MBSending build context to Docker daemon 74.65 MBSending build context to Docker daemon  75.2 MBSending build context to Docker daemon 75.76 MBSending build context to Docker daemon 76.32 MBSending build context to Docker daemon 76.87 MBSending build context to Docker daemon 77.43 MBSending build context to Docker daemon 77.99 MBSending build context to Docker daemon 78.54 MBSending build context to Docker daemon  79.1 MBSending build context to Docker daemon 79.66 MBSending build context to Docker daemon 80.22 MBSending build context to Docker daemon 80.77 MBSending build context to Docker daemon 81.33 MBSending build context to Docker daemon 81.89 MBSending build context to Docker daemon 82.44 MBSending build context to Docker daemon    83 MBSending build context to Docker daemon 83.56 MBSending build context to Docker daemon 84.12 MBSending build context to Docker daemon 84.65 MBSending build context to Docker daemon  85.2 MBSending build context to Docker daemon 85.75 MBSending build context to Docker daemon 86.31 MBSending build context to Docker daemon 86.87 MBSending build context to Docker daemon 87.43 MBSending build context to Docker daemon 87.98 MBSending build context to Docker daemon 88.54 MBSending build context to Docker daemon  89.1 MBSending build context to Docker daemon 89.65 MBSending build context to Docker daemon 90.21 MBSending build context to Docker daemon 90.77 MBSending build context to Docker daemon 91.32 MBSending build context to Docker daemon 91.88 MBSending build context to Docker daemon 92.44 MBSending build context to Docker daemon    93 MBSending build context to Docker daemon 93.55 MBSending build context to Docker daemon 94.11 MBSending build context to Docker daemon 94.67 MBSending build context to Docker daemon 95.14 MBSending build context to Docker daemon 95.14 MB
-Step 0 : FROM registry.access.redhat.com/rhel7:latest
- ---> bf63a676257a
-Step 1 : MAINTAINER John Call <johnsimcall@gmail.com>
- ---> Running in 7929ddf48f34
- ---> cfd3d0d6b11f
-Removing intermediate container 7929ddf48f34
-Step 2 : LABEL com.ubnt.controller "4.8.14"
- ---> Running in f9abe005816a
- ---> c880b7e87871
-Removing intermediate container f9abe005816a
-Step 3 : ADD Unifi-4_8_14.tgz /opt/
- ---> a12f073d517f
-Removing intermediate container c5c8a39f5358
-Step 4 : ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
+Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.52 MBSending build context to Docker daemon 71.52 MB
+Step 1 : FROM registry.access.redhat.com/rhel7:latest
+Trying to pull repository registry.access.redhat.com/rhel7 ... 95612a3264fc: Pulling image (latest) from registry.access.redhat.com/rhel7
+95612a3264fc: Pulling image (latest) from registry.access.redhat.com/rhel7, endpoint: https://registry.access.redhat.com/v1/
+95612a3264fc: Pulling dependent layers
+95612a3264fc: Download complete
+95612a3264fc: Download complete
+Status: Image is up to date for registry.access.redhat.com/rhel7:latest
+registry.access.redhat.com/rhel7: this image was pulled from a legacy registry.  Important: This registry version will not be supported in future versions of docker.
+
+ ---> 95612a3264fc
+Step 2 : MAINTAINER John Call <johnsimcall@gmail.com>
+ ---> Running in 982881f7791e
+ ---> 34f293250ad9
+Removing intermediate container 982881f7791e
+Step 3 : LABEL com.ubnt.controller "4.8.15"
+ ---> Running in abbe5ca3d768
+ ---> 66a79fbafa8a
+Removing intermediate container abbe5ca3d768
+Step 4 : ADD UniFi.unix.4_8_15.tgz /opt/
+ ---> 0bd6f2e48b71
+Removing intermediate container 80290d220bcc
+Step 5 : ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
 
 
- ---> f08d67eb0242
-Removing intermediate container 93ae6f42ef44
-Step 5 : RUN yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
- ---> Running in 4c35180acd66
+ ---> 581139efe7ee
+Removing intermediate container 0517d03df744
+Step 6 : RUN yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
+ ---> Running in aa83a81eb625
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --> Running transaction check
----> Package java-1.8.0-oracle.x86_64 1:1.8.0.71-1jpp.1.el7 will be installed
---> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
---> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64
+---> Package java-1.8.0-oracle.x86_64 1:1.8.0.77-1jpp.1.el7 will be installed
+--> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
 ---> Package rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7 will be installed
 --> Processing Dependency: v8314-v8 for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 --> Processing Dependency: rh-mongodb26-runtime for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
@@ -281,7 +289,7 @@ Dependencies Resolved
  Package                Arch   Version           Repository                Size
 ================================================================================
 Installing:
- java-1.8.0-oracle      x86_64 1:1.8.0.71-1jpp.1.el7
+ java-1.8.0-oracle      x86_64 1:1.8.0.77-1jpp.1.el7
                                                  rhel-7-server-thirdparty-oracle-java-rpms
                                                                            34 M
  rh-mongodb26-mongodb-server
@@ -410,12 +418,12 @@ Install  2 Packages (+106 Dependent packages)
 Total download size: 74 M
 Installed size: 236 M
 Downloading packages:
-[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/alsa-lib-1.0.28-2.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
-[0mPublic key for alsa-lib-1.0.28-2.el7.x86_64.rpm is not installed
-Public key for java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64.rpm is not installed
+[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/atk-2.14.0-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+[0mPublic key for atk-2.14.0-1.el7.x86_64.rpm is not installed
+Public key for java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64.rpm is not installed
 Public key for rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              3.5 MB/s |  74 MB  00:20     
+Total                                              3.8 MB/s |  74 MB  00:19     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [91mImporting GPG key 0xFD431D51:
  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
@@ -525,7 +533,7 @@ Running transaction
   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       92/108 
   Installing : perl-Getopt-Long-2.40-2.el7.noarch                        93/108 
   Installing : 4:perl-5.16.3-286.el7.x86_64                              94/108 
-  Installing : 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64            95/108 
+  Installing : 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64            95/108 
   Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  96/108 
   Installing : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    97/108 
   Installing : rh-java-common-runtime-1.1-43.el7.x86_64                  98/108 
@@ -566,53 +574,53 @@ Running transaction
   Verifying  : libselinux-python-2.2.2-6.el7.x86_64                      25/108 
   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    26/108 
   Verifying  : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  27/108 
-  Verifying  : rh-java-common-runtime-1.1-43.el7.x86_64                  28/108 
-  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     29/108 
-  Verifying  : pixman-0.32.6-3.el7.x86_64                                30/108 
-  Verifying  : libxcb-1.11-4.el7.x86_64                                  31/108 
-  Verifying  : libtiff-4.0.3-14.el7.x86_64                               32/108 
-  Verifying  : hwdata-0.252-8.1.el7.x86_64                               33/108 
-  Verifying  : libX11-1.6.3-2.el7.x86_64                                 34/108 
-  Verifying  : python-IPy-0.75-6.el7.noarch                              35/108 
-  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              36/108 
-  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       37/108 
-  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       38/108 
-  Verifying  : libX11-common-1.6.3-2.el7.noarch                          39/108 
-  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                40/108 
-  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    41/108 
-  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          42/108 
-  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          43/108 
-  Verifying  : perl-Encode-2.51-7.el7.x86_64                             44/108 
-  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         45/108 
-  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             46/108 
-  Verifying  : perl-threads-1.87-4.el7.x86_64                            47/108 
-  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           48/108 
-  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            49/108 
-  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         50/108 
-  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 51/108 
-  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     52/108 
-  Verifying  : perl-Storable-2.45-3.el7.x86_64                           53/108 
-  Verifying  : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    54/108 
-  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           55/108 
-  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         56/108 
-  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            57/108 
-  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 58/108 
-  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           59/108 
-  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      60/108 
-  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   61/108 
-  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        62/108 
-  Verifying  : snappy-1.1.0-3.el7.x86_64                                 63/108 
-  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           64/108 
-  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      65/108 
-  Verifying  : perl-Carp-1.26-244.el7.noarch                             66/108 
-  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     67/108 
-  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         68/108 
-  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  69/108 
-  Verifying  : libxslt-1.1.28-5.el7.x86_64                               70/108 
-  Verifying  : pango-1.36.8-2.el7.x86_64                                 71/108 
-  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         72/108 
-  Verifying  : libXi-1.7.4-2.el7.x86_64                                  73/108 
-  Verifying  : 1:java-1.8.0-oracle-1.8.0.71-1jpp.1.el7.x86_64            74/108 
+  Verifying  : 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64            28/108 
+  Verifying  : rh-java-common-runtime-1.1-43.el7.x86_64                  29/108 
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     30/108 
+  Verifying  : pixman-0.32.6-3.el7.x86_64                                31/108 
+  Verifying  : libxcb-1.11-4.el7.x86_64                                  32/108 
+  Verifying  : libtiff-4.0.3-14.el7.x86_64                               33/108 
+  Verifying  : hwdata-0.252-8.1.el7.x86_64                               34/108 
+  Verifying  : libX11-1.6.3-2.el7.x86_64                                 35/108 
+  Verifying  : python-IPy-0.75-6.el7.noarch                              36/108 
+  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              37/108 
+  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       38/108 
+  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       39/108 
+  Verifying  : libX11-common-1.6.3-2.el7.noarch                          40/108 
+  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                41/108 
+  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    42/108 
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          43/108 
+  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          44/108 
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                             45/108 
+  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         46/108 
+  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             47/108 
+  Verifying  : perl-threads-1.87-4.el7.x86_64                            48/108 
+  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           49/108 
+  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            50/108 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         51/108 
+  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 52/108 
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     53/108 
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                           54/108 
+  Verifying  : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    55/108 
+  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           56/108 
+  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         57/108 
+  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            58/108 
+  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 59/108 
+  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           60/108 
+  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      61/108 
+  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   62/108 
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        63/108 
+  Verifying  : snappy-1.1.0-3.el7.x86_64                                 64/108 
+  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           65/108 
+  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      66/108 
+  Verifying  : perl-Carp-1.26-244.el7.noarch                             67/108 
+  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     68/108 
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         69/108 
+  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  70/108 
+  Verifying  : libxslt-1.1.28-5.el7.x86_64                               71/108 
+  Verifying  : pango-1.36.8-2.el7.x86_64                                 72/108 
+  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         73/108 
+  Verifying  : libXi-1.7.4-2.el7.x86_64                                  74/108 
   Verifying  : alsa-lib-1.0.28-2.el7.x86_64                              75/108 
   Verifying  : libxshmfence-1.2-1.el7.x86_64                             76/108 
   Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            77/108 
@@ -649,7 +657,7 @@ Running transaction
   Verifying  : scl-utils-20130529-17.el7_1.x86_64                       108/108 
 
 Installed:
-  java-1.8.0-oracle.x86_64 1:1.8.0.71-1jpp.1.el7                                
+  java-1.8.0-oracle.x86_64 1:1.8.0.77-1jpp.1.el7                                
   rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7                              
 
 Dependency Installed:
@@ -775,34 +783,38 @@ Cleaning repos: rhel-7-server-aus-rpms rhel-7-server-eus-rpms
               : rhel-sap-hana-for-rhel-7-server-rpms
               : rhel-sjis-for-rhel-7-server-rpms
 Cleaning up everything
- ---> 34bdfb86d992
-Removing intermediate container 4c35180acd66
-Step 6 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
- ---> Running in ecbfac94814b
- ---> f43144e7fac4
-Removing intermediate container ecbfac94814b
-Step 7 : EXPOSE 8080/tcp 8443/tcp 3478/udp
- ---> Running in 24a6094c302e
- ---> 35b60bec55b8
-Removing intermediate container 24a6094c302e
-Step 8 : WORKDIR /opt/UniFi
- ---> Running in 902f2a2e1a1b
- ---> c7d0afcc2b87
-Removing intermediate container 902f2a2e1a1b
-Step 9 : ENV TZ UTC
- ---> Running in 19b9a4737065
- ---> ca5fb630a96d
-Removing intermediate container 19b9a4737065
-Step 10 : ENV TERM xterm-256color
- ---> Running in 9d80805c86dd
- ---> 46da0dbb4a7e
-Removing intermediate container 9d80805c86dd
-Step 11 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
- ---> Running in a0ad8b3edb83
- ---> aa5a21a18aef
-Removing intermediate container a0ad8b3edb83
-Step 12 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
- ---> Running in fbaeb387edec
- ---> 90e55037cccc
-Removing intermediate container fbaeb387edec
-Successfully built 90e55037cccc
+ ---> c2c2d9900db7
+Removing intermediate container aa83a81eb625
+Step 7 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
+ ---> Running in 032a92654625
+ ---> 77cecc21c080
+Removing intermediate container 032a92654625
+Step 8 : EXPOSE 8080/tcp 8443/tcp 3478/udp
+ ---> Running in 1cf5a5077b38
+ ---> f197b8c6e0f2
+Removing intermediate container 1cf5a5077b38
+Step 9 : VOLUME /opt/UniFi/data
+ ---> Running in da0c67d4b530
+ ---> 77fbc92bf600
+Removing intermediate container da0c67d4b530
+Step 10 : WORKDIR /opt/UniFi
+ ---> Running in 7e6ed24af170
+ ---> 0e87e2897116
+Removing intermediate container 7e6ed24af170
+Step 11 : ENV TZ UTC
+ ---> Running in 21c16de537ad
+ ---> 74a67e1bdf4b
+Removing intermediate container 21c16de537ad
+Step 12 : ENV TERM xterm-256color
+ ---> Running in 75a1e1832661
+ ---> c9c80cf8ef75
+Removing intermediate container 75a1e1832661
+Step 13 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
+ ---> Running in 79e6d71923bd
+ ---> 89a7c5de2705
+Removing intermediate container 79e6d71923bd
+Step 14 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
+ ---> Running in dc0dabe31223
+ ---> 6dae63e64787
+Removing intermediate container dc0dabe31223
+Successfully built 6dae63e64787

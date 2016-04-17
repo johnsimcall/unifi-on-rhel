@@ -2,8 +2,6 @@ FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
 LABEL com.ubnt.controller="4.8.15"
 
-# wget http://dl.ubnt.com/unifi/4.8.14/UniFi.unix.zip | manually extract ZIP and create TAR archive instead
-# consider changing this to a wget/curl | unzip --if unzip exists in image...--
 ADD UniFi.unix.4_8_15.tgz /opt/
 
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
@@ -19,7 +17,10 @@ RUN yum -y --disablerepo="*" \
 RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
 
 EXPOSE 8080/tcp 8443/tcp 3478/udp
-#VOLUME ["/var/lib/unifi", "/var/log/unifi", "/var/run/unifi", "/usr/lib/unifi/work"]
+
+# You can mount a local path into the container by supplying the `-v` argument like
+# `-v <local_path>:<container_path>` e.g. `-v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data`
+VOLUME ["/opt/UniFi/data"]
 WORKDIR /opt/UniFi
 ENV TZ=UTC
 ENV TERM=xterm-256color
@@ -29,8 +30,6 @@ CMD ["/usr/bin/java", "-Xmx1024M", "-jar", "lib/ace.jar", "start"]
 
 
 # ---- Notes and TODO ----
-#
-#VOLUME exports, so I don't have to "docker cp" the "data" dir
 #
 # http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
 # Capture the output (stdout/stderr?) from java -jar ... to a file
