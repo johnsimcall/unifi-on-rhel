@@ -3,7 +3,7 @@ MAINTAINER John Call <johnsimcall@gmail.com>
 LABEL com.ubnt.controller="4.8.15"
 
 ADD UniFi.unix.4_8_15.tgz /opt/
-
+ADD shutdown-unifi.sh /opt/UniFi/
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
 

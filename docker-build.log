@@ -10,52 +10,66 @@ registry.access.redhat.com/rhel7: this image was pulled from a legacy registry. 
 
  ---> 95612a3264fc
 Step 2 : MAINTAINER John Call <johnsimcall@gmail.com>
- ---> Running in 982881f7791e
- ---> 34f293250ad9
-Removing intermediate container 982881f7791e
+ ---> Running in 9dbe8aaae5af
+ ---> 0e818ac28cfe
+Removing intermediate container 9dbe8aaae5af
 Step 3 : LABEL com.ubnt.controller "4.8.15"
- ---> Running in abbe5ca3d768
- ---> 66a79fbafa8a
-Removing intermediate container abbe5ca3d768
+ ---> Running in 6cdae8f20928
+ ---> 212fefcd3ecb
+Removing intermediate container 6cdae8f20928
 Step 4 : ADD UniFi.unix.4_8_15.tgz /opt/
- ---> 0bd6f2e48b71
-Removing intermediate container 80290d220bcc
+ ---> 336923f05a5e
+Removing intermediate container 9a707e96eedb
 Step 5 : ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
 
 
- ---> 581139efe7ee
-Removing intermediate container 0517d03df744
-Step 6 : RUN yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
- ---> Running in aa83a81eb625
+ ---> ef294a0a03d0
+Removing intermediate container 43e35144837b
+Step 6 : RUN yum clean all &&  yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
+ ---> Running in fb29a65ae33e
+Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
+Cleaning repos: rhel-7-server-aus-rpms rhel-7-server-eus-rpms
+              : rhel-7-server-htb-rpms rhel-7-server-rpms
+              : rhel-7-server-rt-beta-rpms rhel-7-server-rt-htb-rpms
+              : rhel-7-server-rt-rpms rhel-ha-for-rhel-7-server-eus-rpms
+              : rhel-ha-for-rhel-7-server-htb-rpms
+              : rhel-ha-for-rhel-7-server-rpms
+              : rhel-lb-for-rhel-7-server-htb-rpms
+              : rhel-rs-for-rhel-7-server-eus-rpms
+              : rhel-rs-for-rhel-7-server-htb-rpms
+              : rhel-rs-for-rhel-7-server-rpms rhel-sap-for-rhel-7-server-rpms
+              : rhel-sap-hana-for-rhel-7-server-rpms
+              : rhel-sjis-for-rhel-7-server-rpms
+Cleaning up everything
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --> Running transaction check
----> Package java-1.8.0-oracle.x86_64 1:1.8.0.77-1jpp.1.el7 will be installed
---> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
---> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64
+---> Package java-1.8.0-oracle.x86_64 1:1.8.0.91-1jpp.1.el7 will be installed
+--> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
 ---> Package rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7 will be installed
 --> Processing Dependency: v8314-v8 for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 --> Processing Dependency: rh-mongodb26-runtime for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
@@ -289,7 +303,7 @@ Dependencies Resolved
  Package                Arch   Version           Repository                Size
 ================================================================================
 Installing:
- java-1.8.0-oracle      x86_64 1:1.8.0.77-1jpp.1.el7
+ java-1.8.0-oracle      x86_64 1:1.8.0.91-1jpp.1.el7
                                                  rhel-7-server-thirdparty-oracle-java-rpms
                                                                            34 M
  rh-mongodb26-mongodb-server
@@ -420,10 +434,10 @@ Installed size: 236 M
 Downloading packages:
 [91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/atk-2.14.0-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
 [0mPublic key for atk-2.14.0-1.el7.x86_64.rpm is not installed
-Public key for java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64.rpm is not installed
+Public key for java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64.rpm is not installed
 Public key for rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              3.8 MB/s |  74 MB  00:19     
+Total                                              1.8 MB/s |  74 MB  00:41     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [91mImporting GPG key 0xFD431D51:
  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
@@ -533,7 +547,7 @@ Running transaction
   Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       92/108 
   Installing : perl-Getopt-Long-2.40-2.el7.noarch                        93/108 
   Installing : 4:perl-5.16.3-286.el7.x86_64                              94/108 
-  Installing : 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64            95/108 
+  Installing : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            95/108 
   Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  96/108 
   Installing : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    97/108 
   Installing : rh-java-common-runtime-1.1-43.el7.x86_64                  98/108 
@@ -574,68 +588,68 @@ Running transaction
   Verifying  : libselinux-python-2.2.2-6.el7.x86_64                      25/108 
   Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    26/108 
   Verifying  : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  27/108 
-  Verifying  : 1:java-1.8.0-oracle-1.8.0.77-1jpp.1.el7.x86_64            28/108 
-  Verifying  : rh-java-common-runtime-1.1-43.el7.x86_64                  29/108 
-  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     30/108 
-  Verifying  : pixman-0.32.6-3.el7.x86_64                                31/108 
-  Verifying  : libxcb-1.11-4.el7.x86_64                                  32/108 
-  Verifying  : libtiff-4.0.3-14.el7.x86_64                               33/108 
-  Verifying  : hwdata-0.252-8.1.el7.x86_64                               34/108 
-  Verifying  : libX11-1.6.3-2.el7.x86_64                                 35/108 
-  Verifying  : python-IPy-0.75-6.el7.noarch                              36/108 
-  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              37/108 
-  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       38/108 
-  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       39/108 
-  Verifying  : libX11-common-1.6.3-2.el7.noarch                          40/108 
-  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                41/108 
-  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    42/108 
-  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          43/108 
-  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          44/108 
-  Verifying  : perl-Encode-2.51-7.el7.x86_64                             45/108 
-  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         46/108 
-  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             47/108 
-  Verifying  : perl-threads-1.87-4.el7.x86_64                            48/108 
-  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           49/108 
-  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            50/108 
-  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         51/108 
-  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 52/108 
-  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     53/108 
-  Verifying  : perl-Storable-2.45-3.el7.x86_64                           54/108 
-  Verifying  : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    55/108 
-  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           56/108 
-  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         57/108 
-  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            58/108 
-  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 59/108 
-  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           60/108 
-  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      61/108 
-  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   62/108 
-  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        63/108 
-  Verifying  : snappy-1.1.0-3.el7.x86_64                                 64/108 
-  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           65/108 
-  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      66/108 
-  Verifying  : perl-Carp-1.26-244.el7.noarch                             67/108 
-  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     68/108 
-  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         69/108 
-  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  70/108 
-  Verifying  : libxslt-1.1.28-5.el7.x86_64                               71/108 
-  Verifying  : pango-1.36.8-2.el7.x86_64                                 72/108 
-  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         73/108 
-  Verifying  : libXi-1.7.4-2.el7.x86_64                                  74/108 
-  Verifying  : alsa-lib-1.0.28-2.el7.x86_64                              75/108 
-  Verifying  : libxshmfence-1.2-1.el7.x86_64                             76/108 
-  Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            77/108 
-  Verifying  : cairo-1.14.2-1.el7.x86_64                                 78/108 
-  Verifying  : boost-system-1.53.0-25.el7.x86_64                         79/108 
-  Verifying  : perl-Filter-1.49-3.el7.x86_64                             80/108 
-  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           81/108 
-  Verifying  : policycoreutils-python-2.2.5-20.el7.x86_64                82/108 
-  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          83/108 
-  Verifying  : libpciaccess-0.13.4-2.el7.x86_64                          84/108 
-  Verifying  : freetype-2.4.11-11.el7.x86_64                             85/108 
-  Verifying  : perl-Exporter-5.68-3.el7.noarch                           86/108 
-  Verifying  : perl-constant-1.27-2.el7.noarch                           87/108 
-  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          88/108 
-  Verifying  : 4:perl-macros-5.16.3-286.el7.x86_64                       89/108 
+  Verifying  : rh-java-common-runtime-1.1-43.el7.x86_64                  28/108 
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     29/108 
+  Verifying  : pixman-0.32.6-3.el7.x86_64                                30/108 
+  Verifying  : libxcb-1.11-4.el7.x86_64                                  31/108 
+  Verifying  : libtiff-4.0.3-14.el7.x86_64                               32/108 
+  Verifying  : hwdata-0.252-8.1.el7.x86_64                               33/108 
+  Verifying  : libX11-1.6.3-2.el7.x86_64                                 34/108 
+  Verifying  : python-IPy-0.75-6.el7.noarch                              35/108 
+  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              36/108 
+  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       37/108 
+  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       38/108 
+  Verifying  : libX11-common-1.6.3-2.el7.noarch                          39/108 
+  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                40/108 
+  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    41/108 
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          42/108 
+  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          43/108 
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                             44/108 
+  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         45/108 
+  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             46/108 
+  Verifying  : perl-threads-1.87-4.el7.x86_64                            47/108 
+  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           48/108 
+  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            49/108 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         50/108 
+  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 51/108 
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     52/108 
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                           53/108 
+  Verifying  : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    54/108 
+  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           55/108 
+  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         56/108 
+  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            57/108 
+  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 58/108 
+  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           59/108 
+  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      60/108 
+  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   61/108 
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        62/108 
+  Verifying  : snappy-1.1.0-3.el7.x86_64                                 63/108 
+  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           64/108 
+  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      65/108 
+  Verifying  : perl-Carp-1.26-244.el7.noarch                             66/108 
+  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     67/108 
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         68/108 
+  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  69/108 
+  Verifying  : libxslt-1.1.28-5.el7.x86_64                               70/108 
+  Verifying  : pango-1.36.8-2.el7.x86_64                                 71/108 
+  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         72/108 
+  Verifying  : libXi-1.7.4-2.el7.x86_64                                  73/108 
+  Verifying  : alsa-lib-1.0.28-2.el7.x86_64                              74/108 
+  Verifying  : libxshmfence-1.2-1.el7.x86_64                             75/108 
+  Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            76/108 
+  Verifying  : cairo-1.14.2-1.el7.x86_64                                 77/108 
+  Verifying  : boost-system-1.53.0-25.el7.x86_64                         78/108 
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                             79/108 
+  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           80/108 
+  Verifying  : policycoreutils-python-2.2.5-20.el7.x86_64                81/108 
+  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          82/108 
+  Verifying  : libpciaccess-0.13.4-2.el7.x86_64                          83/108 
+  Verifying  : freetype-2.4.11-11.el7.x86_64                             84/108 
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                           85/108 
+  Verifying  : perl-constant-1.27-2.el7.noarch                           86/108 
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          87/108 
+  Verifying  : 4:perl-macros-5.16.3-286.el7.x86_64                       88/108 
+  Verifying  : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            89/108 
   Verifying  : libXrandr-1.4.2-2.el7.x86_64                              90/108 
   Verifying  : rh-mongodb26-runtime-2.0-19.el7.x86_64                    91/108 
   Verifying  : 4:perl-5.16.3-286.el7.x86_64                              92/108 
@@ -657,7 +671,7 @@ Running transaction
   Verifying  : scl-utils-20130529-17.el7_1.x86_64                       108/108 
 
 Installed:
-  java-1.8.0-oracle.x86_64 1:1.8.0.77-1jpp.1.el7                                
+  java-1.8.0-oracle.x86_64 1:1.8.0.91-1jpp.1.el7                                
   rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7                              
 
 Dependency Installed:
@@ -783,38 +797,42 @@ Cleaning repos: rhel-7-server-aus-rpms rhel-7-server-eus-rpms
               : rhel-sap-hana-for-rhel-7-server-rpms
               : rhel-sjis-for-rhel-7-server-rpms
 Cleaning up everything
- ---> c2c2d9900db7
-Removing intermediate container aa83a81eb625
+ ---> b76e0894bc36
+Removing intermediate container fb29a65ae33e
 Step 7 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
- ---> Running in 032a92654625
- ---> 77cecc21c080
-Removing intermediate container 032a92654625
+ ---> Running in fe8fafa35c1e
+ ---> 288e82d42282
+Removing intermediate container fe8fafa35c1e
 Step 8 : EXPOSE 8080/tcp 8443/tcp 3478/udp
- ---> Running in 1cf5a5077b38
- ---> f197b8c6e0f2
-Removing intermediate container 1cf5a5077b38
+ ---> Running in 34fb0767d45f
+ ---> 580da5d36a13
+Removing intermediate container 34fb0767d45f
 Step 9 : VOLUME /opt/UniFi/data
- ---> Running in da0c67d4b530
- ---> 77fbc92bf600
-Removing intermediate container da0c67d4b530
-Step 10 : WORKDIR /opt/UniFi
- ---> Running in 7e6ed24af170
- ---> 0e87e2897116
-Removing intermediate container 7e6ed24af170
-Step 11 : ENV TZ UTC
- ---> Running in 21c16de537ad
- ---> 74a67e1bdf4b
-Removing intermediate container 21c16de537ad
-Step 12 : ENV TERM xterm-256color
- ---> Running in 75a1e1832661
- ---> c9c80cf8ef75
-Removing intermediate container 75a1e1832661
-Step 13 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
- ---> Running in 79e6d71923bd
- ---> 89a7c5de2705
-Removing intermediate container 79e6d71923bd
-Step 14 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
- ---> Running in dc0dabe31223
- ---> 6dae63e64787
-Removing intermediate container dc0dabe31223
-Successfully built 6dae63e64787
+ ---> Running in 7faa7da9a433
+ ---> 72c9ca792fe4
+Removing intermediate container 7faa7da9a433
+Step 10 : VOLUME /opt/UniFi/logs
+ ---> Running in 21b0228ec262
+ ---> abd4ea38cade
+Removing intermediate container 21b0228ec262
+Step 11 : WORKDIR /opt/UniFi
+ ---> Running in 3e5f1128e3c9
+ ---> 9313cc541ee8
+Removing intermediate container 3e5f1128e3c9
+Step 12 : ENV TZ UTC
+ ---> Running in 1e47a6de16cd
+ ---> 35e9b1227a8a
+Removing intermediate container 1e47a6de16cd
+Step 13 : ENV TERM xterm-256color
+ ---> Running in da57e655c7d8
+ ---> 18f6c2284345
+Removing intermediate container da57e655c7d8
+Step 14 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
+ ---> Running in c5298202840f
+ ---> 2997085f1d46
+Removing intermediate container c5298202840f
+Step 15 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
+ ---> Running in 5c53cac5c660
+ ---> 28869531756f
+Removing intermediate container 5c53cac5c660
+Successfully built 28869531756f
