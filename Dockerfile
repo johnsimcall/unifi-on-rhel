@@ -7,7 +7,8 @@ ADD UniFi.unix.4_8_15.tgz /opt/
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
 
-RUN yum -y --disablerepo="*" \
+RUN yum clean all && \
+ yum -y --disablerepo="*" \
  --enablerepo=rhel-7-server-rpms \
  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms \
  --enablerepo=rhel-server-rhscl-7-rpms \
@@ -22,6 +23,7 @@ EXPOSE 8080/tcp 8443/tcp 3478/udp
 # `-v <local_path>:<container_path>:z` e.g. `-v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z`
 # Don't forget the trailing ":z" on the mount for SELinux
 VOLUME ["/opt/UniFi/data"]
+VOLUME ["/opt/UniFi/logs"]
 WORKDIR /opt/UniFi
 ENV TZ=UTC
 ENV TERM=xterm-256color

@@ -5,3 +5,4 @@ sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp 
 sudo docker exec -it unifi "/usr/bin/bash"
 
 sudo docker cp unifi:/opt/UniFi/logs/ ./logs-$(date "+%Y-%m-%d")
+sudo docker cp unifi:/opt/UniFi/ ./backup-$(date "+%Y-%m-%d")
