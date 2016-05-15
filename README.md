@@ -22,16 +22,15 @@ Then
 sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14
 ```
 
-## Volumes (out-of-date -- I'm doing this wrong because I'm not host-mounting yet):
+## Volumes:
 
-### `/var/lib/unifi`
-Configuration data
+### `/opt/UniFi/data`
+VOLUME ["/opt/UniFi/data"]
+Database Files
 
-### `/var/log/unifi`
+### `/opt/UniFi/logs`
+VOLUME ["/opt/UniFi/logs"]
 Log Files
-
-### `/var/run/unifi`
-Run Information
 
 ## Environment Variables:
 ### `TZ`
