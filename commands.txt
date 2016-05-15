@@ -10,3 +10,6 @@ sudo docker exec -it unifi "/usr/bin/bash"
 
 sudo docker cp unifi:/opt/UniFi/logs/ ./logs-$(date "+%Y-%m-%d")
 sudo docker cp unifi:/opt/UniFi/ ./backup-$(date "+%Y-%m-%d")
+
+
+wget -O UniFi.unix.4_8_18.zip https://www.ubnt.com/downloads/unifi/4.8.18/UniFi.unix.zip
