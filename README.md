@@ -14,12 +14,16 @@ See commands.txt for examples:
 
 To begin / build, run:
 ```
-sudo docker build -t home.lab/unifi:4.8.14 . | tee ./docker-build.log
+sudo docker build --pull=true --no-cache -t home.lab/unifi:4.8.18 . | tee ./docker-build.log
 ````
 
 Then
 ```
-sudo docker run --name=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -d home.lab/unifi:4.8.14
+sudo docker run --name=unifi --hostname=unifi \
+ -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp \
+ -v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z \
+ -v /nas/docker-host-mounts/UniFi/logs:/opt/UniFi/logs:z \
+ -d home.lab/unifi:4.8.18
 ```
 
 ## Volumes:
