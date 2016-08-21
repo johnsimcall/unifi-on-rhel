@@ -1,0 +1,19 @@
+
+Shutdown all the containers
+Export the data dir
+sudo docker cp unifi-new:/opt/UniFi/ ./backup-$(date "+%Y-%m-%d")
+
+Delete all the containers (I want the "unifi" container name back)
+sudo docker rm unifi unifi-new
+sudo docker rmi home.lab/unifi:4.8.14_4 home.lab/unifi:4.8.14_3
+
+Create a new container, without running the UBNT controller (override ENTRYPOINT)
+sudo docker run --name=unifi --hostname=unifi -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp --entrypoint="" -it home.lab/unifi:4.8.15 /bin/bash
+^^^--- probably don't want to run bash, since I'm just going to shutdown the container to import anyway
+
+Stop any containers by killing PID1=bash (because we overrode ENTRYPOINT)
+
+Import the data
+sudo docker cp ./data unifi-new:/opt/UniFi/
+
+Start the container as usual

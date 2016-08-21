@@ -1,0 +1,37 @@
+2016-03-13T10:02:38.289625324Z Java HotSpot(TM) 64-Bit Server VM warning: You have loaded library /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+2016-03-13T10:02:38.289678159Z It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2016-03-13T10:40:03.909220255Z Exception in thread "inform_stat-10" java.util.ConcurrentModificationException
+2016-03-13T10:40:03.909245652Z 	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:711)
+2016-03-13T10:40:03.909255366Z 	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:734)
+2016-03-13T10:40:03.909380623Z 	at com.ubnt.data.X.mergeFrom(Unknown Source)
+2016-03-13T10:40:03.909423148Z 	at com.ubnt.service.oOOO.E.?O0000(Unknown Source)
+2016-03-13T10:40:03.909428149Z 	at com.ubnt.service.oOOO.float$_o.run(Unknown Source)
+2016-03-13T10:40:03.909466404Z 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2016-03-13T10:40:03.909533821Z 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2016-03-13T10:40:03.909692503Z 	at java.lang.Thread.run(Thread.java:745)
+2016-03-14T05:20:19.218177426Z Exception in thread "inform_stat-11" java.util.ConcurrentModificationException
+2016-03-14T05:20:19.218200653Z 	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:711)
+2016-03-14T05:20:19.218205608Z 	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:734)
+2016-03-14T05:20:19.218209884Z 	at com.ubnt.data.X.mergeFrom(Unknown Source)
+2016-03-14T05:20:19.218213935Z 	at com.ubnt.service.oOOO.E.?O0000(Unknown Source)
+2016-03-14T05:20:19.218217727Z 	at com.ubnt.service.oOOO.float$_o.run(Unknown Source)
+2016-03-14T05:20:19.218221571Z 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2016-03-14T05:20:19.218225362Z 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2016-03-14T05:20:19.218229069Z 	at java.lang.Thread.run(Thread.java:745)
+2016-03-14T15:02:41.823779736Z Exception in thread "inform_stat-12" java.util.ConcurrentModificationException
+2016-03-14T15:02:41.823804373Z 	at java.util.LinkedHashMap$LinkedHashIterator.nextNode(LinkedHashMap.java:711)
+2016-03-14T15:02:41.823809262Z 	at java.util.LinkedHashMap$LinkedKeyIterator.next(LinkedHashMap.java:734)
+2016-03-14T15:02:41.823813494Z 	at com.ubnt.data.X.mergeFrom(Unknown Source)
+2016-03-14T15:02:41.823817584Z 	at com.ubnt.service.oOOO.E.?O0000(Unknown Source)
+2016-03-14T15:02:41.823821435Z 	at com.ubnt.service.oOOO.float$_o.run(Unknown Source)
+2016-03-14T15:02:41.823825649Z 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+2016-03-14T15:02:41.823829461Z 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+2016-03-14T15:02:41.824052917Z 	at java.lang.Thread.run(Thread.java:745)
+2016-03-18T04:28:24.326096014Z Java HotSpot(TM) 64-Bit Server VM warning: You have loaded library /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+2016-03-18T04:28:24.326130522Z It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2016-03-18T04:44:32.831563411Z Java HotSpot(TM) 64-Bit Server VM warning: You have loaded library /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+2016-03-18T04:44:32.831600541Z It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2016-03-18T17:48:05.804535261Z Java HotSpot(TM) 64-Bit Server VM warning: You have loaded library /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+2016-03-18T17:48:05.804573933Z It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.
+2016-03-28T03:33:50.649001228Z Java HotSpot(TM) 64-Bit Server VM warning: You have loaded library /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so which might have disabled stack guard. The VM will try to fix the stack guard now.
+2016-03-28T03:33:50.649801999Z It's highly recommended that you fix the library with 'execstack -c <libfile>', or link it with '-z noexecstack'.

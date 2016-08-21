@@ -1,0 +1,13 @@
+[Unit]
+Description=Manage my Unifi container
+Requires=docker.service
+After=docker.service
+
+[Service]
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/docker start unifi
+ExecStop=-/usr/bin/docker exec unifi "/opt/UniFi/shutdown-unifi.sh"
+
+[Install]
+WantedBy=multi-user.target

@@ -1,4 +1,4 @@
-Sending build context to Docker daemon 557.1 kBSending build context to Docker daemon 1.114 MBSending build context to Docker daemon 1.671 MBSending build context to Docker daemon 2.228 MBSending build context to Docker daemon 2.785 MBSending build context to Docker daemon 3.342 MBSending build context to Docker daemon 3.899 MBSending build context to Docker daemon 4.456 MBSending build context to Docker daemon 5.014 MBSending build context to Docker daemon 5.571 MBSending build context to Docker daemon 6.128 MBSending build context to Docker daemon 6.685 MBSending build context to Docker daemon 7.242 MBSending build context to Docker daemon 7.799 MBSending build context to Docker daemon 8.356 MBSending build context to Docker daemon 8.913 MBSending build context to Docker daemon  9.47 MBSending build context to Docker daemon 10.03 MBSending build context to Docker daemon 10.58 MBSending build context to Docker daemon 11.14 MBSending build context to Docker daemon  11.7 MBSending build context to Docker daemon 12.26 MBSending build context to Docker daemon 12.81 MBSending build context to Docker daemon 13.37 MBSending build context to Docker daemon 13.93 MBSending build context to Docker daemon 14.48 MBSending build context to Docker daemon 15.04 MBSending build context to Docker daemon  15.6 MBSending build context to Docker daemon 16.15 MBSending build context to Docker daemon 16.71 MBSending build context to Docker daemon 17.27 MBSending build context to Docker daemon 17.83 MBSending build context to Docker daemon 18.38 MBSending build context to Docker daemon 18.94 MBSending build context to Docker daemon  19.5 MBSending build context to Docker daemon 20.05 MBSending build context to Docker daemon 20.61 MBSending build context to Docker daemon 21.17 MBSending build context to Docker daemon 21.73 MBSending build context to Docker daemon 22.28 MBSending build context to Docker daemon 22.84 MBSending build context to Docker daemon  23.4 MBSending build context to Docker daemon 23.95 MBSending build context to Docker daemon 24.51 MBSending build context to Docker daemon 25.07 MBSending build context to Docker daemon 25.62 MBSending build context to Docker daemon 26.18 MBSending build context to Docker daemon 26.74 MBSending build context to Docker daemon  27.3 MBSending build context to Docker daemon 27.85 MBSending build context to Docker daemon 28.41 MBSending build context to Docker daemon 28.97 MBSending build context to Docker daemon 29.52 MBSending build context to Docker daemon 30.08 MBSending build context to Docker daemon 30.64 MBSending build context to Docker daemon  31.2 MBSending build context to Docker daemon 31.75 MBSending build context to Docker daemon 32.31 MBSending build context to Docker daemon 32.87 MBSending build context to Docker daemon 33.42 MBSending build context to Docker daemon 33.98 MBSending build context to Docker daemon 34.54 MBSending build context to Docker daemon 35.09 MBSending build context to Docker daemon 35.65 MBSending build context to Docker daemon 36.21 MBSending build context to Docker daemon 36.77 MBSending build context to Docker daemon 37.32 MBSending build context to Docker daemon 37.88 MBSending build context to Docker daemon 38.44 MBSending build context to Docker daemon 38.99 MBSending build context to Docker daemon 39.55 MBSending build context to Docker daemon 40.11 MBSending build context to Docker daemon 40.67 MBSending build context to Docker daemon 41.22 MBSending build context to Docker daemon 41.78 MBSending build context to Docker daemon 42.34 MBSending build context to Docker daemon 42.89 MBSending build context to Docker daemon 43.45 MBSending build context to Docker daemon 44.01 MBSending build context to Docker daemon 44.56 MBSending build context to Docker daemon 45.12 MBSending build context to Docker daemon 45.68 MBSending build context to Docker daemon 46.24 MBSending build context to Docker daemon 46.79 MBSending build context to Docker daemon 47.35 MBSending build context to Docker daemon 47.91 MBSending build context to Docker daemon 48.46 MBSending build context to Docker daemon 49.02 MBSending build context to Docker daemon 49.58 MBSending build context to Docker daemon 50.14 MBSending build context to Docker daemon 50.69 MBSending build context to Docker daemon 51.25 MBSending build context to Docker daemon 51.81 MBSending build context to Docker daemon 52.36 MBSending build context to Docker daemon 52.92 MBSending build context to Docker daemon 53.48 MBSending build context to Docker daemon 54.03 MBSending build context to Docker daemon 54.59 MBSending build context to Docker daemon 55.15 MBSending build context to Docker daemon 55.71 MBSending build context to Docker daemon 56.26 MBSending build context to Docker daemon 56.82 MBSending build context to Docker daemon 57.38 MBSending build context to Docker daemon 57.93 MBSending build context to Docker daemon 58.49 MBSending build context to Docker daemon 59.05 MBSending build context to Docker daemon  59.6 MBSending build context to Docker daemon 60.16 MBSending build context to Docker daemon 60.72 MBSending build context to Docker daemon 61.28 MBSending build context to Docker daemon 61.83 MBSending build context to Docker daemon 62.39 MBSending build context to Docker daemon 62.95 MBSending build context to Docker daemon  63.5 MBSending build context to Docker daemon 64.06 MBSending build context to Docker daemon 64.62 MBSending build context to Docker daemon 65.18 MBSending build context to Docker daemon 65.73 MBSending build context to Docker daemon 66.29 MBSending build context to Docker daemon 66.85 MBSending build context to Docker daemon  67.4 MBSending build context to Docker daemon 67.96 MBSending build context to Docker daemon 68.52 MBSending build context to Docker daemon 69.07 MBSending build context to Docker daemon 69.63 MBSending build context to Docker daemon 70.19 MBSending build context to Docker daemon 70.75 MBSending build context to Docker daemon  71.3 MBSending build context to Docker daemon 71.86 MBSending build context to Docker daemon 72.36 MBSending build context to Docker daemon 72.36 MB
+Sending build context to Docker daemon 6.144 kBSending build context to Docker daemon 6.144 kB
 Step 1 : FROM registry.access.redhat.com/rhel7:latest
 Trying to pull repository registry.access.redhat.com/rhel7 ... c453594215e4: Pulling image (latest) from registry.access.redhat.com/rhel7
 c453594215e4: Pulling image (latest) from registry.access.redhat.com/rhel7, endpoint: https://registry.access.redhat.com/v1/
@@ -10,26 +10,27 @@ registry.access.redhat.com/rhel7: this image was pulled from a legacy registry. 
 
  ---> c453594215e4
 Step 2 : MAINTAINER John Call <johnsimcall@gmail.com>
- ---> Running in 6e6b1fcb61fd
- ---> 093cb69b3b9f
-Removing intermediate container 6e6b1fcb61fd
-Step 3 : LABEL com.ubnt.controller "4.8.18"
- ---> Running in b9f487536a44
- ---> adb94b3e5272
-Removing intermediate container b9f487536a44
-Step 4 : ADD UniFi.unix.4_8_18.tgz /opt/
- ---> 3ff4b45aa7eb
-Removing intermediate container 80052f168283
+ ---> Running in 89286383379e
+ ---> 4115935a6b06
+Removing intermediate container 89286383379e
+Step 3 : LABEL com.ubnt.controller "5.0.7"
+ ---> Running in 461e607ae48c
+ ---> bebc437de7da
+Removing intermediate container 461e607ae48c
+Step 4 : ADD https://www.ubnt.com/downloads/unifi/5.0.7/UniFi.unix.zip /opt/UniFi/
+
+ ---> 8fdfb20205e5
+Removing intermediate container bc5c89abb698
 Step 5 : ADD shutdown-unifi.sh /opt/UniFi/
- ---> 4ccc14c577e4
-Removing intermediate container 6dd665ab2fbd
+ ---> b4aeb5287b68
+Removing intermediate container eacd89f92d6a
 Step 6 : ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
 
 
- ---> e8c45b5ecb89
-Removing intermediate container e7314f76578d
-Step 7 : RUN yum clean all &&  yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
- ---> Running in 8ecaca651314
+ ---> e6976dfb8e4e
+Removing intermediate container 144a10e1973a
+Step 7 : RUN yum clean all &&  yum -y --disablerepo="*"  --enablerepo=rhel-7-server-rpms  --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms  --enablerepo=rhel-server-rhscl-7-rpms  install unzip java-1.8.0-oracle rh-mongodb26-mongodb-server &&  yum clean all
+ ---> Running in e2a1ceabe2a6
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Cleaning repos: rhel-7-server-aus-rpms rhel-7-server-eus-rpms
               : rhel-7-server-htb-rpms rhel-7-server-nfv-rpms rhel-7-server-rpms
@@ -74,17 +75,18 @@ Resolving Dependencies
 --> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
 --> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64
 ---> Package rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7 will be installed
---> Processing Dependency: v8314-v8 for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 --> Processing Dependency: rh-mongodb26-runtime for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libyaml-cpp.so.rh-mongodb26-0.5()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libv8.so.v8314-3.14.5()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libtcmalloc.so.rh-mongodb26-4()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libstemmer.so.rh-mongodb26-0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libsnappy.so.1()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libboost_thread-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libboost_system-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
---> Processing Dependency: libboost_program_options-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: v8314-v8 for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 --> Processing Dependency: libboost_filesystem-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libboost_program_options-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libboost_system-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libboost_thread-mt.so.1.53.0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libsnappy.so.1()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libstemmer.so.rh-mongodb26-0()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libtcmalloc.so.rh-mongodb26-4()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libv8.so.v8314-3.14.5()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+--> Processing Dependency: libyaml-cpp.so.rh-mongodb26-0.5()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
+---> Package unzip.x86_64 0:6.0-15.el7 will be installed
 --> Running transaction check
 ---> Package alsa-lib.x86_64 0:1.0.28-2.el7 will be installed
 ---> Package atk.x86_64 0:2.14.0-1.el7 will be installed
@@ -173,13 +175,13 @@ Resolving Dependencies
 --> Processing Dependency: libunwind.so.rh-mongodb26-8()(64bit) for package: rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64
 ---> Package rh-mongodb26-libstemmer.x86_64 0:0-4.585svn.el7 will be installed
 ---> Package rh-mongodb26-runtime.x86_64 0:2.0-19.el7 will be installed
---> Processing Dependency: v8314-runtime for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
---> Processing Dependency: scl-utils for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
---> Processing Dependency: rh-java-common-runtime for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
---> Processing Dependency: rh-java-common-javapackages-tools for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
---> Processing Dependency: policycoreutils-python for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
---> Processing Dependency: libselinux-utils for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
 --> Processing Dependency: /usr/bin/scl_source for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: libselinux-utils for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: policycoreutils-python for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: rh-java-common-javapackages-tools for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: rh-java-common-runtime for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: scl-utils for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
+--> Processing Dependency: v8314-runtime for package: rh-mongodb26-runtime-2.0-19.el7.x86_64
 ---> Package rh-mongodb26-yaml-cpp.x86_64 0:0.5.1-9.el7 will be installed
 ---> Package snappy.x86_64 0:1.1.0-3.el7 will be installed
 ---> Package v8314-v8.x86_64 1:3.14.5.10-9.el7 will be installed
@@ -255,9 +257,9 @@ Resolving Dependencies
 --> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.2.5-20.el7.x86_64
 ---> Package python-javapackages.noarch 0:3.4.1-11.el7 will be installed
 --> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.el7.noarch
----> Package rh-java-common-javapackages-tools.noarch 0:4.3.2-1.10.el7 will be installed
---> Processing Dependency: rh-java-common-python-javapackages = 4.3.2-1.10.el7 for package: rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarch
----> Package rh-java-common-runtime.x86_64 0:1.1-43.el7 will be installed
+---> Package rh-java-common-javapackages-tools.noarch 0:4.3.2-1.11.el7 will be installed
+--> Processing Dependency: rh-java-common-python-javapackages = 4.3.2-1.11.el7 for package: rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarch
+---> Package rh-java-common-runtime.x86_64 0:1.1-46.el7 will be installed
 ---> Package rh-mongodb26-libunwind.x86_64 0:1.1-4.el7 will be installed
 ---> Package scl-utils.x86_64 0:20130529-17.el7_1 will be installed
 ---> Package v8314-runtime.x86_64 0:2.1-1.el7 will be installed
@@ -283,8 +285,8 @@ Resolving Dependencies
 ---> Package policycoreutils.x86_64 0:2.2.5-20.el7 will be installed
 ---> Package python-IPy.noarch 0:0.75-6.el7 will be installed
 ---> Package python-lxml.x86_64 0:3.2.1-4.el7 will be installed
----> Package rh-java-common-python-javapackages.noarch 0:4.3.2-1.10.el7 will be installed
---> Processing Dependency: rh-java-common-PyXB = 1.2.4 for package: rh-java-common-python-javapackages-4.3.2-1.10.el7.noarch
+---> Package rh-java-common-python-javapackages.noarch 0:4.3.2-1.11.el7 will be installed
+--> Processing Dependency: rh-java-common-PyXB = 1.2.4 for package: rh-java-common-python-javapackages-4.3.2-1.11.el7.noarch
 ---> Package setools-libs.x86_64 0:3.3.7-46.el7 will be installed
 --> Running transaction check
 ---> Package hwdata.x86_64 0:0.252-8.1.el7 will be installed
@@ -311,6 +313,7 @@ Installing:
                                                                            34 M
  rh-mongodb26-mongodb-server
                         x86_64 2.6.9-1.el7       rhel-server-rhscl-7-rpms 6.3 M
+ unzip                  x86_64 6.0-15.el7        rhel-7-server-rpms       166 k
 Installing for dependencies:
  alsa-lib               x86_64 1.0.28-2.el7      rhel-7-server-rpms       391 k
  atk                    x86_64 2.14.0-1.el7      rhel-7-server-rpms       251 k
@@ -411,10 +414,10 @@ Installing for dependencies:
  python-lxml            x86_64 3.2.1-4.el7       rhel-7-server-rpms       758 k
  rh-java-common-PyXB    noarch 1.2.4-1.4.el7     rhel-server-rhscl-7-rpms 506 k
  rh-java-common-javapackages-tools
-                        noarch 4.3.2-1.10.el7    rhel-server-rhscl-7-rpms  94 k
+                        noarch 4.3.2-1.11.el7    rhel-server-rhscl-7-rpms  95 k
  rh-java-common-python-javapackages
-                        noarch 4.3.2-1.10.el7    rhel-server-rhscl-7-rpms  86 k
- rh-java-common-runtime x86_64 1.1-43.el7        rhel-server-rhscl-7-rpms  31 k
+                        noarch 4.3.2-1.11.el7    rhel-server-rhscl-7-rpms  86 k
+ rh-java-common-runtime x86_64 1.1-46.el7        rhel-server-rhscl-7-rpms  31 k
  rh-mongodb26-gperftools-libs
                         x86_64 2.2.1-4.el7       rhel-server-rhscl-7-rpms 278 k
  rh-mongodb26-libstemmer
@@ -430,17 +433,17 @@ Installing for dependencies:
 
 Transaction Summary
 ================================================================================
-Install  2 Packages (+106 Dependent packages)
+Install  3 Packages (+106 Dependent packages)
 
 Total download size: 74 M
 Installed size: 236 M
 Downloading packages:
-[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/atk-2.14.0-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
-[0mPublic key for atk-2.14.0-1.el7.x86_64.rpm is not installed
+[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/alsa-lib-1.0.28-2.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+[0mPublic key for alsa-lib-1.0.28-2.el7.x86_64.rpm is not installed
 Public key for java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64.rpm is not installed
-Public key for rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarch.rpm is not installed
+Public key for rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarch.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              2.6 MB/s |  74 MB  00:28     
+Total                                              3.3 MB/s |  74 MB  00:22     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [91mImporting GPG key 0xFD431D51:
  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
@@ -456,226 +459,229 @@ Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 Running transaction test
 Transaction test succeeded
 Running transaction
-  Installing : freetype-2.4.11-11.el7.x86_64                              1/108 
-  Installing : scl-utils-20130529-17.el7_1.x86_64                         2/108 
-  Installing : boost-system-1.53.0-25.el7.x86_64                          3/108 
-  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          4/108 
-  Installing : v8314-runtime-2.1-1.el7.x86_64                             5/108 
-  Installing : mesa-libglapi-10.6.5-3.20150824.el7.x86_64                 6/108 
-  Installing : libxslt-1.1.28-5.el7.x86_64                                7/108 
-  Installing : python-lxml-3.2.1-4.el7.x86_64                             8/108 
-  Installing : libselinux-utils-2.2.2-6.el7.x86_64                        9/108 
-  Installing : atk-2.14.0-1.el7.x86_64                                   10/108 
-  Installing : 2:libpng-1.5.13-7.el7_2.x86_64                            11/108 
-  Installing : policycoreutils-2.2.5-20.el7.x86_64                       12/108 
-  Installing : python-javapackages-3.4.1-11.el7.noarch                   13/108 
-  Installing : javapackages-tools-3.4.1-11.el7.noarch                    14/108 
-  Installing : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         15/108 
-  Installing : jasper-libs-1.900.1-29.el7.x86_64                         16/108 
-  Installing : boost-filesystem-1.53.0-25.el7.x86_64                     17/108 
-  Installing : boost-thread-1.53.0-25.el7.x86_64                         18/108 
-  Installing : jbigkit-libs-2.0-11.el7.x86_64                            19/108 
-  Installing : libtiff-4.0.3-14.el7.x86_64                               20/108 
-  Installing : libcgroup-0.41-8.el7.x86_64                               21/108 
-  Installing : 1:emacs-filesystem-24.3-18.el7.noarch                     22/108 
-  Installing : desktop-file-utils-0.22-1.el7.x86_64                      23/108 
-  Installing : libthai-0.1.14-9.el7.x86_64                               24/108 
-  Installing : libxshmfence-1.2-1.el7.x86_64                             25/108 
-  Installing : alsa-lib-1.0.28-2.el7.x86_64                              26/108 
-  Installing : audit-libs-python-2.4.1-5.el7.x86_64                      27/108 
-  Installing : snappy-1.1.0-3.el7.x86_64                                 28/108 
-  Installing : hicolor-icon-theme-0.12-7.el7.noarch                      29/108 
-  Installing : fontpackages-filesystem-1.44-8.el7.noarch                 30/108 
-  Installing : fontconfig-2.10.95-7.el7.x86_64                           31/108 
-  Installing : graphite2-1.3.6-1.el7_2.x86_64                            32/108 
-  Installing : harfbuzz-0.9.36-1.el7.x86_64                              33/108 
-  Installing : boost-program-options-1.53.0-25.el7.x86_64                34/108 
-  Installing : libX11-common-1.6.3-2.el7.noarch                          35/108 
-  Installing : avahi-libs-0.6.31-15.el7_2.1.x86_64                       36/108 
-  Installing : 1:cups-libs-1.6.3-22.el7.x86_64                           37/108 
-  Installing : python-IPy-0.75-6.el7.noarch                              38/108 
-  Installing : hwdata-0.252-8.1.el7.x86_64                               39/108 
-  Installing : libpciaccess-0.13.4-2.el7.x86_64                          40/108 
-  Installing : libdrm-2.4.60-3.el7.x86_64                                41/108 
-  Installing : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  42/108 
-  Installing : pixman-0.32.6-3.el7.x86_64                                43/108 
-  Installing : libselinux-python-2.2.2-6.el7.x86_64                      44/108 
-  Installing : checkpolicy-2.1.12-6.el7.x86_64                           45/108 
-  Installing : libXau-1.0.8-2.1.el7.x86_64                               46/108 
-  Installing : libxcb-1.11-4.el7.x86_64                                  47/108 
-  Installing : libX11-1.6.3-2.el7.x86_64                                 48/108 
-  Installing : libXext-1.3.3-3.el7.x86_64                                49/108 
-  Installing : libXrender-0.9.8-2.1.el7.x86_64                           50/108 
-  Installing : libXfixes-5.0.1-2.1.el7.x86_64                            51/108 
-  Installing : libXi-1.7.4-2.el7.x86_64                                  52/108 
-  Installing : libXdamage-1.1.4-4.1.el7.x86_64                           53/108 
-  Installing : libXxf86vm-1.1.3-2.1.el7.x86_64                           54/108 
-  Installing : mesa-libGL-10.6.5-3.20150824.el7.x86_64                   55/108 
-  Installing : gdk-pixbuf2-2.31.6-3.el7.x86_64                           56/108 
-  Installing : libXtst-1.2.2-2.1.el7.x86_64                              57/108 
-  Installing : libXcursor-1.1.14-2.1.el7.x86_64                          58/108 
-  Installing : libXrandr-1.4.2-2.el7.x86_64                              59/108 
-  Installing : libXft-2.3.2-2.el7.x86_64                                 60/108 
-  Installing : libXinerama-1.1.3-2.1.el7.x86_64                          61/108 
-  Installing : libXcomposite-0.4.4-4.1.el7.x86_64                        62/108 
-  Installing : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  63/108 
-  Installing : cairo-1.14.2-1.el7.x86_64                                 64/108 
-  Installing : pango-1.36.8-2.el7.x86_64                                 65/108 
-  Installing : gtk2-2.24.28-8.el7.x86_64                                 66/108 
-  Installing : groff-base-1.22.2-8.el7.x86_64                            67/108 
-  Installing : 1:perl-parent-0.225-244.el7.noarch                        68/108 
-  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                         69/108 
-  Installing : perl-podlators-2.5.1-3.el7.noarch                         70/108 
-  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                        71/108 
-  Installing : 1:perl-Pod-Escapes-1.04-286.el7.noarch                    72/108 
-  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                    73/108 
-  Installing : perl-Encode-2.51-7.el7.x86_64                             74/108 
-  Installing : perl-Pod-Usage-1.63-3.el7.noarch                          75/108 
-  Installing : 4:perl-libs-5.16.3-286.el7.x86_64                         76/108 
-  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     77/108 
-  Installing : perl-threads-1.87-4.el7.x86_64                            78/108 
-  Installing : perl-Storable-2.45-3.el7.x86_64                           79/108 
-  Installing : perl-Carp-1.26-244.el7.noarch                             80/108 
-  Installing : perl-Filter-1.49-3.el7.x86_64                             81/108 
-  Installing : perl-Exporter-5.68-3.el7.noarch                           82/108 
-  Installing : perl-constant-1.27-2.el7.noarch                           83/108 
-  Installing : 4:perl-macros-5.16.3-286.el7.x86_64                       84/108 
-  Installing : perl-Time-Local-1.2300-2.el7.noarch                       85/108 
-  Installing : perl-Socket-2.010-3.el7.x86_64                            86/108 
-  Installing : perl-threads-shared-1.43-6.el7.x86_64                     87/108 
-  Installing : perl-File-Temp-0.23.01-3.el7.noarch                       88/108 
-  Installing : perl-File-Path-2.09-2.el7.noarch                          89/108 
-  Installing : perl-PathTools-3.40-5.el7.x86_64                          90/108 
-  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                91/108 
-  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       92/108 
-  Installing : perl-Getopt-Long-2.40-2.el7.noarch                        93/108 
-  Installing : 4:perl-5.16.3-286.el7.x86_64                              94/108 
-  Installing : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            95/108 
-  Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  96/108 
-  Installing : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    97/108 
-  Installing : rh-java-common-runtime-1.1-43.el7.x86_64                  98/108 
-  Installing : rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarc    99/108 
-  Installing : setools-libs-3.3.7-46.el7.x86_64                         100/108 
-  Installing : libsemanage-python-2.1.10-18.el7.x86_64                  101/108 
-  Installing : policycoreutils-python-2.2.5-20.el7.x86_64               102/108 
-  Installing : rh-mongodb26-runtime-2.0-19.el7.x86_64                   103/108 
-  Installing : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64            104/108 
-  Installing : rh-mongodb26-libunwind-1.1-4.el7.x86_64                  105/108 
-  Installing : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64          106/108 
-  Installing : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                 107/108 
-  Installing : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64           108/108 
-  Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/108 
-  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                          2/108 
-  Verifying  : libXtst-1.2.2-2.1.el7.x86_64                               3/108 
-  Verifying  : python-lxml-3.2.1-4.el7.x86_64                             4/108 
-  Verifying  : libsemanage-python-2.1.10-18.el7.x86_64                    5/108 
-  Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                             6/108 
-  Verifying  : libdrm-2.4.60-3.el7.x86_64                                 7/108 
-  Verifying  : setools-libs-3.3.7-46.el7.x86_64                           8/108 
-  Verifying  : desktop-file-utils-0.22-1.el7.x86_64                       9/108 
-  Verifying  : python-javapackages-3.4.1-11.el7.noarch                   10/108 
-  Verifying  : groff-base-1.22.2-8.el7.x86_64                            11/108 
-  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                       12/108 
-  Verifying  : libXcomposite-0.4.4-4.1.el7.x86_64                        13/108 
-  Verifying  : atk-2.14.0-1.el7.x86_64                                   14/108 
-  Verifying  : rh-java-common-javapackages-tools-4.3.2-1.10.el7.noarc    15/108 
-  Verifying  : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64            16/108 
-  Verifying  : 1:cups-libs-1.6.3-22.el7.x86_64                           17/108 
-  Verifying  : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  18/108 
-  Verifying  : 1:perl-Pod-Escapes-1.04-286.el7.noarch                    19/108 
-  Verifying  : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64           20/108 
-  Verifying  : libXau-1.0.8-2.1.el7.x86_64                               21/108 
-  Verifying  : perl-File-Path-2.09-2.el7.noarch                          22/108 
-  Verifying  : checkpolicy-2.1.12-6.el7.x86_64                           23/108 
-  Verifying  : policycoreutils-2.2.5-20.el7.x86_64                       24/108 
-  Verifying  : libselinux-python-2.2.2-6.el7.x86_64                      25/108 
-  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    26/108 
-  Verifying  : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  27/108 
-  Verifying  : rh-java-common-runtime-1.1-43.el7.x86_64                  28/108 
-  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     29/108 
-  Verifying  : pixman-0.32.6-3.el7.x86_64                                30/108 
-  Verifying  : libxcb-1.11-4.el7.x86_64                                  31/108 
-  Verifying  : libtiff-4.0.3-14.el7.x86_64                               32/108 
-  Verifying  : hwdata-0.252-8.1.el7.x86_64                               33/108 
-  Verifying  : libX11-1.6.3-2.el7.x86_64                                 34/108 
-  Verifying  : python-IPy-0.75-6.el7.noarch                              35/108 
-  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              36/108 
-  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       37/108 
-  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       38/108 
-  Verifying  : libX11-common-1.6.3-2.el7.noarch                          39/108 
-  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                40/108 
-  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    41/108 
-  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          42/108 
-  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          43/108 
-  Verifying  : perl-Encode-2.51-7.el7.x86_64                             44/108 
-  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         45/108 
-  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             46/108 
-  Verifying  : perl-threads-1.87-4.el7.x86_64                            47/108 
-  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           48/108 
-  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            49/108 
-  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         50/108 
-  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 51/108 
-  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     52/108 
-  Verifying  : perl-Storable-2.45-3.el7.x86_64                           53/108 
-  Verifying  : rh-java-common-python-javapackages-4.3.2-1.10.el7.noar    54/108 
-  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           55/108 
-  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         56/108 
-  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            57/108 
-  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 58/108 
-  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           59/108 
-  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      60/108 
-  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   61/108 
-  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        62/108 
-  Verifying  : snappy-1.1.0-3.el7.x86_64                                 63/108 
-  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           64/108 
-  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      65/108 
-  Verifying  : perl-Carp-1.26-244.el7.noarch                             66/108 
-  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     67/108 
-  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         68/108 
-  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  69/108 
-  Verifying  : libxslt-1.1.28-5.el7.x86_64                               70/108 
-  Verifying  : pango-1.36.8-2.el7.x86_64                                 71/108 
-  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         72/108 
-  Verifying  : libXi-1.7.4-2.el7.x86_64                                  73/108 
-  Verifying  : alsa-lib-1.0.28-2.el7.x86_64                              74/108 
-  Verifying  : libxshmfence-1.2-1.el7.x86_64                             75/108 
-  Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            76/108 
-  Verifying  : cairo-1.14.2-1.el7.x86_64                                 77/108 
-  Verifying  : boost-system-1.53.0-25.el7.x86_64                         78/108 
-  Verifying  : perl-Filter-1.49-3.el7.x86_64                             79/108 
-  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           80/108 
-  Verifying  : policycoreutils-python-2.2.5-20.el7.x86_64                81/108 
-  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          82/108 
-  Verifying  : libpciaccess-0.13.4-2.el7.x86_64                          83/108 
-  Verifying  : freetype-2.4.11-11.el7.x86_64                             84/108 
-  Verifying  : perl-Exporter-5.68-3.el7.noarch                           85/108 
-  Verifying  : perl-constant-1.27-2.el7.noarch                           86/108 
-  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          87/108 
-  Verifying  : 4:perl-macros-5.16.3-286.el7.x86_64                       88/108 
-  Verifying  : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            89/108 
-  Verifying  : libXrandr-1.4.2-2.el7.x86_64                              90/108 
-  Verifying  : rh-mongodb26-runtime-2.0-19.el7.x86_64                    91/108 
-  Verifying  : 4:perl-5.16.3-286.el7.x86_64                              92/108 
-  Verifying  : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                  93/108 
-  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                       94/108 
-  Verifying  : libthai-0.1.14-9.el7.x86_64                               95/108 
-  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                       96/108 
-  Verifying  : libXft-2.3.2-2.el7.x86_64                                 97/108 
-  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                        98/108 
-  Verifying  : perl-Socket-2.010-3.el7.x86_64                            99/108 
-  Verifying  : boost-thread-1.53.0-25.el7.x86_64                        100/108 
-  Verifying  : 1:emacs-filesystem-24.3-18.el7.noarch                    101/108 
-  Verifying  : libcgroup-0.41-8.el7.x86_64                              102/108 
-  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64               103/108 
-  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           104/108 
-  Verifying  : mesa-libglapi-10.6.5-3.20150824.el7.x86_64               105/108 
-  Verifying  : mesa-libGL-10.6.5-3.20150824.el7.x86_64                  106/108 
-  Verifying  : perl-Getopt-Long-2.40-2.el7.noarch                       107/108 
-  Verifying  : scl-utils-20130529-17.el7_1.x86_64                       108/108 
+  Installing : freetype-2.4.11-11.el7.x86_64                              1/109 
+  Installing : scl-utils-20130529-17.el7_1.x86_64                         2/109 
+  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          3/109 
+  Installing : boost-system-1.53.0-25.el7.x86_64                          4/109 
+  Installing : v8314-runtime-2.1-1.el7.x86_64                             5/109 
+  Installing : mesa-libglapi-10.6.5-3.20150824.el7.x86_64                 6/109 
+  Installing : libxslt-1.1.28-5.el7.x86_64                                7/109 
+  Installing : python-lxml-3.2.1-4.el7.x86_64                             8/109 
+  Installing : libselinux-utils-2.2.2-6.el7.x86_64                        9/109 
+  Installing : atk-2.14.0-1.el7.x86_64                                   10/109 
+  Installing : 2:libpng-1.5.13-7.el7_2.x86_64                            11/109 
+  Installing : policycoreutils-2.2.5-20.el7.x86_64                       12/109 
+  Installing : python-javapackages-3.4.1-11.el7.noarch                   13/109 
+  Installing : javapackages-tools-3.4.1-11.el7.noarch                    14/109 
+  Installing : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         15/109 
+  Installing : boost-filesystem-1.53.0-25.el7.x86_64                     16/109 
+  Installing : boost-thread-1.53.0-25.el7.x86_64                         17/109 
+  Installing : jasper-libs-1.900.1-29.el7.x86_64                         18/109 
+  Installing : jbigkit-libs-2.0-11.el7.x86_64                            19/109 
+  Installing : libtiff-4.0.3-14.el7.x86_64                               20/109 
+  Installing : libcgroup-0.41-8.el7.x86_64                               21/109 
+  Installing : 1:emacs-filesystem-24.3-18.el7.noarch                     22/109 
+  Installing : desktop-file-utils-0.22-1.el7.x86_64                      23/109 
+  Installing : libthai-0.1.14-9.el7.x86_64                               24/109 
+  Installing : libxshmfence-1.2-1.el7.x86_64                             25/109 
+  Installing : alsa-lib-1.0.28-2.el7.x86_64                              26/109 
+  Installing : audit-libs-python-2.4.1-5.el7.x86_64                      27/109 
+  Installing : snappy-1.1.0-3.el7.x86_64                                 28/109 
+  Installing : hicolor-icon-theme-0.12-7.el7.noarch                      29/109 
+  Installing : fontpackages-filesystem-1.44-8.el7.noarch                 30/109 
+  Installing : fontconfig-2.10.95-7.el7.x86_64                           31/109 
+  Installing : graphite2-1.3.6-1.el7_2.x86_64                            32/109 
+  Installing : harfbuzz-0.9.36-1.el7.x86_64                              33/109 
+  Installing : boost-program-options-1.53.0-25.el7.x86_64                34/109 
+  Installing : libX11-common-1.6.3-2.el7.noarch                          35/109 
+  Installing : avahi-libs-0.6.31-15.el7_2.1.x86_64                       36/109 
+  Installing : 1:cups-libs-1.6.3-22.el7.x86_64                           37/109 
+  Installing : python-IPy-0.75-6.el7.noarch                              38/109 
+  Installing : hwdata-0.252-8.1.el7.x86_64                               39/109 
+  Installing : libpciaccess-0.13.4-2.el7.x86_64                          40/109 
+  Installing : libdrm-2.4.60-3.el7.x86_64                                41/109 
+  Installing : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  42/109 
+  Installing : pixman-0.32.6-3.el7.x86_64                                43/109 
+  Installing : libselinux-python-2.2.2-6.el7.x86_64                      44/109 
+  Installing : checkpolicy-2.1.12-6.el7.x86_64                           45/109 
+  Installing : libXau-1.0.8-2.1.el7.x86_64                               46/109 
+  Installing : libxcb-1.11-4.el7.x86_64                                  47/109 
+  Installing : libX11-1.6.3-2.el7.x86_64                                 48/109 
+  Installing : libXext-1.3.3-3.el7.x86_64                                49/109 
+  Installing : libXrender-0.9.8-2.1.el7.x86_64                           50/109 
+  Installing : libXfixes-5.0.1-2.1.el7.x86_64                            51/109 
+  Installing : libXi-1.7.4-2.el7.x86_64                                  52/109 
+  Installing : libXdamage-1.1.4-4.1.el7.x86_64                           53/109 
+  Installing : libXxf86vm-1.1.3-2.1.el7.x86_64                           54/109 
+  Installing : mesa-libGL-10.6.5-3.20150824.el7.x86_64                   55/109 
+  Installing : gdk-pixbuf2-2.31.6-3.el7.x86_64                           56/109 
+  Installing : libXtst-1.2.2-2.1.el7.x86_64                              57/109 
+  Installing : libXcursor-1.1.14-2.1.el7.x86_64                          58/109 
+  Installing : libXrandr-1.4.2-2.el7.x86_64                              59/109 
+  Installing : libXft-2.3.2-2.el7.x86_64                                 60/109 
+  Installing : libXinerama-1.1.3-2.1.el7.x86_64                          61/109 
+  Installing : libXcomposite-0.4.4-4.1.el7.x86_64                        62/109 
+  Installing : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  63/109 
+  Installing : cairo-1.14.2-1.el7.x86_64                                 64/109 
+  Installing : pango-1.36.8-2.el7.x86_64                                 65/109 
+  Installing : gtk2-2.24.28-8.el7.x86_64                                 66/109 
+  Installing : groff-base-1.22.2-8.el7.x86_64                            67/109 
+  Installing : 1:perl-parent-0.225-244.el7.noarch                        68/109 
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                         69/109 
+  Installing : perl-podlators-2.5.1-3.el7.noarch                         70/109 
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                        71/109 
+  Installing : 1:perl-Pod-Escapes-1.04-286.el7.noarch                    72/109 
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                    73/109 
+  Installing : perl-Encode-2.51-7.el7.x86_64                             74/109 
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                          75/109 
+  Installing : 4:perl-libs-5.16.3-286.el7.x86_64                         76/109 
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     77/109 
+  Installing : perl-threads-1.87-4.el7.x86_64                            78/109 
+  Installing : perl-Storable-2.45-3.el7.x86_64                           79/109 
+  Installing : perl-Carp-1.26-244.el7.noarch                             80/109 
+  Installing : perl-Filter-1.49-3.el7.x86_64                             81/109 
+  Installing : perl-Exporter-5.68-3.el7.noarch                           82/109 
+  Installing : perl-constant-1.27-2.el7.noarch                           83/109 
+  Installing : 4:perl-macros-5.16.3-286.el7.x86_64                       84/109 
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                       85/109 
+  Installing : perl-Socket-2.010-3.el7.x86_64                            86/109 
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                     87/109 
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                       88/109 
+  Installing : perl-File-Path-2.09-2.el7.noarch                          89/109 
+  Installing : perl-PathTools-3.40-5.el7.x86_64                          90/109 
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                91/109 
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       92/109 
+  Installing : perl-Getopt-Long-2.40-2.el7.noarch                        93/109 
+  Installing : 4:perl-5.16.3-286.el7.x86_64                              94/109 
+  Installing : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            95/109 
+  Installing : rh-java-common-python-javapackages-4.3.2-1.11.el7.noar    96/109 
+  Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  97/109 
+  Installing : rh-java-common-runtime-1.1-46.el7.x86_64                  98/109 
+  Installing : rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarc    99/109 
+  Installing : setools-libs-3.3.7-46.el7.x86_64                         100/109 
+  Installing : libsemanage-python-2.1.10-18.el7.x86_64                  101/109 
+  Installing : policycoreutils-python-2.2.5-20.el7.x86_64               102/109 
+  Installing : rh-mongodb26-runtime-2.0-19.el7.x86_64                   103/109 
+  Installing : rh-mongodb26-libunwind-1.1-4.el7.x86_64                  104/109 
+  Installing : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64          105/109 
+  Installing : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64            106/109 
+  Installing : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                 107/109 
+  Installing : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64           108/109 
+  Installing : unzip-6.0-15.el7.x86_64                                  109/109 
+  Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/109 
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                          2/109 
+  Verifying  : rh-java-common-python-javapackages-4.3.2-1.11.el7.noar     3/109 
+  Verifying  : libXtst-1.2.2-2.1.el7.x86_64                               4/109 
+  Verifying  : python-lxml-3.2.1-4.el7.x86_64                             5/109 
+  Verifying  : libsemanage-python-2.1.10-18.el7.x86_64                    6/109 
+  Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                             7/109 
+  Verifying  : libdrm-2.4.60-3.el7.x86_64                                 8/109 
+  Verifying  : setools-libs-3.3.7-46.el7.x86_64                           9/109 
+  Verifying  : desktop-file-utils-0.22-1.el7.x86_64                      10/109 
+  Verifying  : python-javapackages-3.4.1-11.el7.noarch                   11/109 
+  Verifying  : groff-base-1.22.2-8.el7.x86_64                            12/109 
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                       13/109 
+  Verifying  : libXcomposite-0.4.4-4.1.el7.x86_64                        14/109 
+  Verifying  : atk-2.14.0-1.el7.x86_64                                   15/109 
+  Verifying  : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64            16/109 
+  Verifying  : 1:cups-libs-1.6.3-22.el7.x86_64                           17/109 
+  Verifying  : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  18/109 
+  Verifying  : 1:perl-Pod-Escapes-1.04-286.el7.noarch                    19/109 
+  Verifying  : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64           20/109 
+  Verifying  : libXau-1.0.8-2.1.el7.x86_64                               21/109 
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                          22/109 
+  Verifying  : checkpolicy-2.1.12-6.el7.x86_64                           23/109 
+  Verifying  : policycoreutils-2.2.5-20.el7.x86_64                       24/109 
+  Verifying  : libselinux-python-2.2.2-6.el7.x86_64                      25/109 
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    26/109 
+  Verifying  : mesa-libEGL-10.6.5-3.20150824.el7.x86_64                  27/109 
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     28/109 
+  Verifying  : pixman-0.32.6-3.el7.x86_64                                29/109 
+  Verifying  : libxcb-1.11-4.el7.x86_64                                  30/109 
+  Verifying  : libtiff-4.0.3-14.el7.x86_64                               31/109 
+  Verifying  : hwdata-0.252-8.1.el7.x86_64                               32/109 
+  Verifying  : libX11-1.6.3-2.el7.x86_64                                 33/109 
+  Verifying  : python-IPy-0.75-6.el7.noarch                              34/109 
+  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              35/109 
+  Verifying  : avahi-libs-0.6.31-15.el7_2.1.x86_64                       36/109 
+  Verifying  : libselinux-utils-2.2.2-6.el7.x86_64                       37/109 
+  Verifying  : libX11-common-1.6.3-2.el7.noarch                          38/109 
+  Verifying  : boost-program-options-1.53.0-25.el7.x86_64                39/109 
+  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    40/109 
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          41/109 
+  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          42/109 
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                             43/109 
+  Verifying  : rh-java-common-runtime-1.1-46.el7.x86_64                  44/109 
+  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         45/109 
+  Verifying  : boost-system-1.53.0-25.el7.x86_64                         46/109 
+  Verifying  : perl-threads-1.87-4.el7.x86_64                            47/109 
+  Verifying  : fontconfig-2.10.95-7.el7.x86_64                           48/109 
+  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            49/109 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         50/109 
+  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 51/109 
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     52/109 
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                           53/109 
+  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           54/109 
+  Verifying  : 4:perl-libs-5.16.3-286.el7.x86_64                         55/109 
+  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            56/109 
+  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 57/109 
+  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           58/109 
+  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      59/109 
+  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   60/109 
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        61/109 
+  Verifying  : snappy-1.1.0-3.el7.x86_64                                 62/109 
+  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           63/109 
+  Verifying  : audit-libs-python-2.4.1-5.el7.x86_64                      64/109 
+  Verifying  : perl-Carp-1.26-244.el7.noarch                             65/109 
+  Verifying  : boost-filesystem-1.53.0-25.el7.x86_64                     66/109 
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         67/109 
+  Verifying  : mesa-libgbm-10.6.5-3.20150824.el7.x86_64                  68/109 
+  Verifying  : libxslt-1.1.28-5.el7.x86_64                               69/109 
+  Verifying  : pango-1.36.8-2.el7.x86_64                                 70/109 
+  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         71/109 
+  Verifying  : libXi-1.7.4-2.el7.x86_64                                  72/109 
+  Verifying  : alsa-lib-1.0.28-2.el7.x86_64                              73/109 
+  Verifying  : libxshmfence-1.2-1.el7.x86_64                             74/109 
+  Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            75/109 
+  Verifying  : cairo-1.14.2-1.el7.x86_64                                 76/109 
+  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             77/109 
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                             78/109 
+  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           79/109 
+  Verifying  : policycoreutils-python-2.2.5-20.el7.x86_64                80/109 
+  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          81/109 
+  Verifying  : libpciaccess-0.13.4-2.el7.x86_64                          82/109 
+  Verifying  : freetype-2.4.11-11.el7.x86_64                             83/109 
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                           84/109 
+  Verifying  : perl-constant-1.27-2.el7.noarch                           85/109 
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          86/109 
+  Verifying  : 4:perl-macros-5.16.3-286.el7.x86_64                       87/109 
+  Verifying  : 1:java-1.8.0-oracle-1.8.0.91-1jpp.1.el7.x86_64            88/109 
+  Verifying  : libXrandr-1.4.2-2.el7.x86_64                              89/109 
+  Verifying  : rh-mongodb26-runtime-2.0-19.el7.x86_64                    90/109 
+  Verifying  : 4:perl-5.16.3-286.el7.x86_64                              91/109 
+  Verifying  : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                  92/109 
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                       93/109 
+  Verifying  : libthai-0.1.14-9.el7.x86_64                               94/109 
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                       95/109 
+  Verifying  : libXft-2.3.2-2.el7.x86_64                                 96/109 
+  Verifying  : rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarc    97/109 
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                        98/109 
+  Verifying  : perl-Socket-2.010-3.el7.x86_64                            99/109 
+  Verifying  : boost-thread-1.53.0-25.el7.x86_64                        100/109 
+  Verifying  : 1:emacs-filesystem-24.3-18.el7.noarch                    101/109 
+  Verifying  : libcgroup-0.41-8.el7.x86_64                              102/109 
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64               103/109 
+  Verifying  : unzip-6.0-15.el7.x86_64                                  104/109 
+  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           105/109 
+  Verifying  : mesa-libglapi-10.6.5-3.20150824.el7.x86_64               106/109 
+  Verifying  : mesa-libGL-10.6.5-3.20150824.el7.x86_64                  107/109 
+  Verifying  : perl-Getopt-Long-2.40-2.el7.noarch                       108/109 
+  Verifying  : scl-utils-20130529-17.el7_1.x86_64                       109/109 
 
 Installed:
   java-1.8.0-oracle.x86_64 1:1.8.0.91-1jpp.1.el7                                
   rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7                              
+  unzip.x86_64 0:6.0-15.el7                                                     
 
 Dependency Installed:
   alsa-lib.x86_64 0:1.0.28-2.el7                                                
@@ -771,9 +777,9 @@ Dependency Installed:
   python-javapackages.noarch 0:3.4.1-11.el7                                     
   python-lxml.x86_64 0:3.2.1-4.el7                                              
   rh-java-common-PyXB.noarch 0:1.2.4-1.4.el7                                    
-  rh-java-common-javapackages-tools.noarch 0:4.3.2-1.10.el7                     
-  rh-java-common-python-javapackages.noarch 0:4.3.2-1.10.el7                    
-  rh-java-common-runtime.x86_64 0:1.1-43.el7                                    
+  rh-java-common-javapackages-tools.noarch 0:4.3.2-1.11.el7                     
+  rh-java-common-python-javapackages.noarch 0:4.3.2-1.11.el7                    
+  rh-java-common-runtime.x86_64 0:1.1-46.el7                                    
   rh-mongodb26-gperftools-libs.x86_64 0:2.2.1-4.el7                             
   rh-mongodb26-libstemmer.x86_64 0:0-4.585svn.el7                               
   rh-mongodb26-libunwind.x86_64 0:1.1-4.el7                                     
@@ -800,42 +806,484 @@ Cleaning repos: rhel-7-server-aus-rpms rhel-7-server-eus-rpms
               : rhel-sap-hana-for-rhel-7-server-rpms
               : rhel-sjis-for-rhel-7-server-rpms
 Cleaning up everything
- ---> dcc378b7cbc1
-Removing intermediate container 8ecaca651314
-Step 8 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
- ---> Running in 21913e4ada19
- ---> 92006becb849
-Removing intermediate container 21913e4ada19
-Step 9 : EXPOSE 8080/tcp 8443/tcp 3478/udp
- ---> Running in a1d79e068f47
- ---> 6a049821e5c0
-Removing intermediate container a1d79e068f47
-Step 10 : VOLUME /opt/UniFi/data
- ---> Running in 0389401b2968
- ---> 02d52f1fd5a4
-Removing intermediate container 0389401b2968
-Step 11 : VOLUME /opt/UniFi/logs
- ---> Running in 361a4b9e794d
- ---> 410c55874646
-Removing intermediate container 361a4b9e794d
-Step 12 : WORKDIR /opt/UniFi
- ---> Running in 7f9341e11fb6
- ---> 5f28eb16a554
-Removing intermediate container 7f9341e11fb6
-Step 13 : ENV TZ UTC
- ---> Running in 02a7f49ba552
- ---> 2f47fd11b7d6
-Removing intermediate container 02a7f49ba552
-Step 14 : ENV TERM xterm-256color
- ---> Running in c32d5ad448e2
- ---> ea37dfe24406
-Removing intermediate container c32d5ad448e2
-Step 15 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
- ---> Running in 6033d6bd1072
- ---> d77295265508
-Removing intermediate container 6033d6bd1072
-Step 16 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
- ---> Running in 404e63d07aae
- ---> 85c1d320a8ad
-Removing intermediate container 404e63d07aae
-Successfully built 85c1d320a8ad
+ ---> b9696bba3794
+Removing intermediate container e2a1ceabe2a6
+Step 8 : RUN unzip -d /opt/ /opt/UniFi/UniFi.unix.zip && rm /opt/UniFi/UniFi.unix.zip
+ ---> Running in ce500de3ae2e
+Archive:  /opt/UniFi/UniFi.unix.zip
+   creating: /opt/UniFi/bin/
+    linking: /opt/UniFi/bin/mongod   -> /usr/bin/mongod 
+   creating: /opt/UniFi/conf/
+   creating: /opt/UniFi/dl/
+   creating: /opt/UniFi/dl/firmware/
+  inflating: /opt/UniFi/dl/firmware/bundles.json  
+   creating: /opt/UniFi/dl/firmware/BZ2/
+   creating: /opt/UniFi/dl/firmware/BZ2/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/BZ2/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U2HSR/
+   creating: /opt/UniFi/dl/firmware/U2HSR/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/U2HSR/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U2IW/
+   creating: /opt/UniFi/dl/firmware/U2IW/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/U2IW/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7E/
+   creating: /opt/UniFi/dl/firmware/U7E/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/U7E/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7P/
+   creating: /opt/UniFi/dl/firmware/U7P/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/U7P/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7PG2/
+   creating: /opt/UniFi/dl/firmware/U7PG2/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/U7PG2/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/US24P250/
+   creating: /opt/UniFi/dl/firmware/US24P250/3.7.5.4969/
+  inflating: /opt/UniFi/dl/firmware/US24P250/3.7.5.4969/firmware.bin  
+   creating: /opt/UniFi/lib/
+  inflating: /opt/UniFi/lib/ace.jar  
+  inflating: /opt/UniFi/lib/annotations-2.0.0.jar  
+  inflating: /opt/UniFi/lib/commons-beanutils-1.9.1.jar  
+  inflating: /opt/UniFi/lib/commons-codec-1.7.jar  
+  inflating: /opt/UniFi/lib/commons-httpclient-3.1-atlassian-2.jar  
+  inflating: /opt/UniFi/lib/commons-httpclient-contrib-3.1.jar  
+  inflating: /opt/UniFi/lib/commons-io-2.4.jar  
+  inflating: /opt/UniFi/lib/commons-lang-2.6.jar  
+  inflating: /opt/UniFi/lib/commons-logging-1.1.3.jar  
+  inflating: /opt/UniFi/lib/commons-net-3.3.jar  
+  inflating: /opt/UniFi/lib/commons-pool2-2.2.jar  
+  inflating: /opt/UniFi/lib/commons-validator-1.5.0.jar  
+  inflating: /opt/UniFi/lib/cron4j-2.2.5.jar  
+  inflating: /opt/UniFi/lib/dom4j-1.3.jar  
+  inflating: /opt/UniFi/lib/ecj-4.3.1.jar  
+  inflating: /opt/UniFi/lib/gson-2.2.4.jar  
+  inflating: /opt/UniFi/lib/guava-14.0.1.jar  
+  inflating: /opt/UniFi/lib/Java-WebSocket-1.3.0-44-gbf2af15.jar  
+  inflating: /opt/UniFi/lib/jmdns-3.4.1.jar  
+  inflating: /opt/UniFi/lib/jorbis-0.0.17.jar  
+  inflating: /opt/UniFi/lib/jsch-0.1.51.jar  
+  inflating: /opt/UniFi/lib/jstl-1.2.jar  
+  inflating: /opt/UniFi/lib/jstun-0.7.3.jar  
+  inflating: /opt/UniFi/lib/jul-to-slf4j-1.7.6.jar  
+  inflating: /opt/UniFi/lib/log4j-1.2.17.jar  
+  inflating: /opt/UniFi/lib/mail-1.4.7.jar  
+  inflating: /opt/UniFi/lib/mongo-java-driver-2.10.1.jar  
+   creating: /opt/UniFi/lib/native/
+   creating: /opt/UniFi/lib/native/Linux/
+   creating: /opt/UniFi/lib/native/Linux/amd64/
+  inflating: /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so  
+   creating: /opt/UniFi/lib/native/Linux/armhf/
+  inflating: /opt/UniFi/lib/native/Linux/armhf/libubnt_webrtc_jni.so  
+   creating: /opt/UniFi/lib/native/Mac/
+   creating: /opt/UniFi/lib/native/Mac/x86_64/
+  inflating: /opt/UniFi/lib/native/Mac/x86_64/libubnt_webrtc_jni.jnilib  
+   creating: /opt/UniFi/lib/native/Windows/
+   creating: /opt/UniFi/lib/native/Windows/amd64/
+  inflating: /opt/UniFi/lib/native/Windows/amd64/ubnt_webrtc_jni.dll  
+  inflating: /opt/UniFi/lib/servo-core-0.9.4.jar  
+  inflating: /opt/UniFi/lib/servo-graphite-0.9.4.jar  
+  inflating: /opt/UniFi/lib/slf4j-api-1.7.6.jar  
+  inflating: /opt/UniFi/lib/slf4j-log4j12-1.7.6.jar  
+  inflating: /opt/UniFi/lib/snappy-java-1.0.5.jar  
+  inflating: /opt/UniFi/lib/spring-beans-3.2.8.RELEASE.jar  
+  inflating: /opt/UniFi/lib/spring-context-3.2.8.RELEASE.jar  
+  inflating: /opt/UniFi/lib/spring-core-3.2.8.RELEASE.jar  
+  inflating: /opt/UniFi/lib/spring-expression-3.2.8.RELEASE.jar  
+  inflating: /opt/UniFi/lib/spring-test-3.2.8.RELEASE.jar  
+  inflating: /opt/UniFi/lib/sshj-0.9.0.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-core-7.0.64.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-el-7.0.64.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-jasper-7.0.64.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-logging-juli-7.0.64.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-logging-log4j-7.0.64.jar  
+  inflating: /opt/UniFi/lib/urlrewritefilter-4.0.4.jar  
+  inflating: /opt/UniFi/readme.txt   
+   creating: /opt/UniFi/webapps/
+   creating: /opt/UniFi/webapps/ROOT/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/.version  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/config/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/config/config.js  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/css/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/css/app.css  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/find_controller.html  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-100-normal.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-100-normal.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-100-normal.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-100-normal.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-100-normal.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-300-normal.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-300-normal.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-300-normal.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-300-normal.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-300-normal.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-400-normal.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-400-normal.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-400-normal.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-400-normal.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-400-normal.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-700-normal.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-700-normal.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-700-normal.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-700-normal.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-700-normal.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-900-normal.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-900-normal.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-900-normal.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-900-normal.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/fonts/lato-900-normal.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/lato/style.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/ubnt.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/ubnt.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/ubnt.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/ubnt.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/fonts/ubnt.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.0.7.3093/ubnt-icon/style.css  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/FontAwesome.otf  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/clients/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/clients/station.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/clients/station@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/BZ2/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/default/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/missing/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/p2N/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2HSR/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2IW/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U2O/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7E/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7EDU/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7O/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7PC/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW3/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW4/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/ugw/UGW8/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5c/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5c/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5c/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5t/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5t/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5t/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5tc/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5tc/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP5tc/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7c/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7c/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uph/UP7c/static@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US16/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/success.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US24/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US48/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/danger.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/danger@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/static.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/static@2x.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/usw/US8/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-discarding.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-mirror.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-poe.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-spacer.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/amazon.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/amazon.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/aol.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/aol.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/apple.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/apple.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/bankofamerica.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/bankofamerica.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/bing.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/bing.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/chase.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/chase.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/cnn.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/cnn.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/comcast.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/comcast.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/craigslist.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/craigslist.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/ebay.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/ebay.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/espn.go.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/espn.go.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/facebook.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/facebook.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/google.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/google.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/huffingtonpost.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/huffingtonpost.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/imdb.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/imdb.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/imgur.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/imgur.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/instagram.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/instagram.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/linkedin.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/linkedin.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/microsoft.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/microsoft.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/msdn.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/msdn.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/msn.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/msn.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/netflix.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/netflix.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/paypal.com/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/paypal.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/pinterest.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/pinterest.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/reddit.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/reddit.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/target.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/target.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/tumblr.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/tumblr.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/twitter.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/twitter.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wellsfargo.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wellsfargo.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wikia.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wikia.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wikipedia.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wikipedia.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wordpress.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/wordpress.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/yahoo.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/yahoo.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/yelp.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/yelp.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/youtube.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/youtube.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/zillow.com/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/zillow.com/favicon.ico  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-120.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-144.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-152.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-32.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-57.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon-72.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/favicons/favicon.ico  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/index.hotspot.html  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/index.html  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/index.overview.html  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/index.wizard.html  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/js/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/app.hotspot.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/app.manage.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/app.overview.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/app.wizard.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/components.hotspot.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/components.manage.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/components.overview.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/components.wizard.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.hotspot.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.manage.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.overview.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.wizard.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.hotspot.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.manage.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.overview.js  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.wizard.js  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/locales/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/account.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/alerts.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/clients.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/common.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/dashboard.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/devices.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/dynamicDns.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/events.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/eventStrings.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/guests.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/hotspot.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/insights.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/knownClients.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/maps.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/modules.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/neighboringAccessPoints.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/operators.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/overview.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/pastConnections.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/pastGuestAuthorizations.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/payments.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/portForwardStats.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/remoteUserVpn.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/settings.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/statistics.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/streams.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/switchStats.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/vouchers.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/en/wizard.json  
+   creating: /opt/UniFi/webapps/ROOT/pages/
+  inflating: /opt/UniFi/webapps/ROOT/pages/voucher.jsp  
+   creating: /opt/UniFi/webapps/ROOT/WEB-INF/
+  inflating: /opt/UniFi/webapps/ROOT/WEB-INF/resourcerewrite.xml  
+  inflating: /opt/UniFi/webapps/ROOT/WEB-INF/urlrewrite.xml  
+  inflating: /opt/UniFi/webapps/ROOT/WEB-INF/web.xml  
+finishing deferred symbolic links:
+  /opt/UniFi/bin/mongod  -> /usr/bin/mongod
+ ---> b249220480bc
+Removing intermediate container ce500de3ae2e
+Step 9 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
+ ---> Running in 7d5306e316bd
+ ---> 9c9e78129e53
+Removing intermediate container 7d5306e316bd
+Step 10 : EXPOSE 8080/tcp 8443/tcp 3478/udp
+ ---> Running in 586b03323d4b
+ ---> 70e382e7f7fa
+Removing intermediate container 586b03323d4b
+Step 11 : VOLUME /opt/UniFi/data
+ ---> Running in 540ae6b73212
+ ---> 97cc5ed8d041
+Removing intermediate container 540ae6b73212
+Step 12 : VOLUME /opt/UniFi/logs
+ ---> Running in e184378f464c
+ ---> 4e676821c04f
+Removing intermediate container e184378f464c
+Step 13 : WORKDIR /opt/UniFi
+ ---> Running in 0c43ebcd3492
+ ---> 5200ffda2269
+Removing intermediate container 0c43ebcd3492
+Step 14 : ENV TZ UTC
+ ---> Running in 9711ef71983f
+ ---> 9b635ade677e
+Removing intermediate container 9711ef71983f
+Step 15 : ENV TERM xterm-256color
+ ---> Running in 5a4f811d4cb7
+ ---> 49fb8622c61b
+Removing intermediate container 5a4f811d4cb7
+Step 16 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
+ ---> Running in 250732afb79b
+ ---> dbe0e17831c6
+Removing intermediate container 250732afb79b
+Step 17 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
+ ---> Running in dbda427cb1e0
+ ---> 512124a888d6
+Removing intermediate container dbda427cb1e0
+Successfully built 512124a888d6
