@@ -1,8 +1,9 @@
 FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
-LABEL com.ubnt.controller="5.0.7"
+LABEL com.ubnt.controller="5.2.7"
 
-ADD https://www.ubnt.com/downloads/unifi/5.0.7/UniFi.unix.zip /opt/UniFi/
+ADD https://www.ubnt.com/downloads/unifi/5.2.7/UniFi.unix.zip
+#ADD https://www.ubnt.com/downloads/unifi/5.0.7/UniFi.unix.zip /opt/UniFi/
 #ADD UniFi.unix.5_0_7.tgz /opt/
 ADD shutdown-unifi.sh /opt/UniFi/
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
