@@ -1,22 +1,23 @@
-sudo docker build --pull=true --no-cache -t home.lab/unifi:4.8.18 . | tee ./docker-build.log
+sudo docker build --pull=true --no-cache -t home.lab/unifi:5.4.11 . | tee ./docker-build.log
 
 sudo docker run --name=unifi --hostname=unifi \
  -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp \
  -v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z \
  -v /nas/docker-host-mounts/UniFi/logs:/opt/UniFi/logs:z \
- -d home.lab/unifi:4.8.18
+ -d home.lab/unifi:5.4.11
 
 //DEBUGGING
-sudo docker run --name=unifi --hostname=unifi \
+sudo docker run --name=unifi-test --hostname=unifi-test \
   -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp \
   -v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z \
   -v /nas/docker-host-mounts/UniFi/logs:/opt/UniFi/logs:z \
-  -it --entrypoint /bin/bash home.lab/unifi:5.0.7
+  -it --entrypoint /bin/bash home.lab/unifi:5.4.11
 
 sudo docker exec -it unifi "/usr/bin/bash"
 
+//BACKUP
 sudo docker cp unifi:/opt/UniFi/logs/ ./logs-$(date "+%Y-%m-%d")
 sudo docker cp unifi:/opt/UniFi/ ./backup-$(date "+%Y-%m-%d")
 
-
+//OBSOLETE (added to Dockerfile)
 wget -O UniFi.unix.4_8_18.zip https://www.ubnt.com/downloads/unifi/4.8.18/UniFi.unix.zip

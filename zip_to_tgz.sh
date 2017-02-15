@@ -1,3 +1,6 @@
+# THIS IS USELESS NOW
+# I'M DOING "yum install unzip" IN THE DOCKERFILE
+
 #!/bin/bash
 
 TMP_DIR=$(mktemp -d)

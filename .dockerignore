@@ -1,5 +1,2 @@
-logs*
-backup*
 *
-!UniFi.unix.4_8_18.tgz
 !shutdown-unifi.sh
