@@ -1,11 +1,11 @@
 FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
-LABEL com.ubnt.controller="5.4.11"
+LABEL com.ubnt.controller="5.4.18"
 
-ADD https://www.ubnt.com/downloads/unifi/5.4.11/UniFi.unix.zip /opt/UniFi/
-ADD shutdown-unifi.sh /opt/UniFi/
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
+ADD https://www.ubnt.com/downloads/unifi/5.4.18/UniFi.unix.zip /opt/UniFi/
+ADD shutdown-unifi.sh /opt/UniFi/
 
 RUN useradd unifi --comment "UniFi Controller" --uid 201 --system --home-dir /opt/UniFi/ && \
     chown -Rv unifi:unifi /opt/UniFi/
@@ -34,12 +34,14 @@ ENTRYPOINT ["/usr/bin/scl", "enable", "rh-mongodb26", "--"]
 CMD ["/usr/bin/java", "-Xmx1024M", "-jar", "lib/ace.jar", "start"]
 
 
+
 # ---- Notes and TODO ----
 #
-# http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
 # Capture the output (stdout/stderr?) from java -jar ... to a file
+# http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
 # java -jar ... | awk '{ print strftime("%c: "), $0; fflush(); }' | tee logs/java-output.log
 
+# ---- Firewall info ----
 # 27117 - mongodb (loopback only)
 # 3478 - UDP STUN
 # 8080 - inform (AP -> Controller)
