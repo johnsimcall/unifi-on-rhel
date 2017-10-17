@@ -11,7 +11,7 @@ See commands.txt for examples:
 
 To begin / build, run:
 ```
-sudo docker build --pull=true --no-cache -t home.lab/unifi:5.4.11 . | tee ./docker-build.log
+sudo docker build --pull=true --no-cache -t home.lab/unifi:5.5.24 . | tee ./docker-build.log
 ```
 
 Then
@@ -20,7 +20,7 @@ sudo docker run --name=unifi --hostname=unifi \
  -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp \
  -v /nas/docker-host-mounts/UniFi/data:/opt/UniFi/data:z \
  -v /nas/docker-host-mounts/UniFi/logs:/opt/UniFi/logs:z \
- -d home.lab/unifi:5.4.11
+ -d home.lab/unifi:5.5.24
 ```
 
 ## Volumes:
@@ -34,8 +34,8 @@ VOLUME ["/opt/UniFi/logs"]
 Log Files
 
 ## Environment Variables:
-### `TZ`
-TimeZone. (i.e America/Chicago)
+### `TERM`
+TERM=xterm-256color
 
 ## Network ports exposed (tcp, unless noted):
 ### Required
