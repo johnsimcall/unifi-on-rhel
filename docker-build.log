@@ -2,94 +2,77 @@ Sending build context to Docker daemon 5.632 kB
 Step 1 : FROM registry.access.redhat.com/rhel7:latest
 Trying to pull repository registry.access.redhat.com/rhel7 ... 
 latest: Pulling from registry.access.redhat.com/rhel7
-7bd78273b666: Already exists
-c196631bd9ac: Already exists
-Digest: sha256:0614d58c96e8d1a04a252880a6c33b48b4685cafae048a70dd9e821edf62cab9
- ---> e4b79d4d89ab
+26e5ed6899db: Already exists
+66dbe984a319: Already exists
+Digest: sha256:fb809742ffc073d7a7828b58b924c5d00cfb66db0bef982629d1b62d027ce187
+ ---> 549b1c5d7a44
 Step 2 : MAINTAINER John Call <johnsimcall@gmail.com>
- ---> Running in 99082afe4904
- ---> 927247bb3d68
-Removing intermediate container 99082afe4904
-Step 3 : LABEL com.ubnt.controller "5.4.11"
- ---> Running in d6c64ac18bf0
- ---> c82739188c4d
-Removing intermediate container d6c64ac18bf0
-Step 4 : ADD https://www.ubnt.com/downloads/unifi/5.4.11/UniFi.unix.zip /opt/UniFi/
+ ---> Running in 7b679a53d610
+ ---> b6016d6113db
+Removing intermediate container 7b679a53d610
+Step 3 : LABEL com.ubnt.controller "5.5.24"
+ ---> Running in 6375361efee5
+ ---> aa61ecad8525
+Removing intermediate container 6375361efee5
+Step 4 : ADD https://www.ubnt.com/downloads/unifi/5.5.24/UniFi.unix.zip /opt/UniFi/
 
- ---> b7746cb99981
-Removing intermediate container 8fa3ba8d4327
-Step 5 : ADD shutdown-unifi.sh /opt/UniFi/
- ---> fc2aef245359
-Removing intermediate container f1ee3afb1633
-Step 6 : ADD https://help.ubnt.com/hc/en-us/article_attachments/204082688/mongo_prune_js.js /opt/UniFi/
+ ---> b51c3d6734fa
+Removing intermediate container 44635ec46e0d
+Step 5 : ADD https://help.ubnt.com/hc/article_attachments/115024095828/mongo_prune_js.js /opt/UniFi/
 
 
- ---> cebae2d40196
-Removing intermediate container 30c02148cfeb
-Step 7 : RUN useradd unifi --comment "UniFi Controller" --uid 201 --system --home-dir /opt/UniFi/ &&     chown -Rv unifi:unifi /opt/UniFi/
- ---> Running in 2e63c280fc12
+ ---> 6940aeb1758a
+Removing intermediate container 1dcc1bf16dee
+Step 6 : ADD shutdown-unifi.sh /opt/UniFi/
+ ---> 0771096962f8
+Removing intermediate container be488e9011ff
+Step 7 : RUN ln -f -s /usr/share/zoneinfo/America/Denver /etc/localtime &&     useradd unifi --comment "UniFi Controller" --uid 201 --system --home-dir /opt/UniFi/ &&     chown -Rv unifi:unifi /opt/UniFi/
+ ---> Running in 41729f32ff8a
 changed ownership of '/opt/UniFi/UniFi.unix.zip' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/shutdown-unifi.sh' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/mongo_prune_js.js' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/' from root:root to unifi:unifi
- ---> fccff54b47b0
-Removing intermediate container 2e63c280fc12
+ ---> 7eb7786f1376
+Removing intermediate container 41729f32ff8a
 Step 8 : RUN yum clean all &&     yum -y --disablerepo="*"       --enablerepo=rhel-7-server-rpms       --enablerepo=rhel-7-server-thirdparty-oracle-java-rpms       --enablerepo=rhel-server-rhscl-7-rpms       install unzip java-1.8.0-oracle rh-mongodb26-mongodb-server &&     yum clean all
- ---> Running in fe8416bcf8bc
+ ---> Running in 576e52d88918
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
-Cleaning repos: rhel-7-fast-datapath-htb-rpms rhel-7-fast-datapath-rpms
-              : rhel-7-server-aus-rpms rhel-7-server-eus-rpms
-              : rhel-7-server-htb-rpms rhel-7-server-nfv-rpms rhel-7-server-rpms
+Cleaning repos: rhel-7-rc-rpms rhel-7-server-aus-rpms rhel-7-server-htb-rpms
+              : rhel-7-server-nfv-rpms rhel-7-server-rpms
               : rhel-7-server-rt-beta-rpms rhel-7-server-rt-htb-rpms
               : rhel-7-server-rt-rpms rhel-7-server-tus-rpms
-              : rhel-ha-for-rhel-7-server-eus-rpms
-              : rhel-ha-for-rhel-7-server-htb-rpms
-              : rhel-ha-for-rhel-7-server-rpms
-              : rhel-lb-for-rhel-7-server-htb-rpms
-              : rhel-rs-for-rhel-7-server-eus-rpms
-              : rhel-rs-for-rhel-7-server-htb-rpms
-              : rhel-rs-for-rhel-7-server-rpms
-              : rhel-sap-for-rhel-7-server-eus-rpms
-              : rhel-sap-for-rhel-7-server-rpms
-              : rhel-sap-hana-for-rhel-7-server-eus-rpms
-              : rhel-sap-hana-for-rhel-7-server-rpms
-              : rhel-sjis-for-rhel-7-server-aus-debug-rpms
-              : rhel-sjis-for-rhel-7-server-aus-rpms
-              : rhel-sjis-for-rhel-7-server-aus-source-rpms
-              : rhel-sjis-for-rhel-7-server-debug-rpms
-              : rhel-sjis-for-rhel-7-server-rpms
-              : rhel-sjis-for-rhel-7-server-source-rpms
 Cleaning up everything
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --> Running transaction check
----> Package java-1.8.0-oracle.x86_64 1:1.8.0.121-1jpp.1.el7_3 will be installed
---> Processing Dependency: copy-jdk-configs >= 1.1-3 for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
---> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64
+---> Package java-1.8.0-oracle.x86_64 1:1.8.0.141-1jpp.1.el7_3 will be installed
+--> Processing Dependency: copy-jdk-configs >= 1.1-3 for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: jpackage-utils >= 1.5.38 for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: desktop-file-utils for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libasound.so.2(ALSA_0.9.0rc4)(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: perl for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libGL.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libX11.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libXext.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libXi.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libXrender.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libXtst.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libXxf86vm.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libasound.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libatk-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libcairo.so.2()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libfontconfig.so.1()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libgdk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libgdk_pixbuf-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libgtk-x11-2.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libpango-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libpangocairo-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
+--> Processing Dependency: libpangoft2-1.0.so.0()(64bit) for package: 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64
 ---> Package rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7 will be installed
 --> Processing Dependency: rh-mongodb26-runtime for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 --> Processing Dependency: v8314-v8 for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
@@ -104,90 +87,94 @@ Resolving Dependencies
 --> Processing Dependency: libyaml-cpp.so.rh-mongodb26-0.5()(64bit) for package: rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64
 ---> Package unzip.x86_64 0:6.0-16.el7 will be installed
 --> Running transaction check
----> Package alsa-lib.x86_64 0:1.1.1-1.el7 will be installed
----> Package atk.x86_64 0:2.14.0-1.el7 will be installed
----> Package boost-filesystem.x86_64 0:1.53.0-26.el7 will be installed
----> Package boost-program-options.x86_64 0:1.53.0-26.el7 will be installed
----> Package boost-system.x86_64 0:1.53.0-26.el7 will be installed
----> Package boost-thread.x86_64 0:1.53.0-26.el7 will be installed
----> Package cairo.x86_64 0:1.14.2-1.el7 will be installed
---> Processing Dependency: libpng15.so.15(PNG15_0)(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libpng15.so.15()(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libxcb-render.so.0()(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libxcb-shm.so.0()(64bit) for package: cairo-1.14.2-1.el7.x86_64
---> Processing Dependency: libxcb.so.1()(64bit) for package: cairo-1.14.2-1.el7.x86_64
----> Package copy-jdk-configs.noarch 0:1.2-1.el7 will be installed
----> Package desktop-file-utils.x86_64 0:0.22-1.el7 will be installed
---> Processing Dependency: emacs-filesystem for package: desktop-file-utils-0.22-1.el7.x86_64
----> Package fontconfig.x86_64 0:2.10.95-10.el7 will be installed
---> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.10.95-10.el7.x86_64
----> Package freetype.x86_64 0:2.4.11-12.el7 will be installed
----> Package gdk-pixbuf2.x86_64 0:2.31.6-3.el7 will be installed
---> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: gdk-pixbuf2-2.31.6-3.el7.x86_64
---> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: gdk-pixbuf2-2.31.6-3.el7.x86_64
---> Processing Dependency: libjasper.so.1()(64bit) for package: gdk-pixbuf2-2.31.6-3.el7.x86_64
---> Processing Dependency: libjpeg.so.62()(64bit) for package: gdk-pixbuf2-2.31.6-3.el7.x86_64
---> Processing Dependency: libtiff.so.5()(64bit) for package: gdk-pixbuf2-2.31.6-3.el7.x86_64
----> Package gtk2.x86_64 0:2.24.28-8.el7 will be installed
---> Processing Dependency: libXrandr >= 1.2.99.4-2 for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: hicolor-icon-theme for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXcomposite.so.1()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXcursor.so.1()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXdamage.so.1()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXfixes.so.3()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXinerama.so.1()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libXrandr.so.2()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
---> Processing Dependency: libcups.so.2()(64bit) for package: gtk2-2.24.28-8.el7.x86_64
+---> Package alsa-lib.x86_64 0:1.1.3-3.el7 will be installed
+---> Package atk.x86_64 0:2.22.0-3.el7 will be installed
+---> Package boost-filesystem.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-program-options.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-system.x86_64 0:1.53.0-27.el7 will be installed
+---> Package boost-thread.x86_64 0:1.53.0-27.el7 will be installed
+---> Package cairo.x86_64 0:1.14.8-2.el7 will be installed
+--> Processing Dependency: libpng15.so.15(PNG15_0)(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libEGL.so.1()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libpixman-1.so.0()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libpng15.so.15()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libxcb-render.so.0()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libxcb-shm.so.0()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+--> Processing Dependency: libxcb.so.1()(64bit) for package: cairo-1.14.8-2.el7.x86_64
+---> Package copy-jdk-configs.noarch 0:2.2-3.el7 will be installed
+---> Package desktop-file-utils.x86_64 0:0.23-1.el7 will be installed
+--> Processing Dependency: emacs-filesystem for package: desktop-file-utils-0.23-1.el7.x86_64
+---> Package fontconfig.x86_64 0:2.10.95-11.el7 will be installed
+--> Processing Dependency: font(:lang=en) for package: fontconfig-2.10.95-11.el7.x86_64
+--> Processing Dependency: fontpackages-filesystem for package: fontconfig-2.10.95-11.el7.x86_64
+---> Package freetype.x86_64 0:2.4.11-15.el7 will be installed
+---> Package gdk-pixbuf2.x86_64 0:2.36.5-1.el7 will be installed
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: gdk-pixbuf2-2.36.5-1.el7.x86_64
+--> Processing Dependency: libtiff.so.5(LIBTIFF_4.0)(64bit) for package: gdk-pixbuf2-2.36.5-1.el7.x86_64
+--> Processing Dependency: libjasper.so.1()(64bit) for package: gdk-pixbuf2-2.36.5-1.el7.x86_64
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: gdk-pixbuf2-2.36.5-1.el7.x86_64
+--> Processing Dependency: libtiff.so.5()(64bit) for package: gdk-pixbuf2-2.36.5-1.el7.x86_64
+---> Package gtk2.x86_64 0:2.24.31-1.el7 will be installed
+--> Processing Dependency: libXrandr >= 1.2.99.4-2 for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: gtk-update-icon-cache for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: hicolor-icon-theme for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXcomposite.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXcursor.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXdamage.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXfixes.so.3()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXinerama.so.1()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libXrandr.so.2()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
+--> Processing Dependency: libcups.so.2()(64bit) for package: gtk2-2.24.31-1.el7.x86_64
 ---> Package javapackages-tools.noarch 0:3.4.1-11.el7 will be installed
 --> Processing Dependency: python-javapackages = 3.4.1-11.el7 for package: javapackages-tools-3.4.1-11.el7.noarch
 --> Processing Dependency: libxslt for package: javapackages-tools-3.4.1-11.el7.noarch
----> Package libX11.x86_64 0:1.6.3-3.el7 will be installed
---> Processing Dependency: libX11-common >= 1.6.3-3.el7 for package: libX11-1.6.3-3.el7.x86_64
+---> Package libX11.x86_64 0:1.6.5-1.el7 will be installed
+--> Processing Dependency: libX11-common >= 1.6.5-1.el7 for package: libX11-1.6.5-1.el7.x86_64
 ---> Package libXext.x86_64 0:1.3.3-3.el7 will be installed
----> Package libXi.x86_64 0:1.7.4-2.el7 will be installed
----> Package libXrender.x86_64 0:0.9.8-2.1.el7 will be installed
----> Package libXtst.x86_64 0:1.2.2-2.1.el7 will be installed
----> Package libXxf86vm.x86_64 0:1.1.3-2.1.el7 will be installed
----> Package mesa-libGL.x86_64 0:11.2.2-2.20160614.el7 will be installed
---> Processing Dependency: mesa-libglapi = 11.2.2-2.20160614.el7 for package: mesa-libGL-11.2.2-2.20160614.el7.x86_64
---> Processing Dependency: libdrm.so.2()(64bit) for package: mesa-libGL-11.2.2-2.20160614.el7.x86_64
---> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libGL-11.2.2-2.20160614.el7.x86_64
---> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libGL-11.2.2-2.20160614.el7.x86_64
----> Package pango.x86_64 0:1.36.8-2.el7 will be installed
---> Processing Dependency: libthai(x86-64) >= 0.1.9 for package: pango-1.36.8-2.el7.x86_64
---> Processing Dependency: libthai.so.0(LIBTHAI_0.1)(64bit) for package: pango-1.36.8-2.el7.x86_64
---> Processing Dependency: libXft.so.2()(64bit) for package: pango-1.36.8-2.el7.x86_64
---> Processing Dependency: libharfbuzz.so.0()(64bit) for package: pango-1.36.8-2.el7.x86_64
---> Processing Dependency: libthai.so.0()(64bit) for package: pango-1.36.8-2.el7.x86_64
----> Package perl.x86_64 4:5.16.3-291.el7 will be installed
---> Processing Dependency: perl-libs = 4:5.16.3-291.el7 for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl-libs for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: perl-macros for package: 4:perl-5.16.3-291.el7.x86_64
---> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-291.el7.x86_64
+---> Package libXi.x86_64 0:1.7.9-1.el7 will be installed
+---> Package libXrender.x86_64 0:0.9.10-1.el7 will be installed
+---> Package libXtst.x86_64 0:1.2.3-1.el7 will be installed
+---> Package libXxf86vm.x86_64 0:1.1.4-1.el7 will be installed
+---> Package mesa-libGL.x86_64 0:17.0.1-6.20170307.el7 will be installed
+--> Processing Dependency: mesa-libglapi = 17.0.1-6.20170307.el7 for package: mesa-libGL-17.0.1-6.20170307.el7.x86_64
+--> Processing Dependency: libdrm.so.2()(64bit) for package: mesa-libGL-17.0.1-6.20170307.el7.x86_64
+--> Processing Dependency: libglapi.so.0()(64bit) for package: mesa-libGL-17.0.1-6.20170307.el7.x86_64
+--> Processing Dependency: libxshmfence.so.1()(64bit) for package: mesa-libGL-17.0.1-6.20170307.el7.x86_64
+---> Package pango.x86_64 0:1.40.4-1.el7 will be installed
+--> Processing Dependency: harfbuzz(x86-64) >= 1.0.3 for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libXft(x86-64) >= 2.0.0 for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libthai(x86-64) >= 0.1.9 for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libthai.so.0(LIBTHAI_0.1)(64bit) for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libXft.so.2()(64bit) for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libharfbuzz.so.0()(64bit) for package: pango-1.40.4-1.el7.x86_64
+--> Processing Dependency: libthai.so.0()(64bit) for package: pango-1.40.4-1.el7.x86_64
+---> Package perl.x86_64 4:5.16.3-292.el7 will be installed
+--> Processing Dependency: perl-libs = 4:5.16.3-292.el7 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(File::Temp) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl-libs for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-292.el7.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-292.el7.x86_64
 ---> Package rh-mongodb26-gperftools-libs.x86_64 0:2.2.1-4.el7 will be installed
 --> Processing Dependency: libunwind.so.rh-mongodb26-8()(64bit) for package: rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64
 ---> Package rh-mongodb26-libstemmer.x86_64 0:0-4.585svn.el7 will be installed
@@ -203,39 +190,40 @@ Resolving Dependencies
 ---> Package snappy.x86_64 0:1.1.0-3.el7 will be installed
 ---> Package v8314-v8.x86_64 1:3.14.5.10-9.el7 will be installed
 --> Running transaction check
----> Package cups-libs.x86_64 1:1.6.3-26.el7 will be installed
---> Processing Dependency: libavahi-client.so.3()(64bit) for package: 1:cups-libs-1.6.3-26.el7.x86_64
---> Processing Dependency: libavahi-common.so.3()(64bit) for package: 1:cups-libs-1.6.3-26.el7.x86_64
----> Package emacs-filesystem.noarch 1:24.3-18.el7 will be installed
+---> Package cups-libs.x86_64 1:1.6.3-29.el7 will be installed
+--> Processing Dependency: libavahi-client.so.3()(64bit) for package: 1:cups-libs-1.6.3-29.el7.x86_64
+--> Processing Dependency: libavahi-common.so.3()(64bit) for package: 1:cups-libs-1.6.3-29.el7.x86_64
+---> Package emacs-filesystem.noarch 1:24.3-20.el7_4 will be installed
 ---> Package fontpackages-filesystem.noarch 0:1.44-8.el7 will be installed
----> Package harfbuzz.x86_64 0:0.9.36-1.el7 will be installed
---> Processing Dependency: libgraphite2.so.3()(64bit) for package: harfbuzz-0.9.36-1.el7.x86_64
+---> Package gtk-update-icon-cache.x86_64 0:3.22.10-4.el7 will be installed
+---> Package harfbuzz.x86_64 0:1.3.2-1.el7 will be installed
+--> Processing Dependency: libgraphite2.so.3()(64bit) for package: harfbuzz-1.3.2-1.el7.x86_64
 ---> Package hicolor-icon-theme.noarch 0:0.12-7.el7 will be installed
----> Package jasper-libs.x86_64 0:1.900.1-29.el7 will be installed
----> Package libX11-common.noarch 0:1.6.3-3.el7 will be installed
+---> Package jasper-libs.x86_64 0:1.900.1-31.el7 will be installed
+---> Package libX11-common.noarch 0:1.6.5-1.el7 will be installed
 ---> Package libXcomposite.x86_64 0:0.4.4-4.1.el7 will be installed
----> Package libXcursor.x86_64 0:1.1.14-2.1.el7 will be installed
+---> Package libXcursor.x86_64 0:1.1.14-8.el7 will be installed
 ---> Package libXdamage.x86_64 0:1.1.4-4.1.el7 will be installed
----> Package libXfixes.x86_64 0:5.0.1-2.1.el7 will be installed
+---> Package libXfixes.x86_64 0:5.0.3-1.el7 will be installed
 ---> Package libXft.x86_64 0:2.3.2-2.el7 will be installed
 ---> Package libXinerama.x86_64 0:1.1.3-2.1.el7 will be installed
----> Package libXrandr.x86_64 0:1.4.2-2.el7 will be installed
----> Package libdrm.x86_64 0:2.4.67-3.el7 will be installed
---> Processing Dependency: libpciaccess.so.0()(64bit) for package: libdrm-2.4.67-3.el7.x86_64
+---> Package libXrandr.x86_64 0:1.5.1-2.el7 will be installed
+---> Package libdrm.x86_64 0:2.4.74-1.el7 will be installed
+--> Processing Dependency: libpciaccess.so.0()(64bit) for package: libdrm-2.4.74-1.el7.x86_64
 ---> Package libjpeg-turbo.x86_64 0:1.2.90-5.el7 will be installed
 ---> Package libpng.x86_64 2:1.5.13-7.el7_2 will be installed
----> Package libselinux-utils.x86_64 0:2.5-6.el7 will be installed
+---> Package libselinux-utils.x86_64 0:2.5-11.el7 will be installed
 ---> Package libthai.x86_64 0:0.1.14-9.el7 will be installed
 ---> Package libtiff.x86_64 0:4.0.3-27.el7_3 will be installed
 --> Processing Dependency: libjbig.so.2.0()(64bit) for package: libtiff-4.0.3-27.el7_3.x86_64
----> Package libxcb.x86_64 0:1.11-4.el7 will be installed
---> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.11-4.el7.x86_64
+---> Package libxcb.x86_64 0:1.12-1.el7 will be installed
+--> Processing Dependency: libXau.so.6()(64bit) for package: libxcb-1.12-1.el7.x86_64
 ---> Package libxshmfence.x86_64 0:1.2-1.el7 will be installed
 ---> Package libxslt.x86_64 0:1.1.28-5.el7 will be installed
----> Package mesa-libEGL.x86_64 0:11.2.2-2.20160614.el7 will be installed
---> Processing Dependency: mesa-libgbm = 11.2.2-2.20160614.el7 for package: mesa-libEGL-11.2.2-2.20160614.el7.x86_64
---> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-11.2.2-2.20160614.el7.x86_64
----> Package mesa-libglapi.x86_64 0:11.2.2-2.20160614.el7 will be installed
+---> Package mesa-libEGL.x86_64 0:17.0.1-6.20170307.el7 will be installed
+--> Processing Dependency: mesa-libgbm = 17.0.1-6.20170307.el7 for package: mesa-libEGL-17.0.1-6.20170307.el7.x86_64
+--> Processing Dependency: libgbm.so.1()(64bit) for package: mesa-libEGL-17.0.1-6.20170307.el7.x86_64
+---> Package mesa-libglapi.x86_64 0:17.0.1-6.20170307.el7 will be installed
 ---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
 ---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
 ---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
@@ -254,66 +242,73 @@ Resolving Dependencies
 ---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
 ---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
 ---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
----> Package perl-libs.x86_64 4:5.16.3-291.el7 will be installed
----> Package perl-macros.x86_64 4:5.16.3-291.el7 will be installed
+---> Package perl-libs.x86_64 4:5.16.3-292.el7 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-292.el7 will be installed
 ---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
 ---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
 ---> Package pixman.x86_64 0:0.34.0-1.el7 will be installed
----> Package policycoreutils-python.x86_64 0:2.5-11.el7_3 will be installed
---> Processing Dependency: policycoreutils = 2.5-11.el7_3 for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: audit-libs-python >= 2.1.3-4 for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libsemanage-python >= 2.5-5 for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: setools-libs >= 3.3.8-1 for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: checkpolicy for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libcgroup for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libselinux-python for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: python-IPy for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.5-11.el7_3.x86_64
---> Processing Dependency: libqpol.so.1()(64bit) for package: policycoreutils-python-2.5-11.el7_3.x86_64
+---> Package policycoreutils-python.x86_64 0:2.5-17.1.el7 will be installed
+--> Processing Dependency: policycoreutils = 2.5-17.1.el7 for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: audit-libs-python >= 2.1.3-4 for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libsemanage-python >= 2.5-5 for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: setools-libs >= 3.3.8-1 for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: checkpolicy for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libapol.so.4(VERS_4.0)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libcgroup for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libqpol.so.1(VERS_1.2)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libqpol.so.1(VERS_1.4)(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libselinux-python for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: python-IPy for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libapol.so.4()(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64
+--> Processing Dependency: libqpol.so.1()(64bit) for package: policycoreutils-python-2.5-17.1.el7.x86_64
 ---> Package python-javapackages.noarch 0:3.4.1-11.el7 will be installed
 --> Processing Dependency: python-lxml for package: python-javapackages-3.4.1-11.el7.noarch
----> Package rh-java-common-javapackages-tools.noarch 0:4.3.2-1.11.el7 will be installed
---> Processing Dependency: rh-java-common-python-javapackages = 4.3.2-1.11.el7 for package: rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarch
+---> Package rh-java-common-javapackages-tools.noarch 0:4.3.2-1.14.el7 will be installed
+--> Processing Dependency: rh-java-common-python-javapackages = 4.3.2-1.14.el7 for package: rh-java-common-javapackages-tools-4.3.2-1.14.el7.noarch
+--> Processing Dependency: java-headless for package: rh-java-common-javapackages-tools-4.3.2-1.14.el7.noarch
 ---> Package rh-java-common-runtime.x86_64 0:1.1-47.el7 will be installed
 ---> Package rh-mongodb26-libunwind.x86_64 0:1.1-4.el7 will be installed
----> Package scl-utils.x86_64 0:20130529-17.el7_1 will be installed
+---> Package scl-utils.x86_64 0:20130529-18.el7_4 will be installed
+---> Package stix-fonts.noarch 0:1.1.0-5.el7 will be installed
 ---> Package v8314-runtime.x86_64 0:2.1-1.el7 will be installed
 --> Running transaction check
----> Package audit-libs-python.x86_64 0:2.6.5-3.el7 will be installed
+---> Package audit-libs-python.x86_64 0:2.7.6-3.el7 will be installed
 ---> Package avahi-libs.x86_64 0:0.6.31-17.el7 will be installed
 ---> Package checkpolicy.x86_64 0:2.5-4.el7 will be installed
----> Package graphite2.x86_64 0:1.3.6-1.el7_2 will be installed
+---> Package graphite2.x86_64 0:1.3.10-1.el7_3 will be installed
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.144-0.b01.el7_4 will be installed
+--> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.144-0.b01.el7_4.x86_64
+--> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.144-0.b01.el7_4.x86_64
 ---> Package jbigkit-libs.x86_64 0:2.0-11.el7 will be installed
 ---> Package libXau.x86_64 0:1.0.8-2.1.el7 will be installed
----> Package libcgroup.x86_64 0:0.41-11.el7 will be installed
+---> Package libcgroup.x86_64 0:0.41-13.el7 will be installed
 ---> Package libpciaccess.x86_64 0:0.13.4-3.el7_3 will be installed
 --> Processing Dependency: hwdata for package: libpciaccess-0.13.4-3.el7_3.x86_64
----> Package libselinux-python.x86_64 0:2.5-6.el7 will be installed
----> Package libsemanage-python.x86_64 0:2.5-5.1.el7_3 will be installed
----> Package mesa-libgbm.x86_64 0:11.2.2-2.20160614.el7 will be installed
+---> Package libselinux-python.x86_64 0:2.5-11.el7 will be installed
+---> Package libsemanage-python.x86_64 0:2.5-8.el7 will be installed
+---> Package mesa-libgbm.x86_64 0:17.0.1-6.20170307.el7 will be installed
 ---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
----> Package perl-Pod-Escapes.noarch 1:1.04-291.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-292.el7 will be installed
 ---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
 --> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
 --> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
 ---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
----> Package policycoreutils.x86_64 0:2.5-11.el7_3 will be installed
+---> Package policycoreutils.x86_64 0:2.5-17.1.el7 will be installed
 ---> Package python-IPy.noarch 0:0.75-6.el7 will be installed
 ---> Package python-lxml.x86_64 0:3.2.1-4.el7 will be installed
----> Package rh-java-common-python-javapackages.noarch 0:4.3.2-1.11.el7 will be installed
---> Processing Dependency: rh-java-common-PyXB = 1.2.4 for package: rh-java-common-python-javapackages-4.3.2-1.11.el7.noarch
+---> Package rh-java-common-python-javapackages.noarch 0:4.3.2-1.14.el7 will be installed
+--> Processing Dependency: rh-java-common-PyXB = 1.2.4 for package: rh-java-common-python-javapackages-4.3.2-1.14.el7.noarch
 ---> Package setools-libs.x86_64 0:3.3.8-1.1.el7 will be installed
 --> Running transaction check
----> Package hwdata.x86_64 0:0.252-8.4.el7 will be installed
+---> Package hwdata.x86_64 0:0.252-8.6.el7 will be installed
+---> Package lksctp-tools.x86_64 0:1.0.17-2.el7 will be installed
 ---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
 --> Processing Dependency: groff-base for package: perl-Pod-Perldoc-3.20-4.el7.noarch
 --> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
 --> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
 ---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
 ---> Package rh-java-common-PyXB.noarch 0:1.2.4-1.4.el7 will be installed
+---> Package tzdata-java.noarch 0:2017b-1.el7 will be installed
 --> Running transaction check
 ---> Package groff-base.x86_64 0:1.22.2-8.el7 will be installed
 ---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
@@ -326,79 +321,84 @@ Dependencies Resolved
  Package                Arch   Version           Repository                Size
 ================================================================================
 Installing:
- java-1.8.0-oracle      x86_64 1:1.8.0.121-1jpp.1.el7_3
+ java-1.8.0-oracle      x86_64 1:1.8.0.141-1jpp.1.el7_3
                                                  rhel-7-server-thirdparty-oracle-java-rpms
                                                                            34 M
  rh-mongodb26-mongodb-server
                         x86_64 2.6.9-1.el7       rhel-server-rhscl-7-rpms 6.3 M
  unzip                  x86_64 6.0-16.el7        rhel-7-server-rpms       169 k
 Installing for dependencies:
- alsa-lib               x86_64 1.1.1-1.el7       rhel-7-server-rpms       415 k
- atk                    x86_64 2.14.0-1.el7      rhel-7-server-rpms       251 k
- audit-libs-python      x86_64 2.6.5-3.el7       rhel-7-server-rpms        70 k
+ alsa-lib               x86_64 1.1.3-3.el7       rhel-7-server-rpms       421 k
+ atk                    x86_64 2.22.0-3.el7      rhel-7-server-rpms       259 k
+ audit-libs-python      x86_64 2.7.6-3.el7       rhel-7-server-rpms        73 k
  avahi-libs             x86_64 0.6.31-17.el7     rhel-7-server-rpms        61 k
- boost-filesystem       x86_64 1.53.0-26.el7     rhel-7-server-rpms        68 k
- boost-program-options  x86_64 1.53.0-26.el7     rhel-7-server-rpms       156 k
- boost-system           x86_64 1.53.0-26.el7     rhel-7-server-rpms        40 k
- boost-thread           x86_64 1.53.0-26.el7     rhel-7-server-rpms        57 k
- cairo                  x86_64 1.14.2-1.el7      rhel-7-server-rpms       711 k
+ boost-filesystem       x86_64 1.53.0-27.el7     rhel-7-server-rpms        68 k
+ boost-program-options  x86_64 1.53.0-27.el7     rhel-7-server-rpms       156 k
+ boost-system           x86_64 1.53.0-27.el7     rhel-7-server-rpms        40 k
+ boost-thread           x86_64 1.53.0-27.el7     rhel-7-server-rpms        57 k
+ cairo                  x86_64 1.14.8-2.el7      rhel-7-server-rpms       713 k
  checkpolicy            x86_64 2.5-4.el7         rhel-7-server-rpms       290 k
- copy-jdk-configs       noarch 1.2-1.el7         rhel-7-server-rpms        14 k
- cups-libs              x86_64 1:1.6.3-26.el7    rhel-7-server-rpms       356 k
- desktop-file-utils     x86_64 0.22-1.el7        rhel-7-server-rpms        67 k
- emacs-filesystem       noarch 1:24.3-18.el7     rhel-7-server-rpms        58 k
- fontconfig             x86_64 2.10.95-10.el7    rhel-7-server-rpms       229 k
+ copy-jdk-configs       noarch 2.2-3.el7         rhel-7-server-rpms        19 k
+ cups-libs              x86_64 1:1.6.3-29.el7    rhel-7-server-rpms       356 k
+ desktop-file-utils     x86_64 0.23-1.el7        rhel-7-server-rpms        67 k
+ emacs-filesystem       noarch 1:24.3-20.el7_4   rhel-7-server-rpms        58 k
+ fontconfig             x86_64 2.10.95-11.el7    rhel-7-server-rpms       229 k
  fontpackages-filesystem
                         noarch 1.44-8.el7        rhel-7-server-rpms       9.9 k
- freetype               x86_64 2.4.11-12.el7     rhel-7-server-rpms       391 k
- gdk-pixbuf2            x86_64 2.31.6-3.el7      rhel-7-server-rpms       559 k
- graphite2              x86_64 1.3.6-1.el7_2     rhel-7-server-rpms       112 k
+ freetype               x86_64 2.4.11-15.el7     rhel-7-server-rpms       392 k
+ gdk-pixbuf2            x86_64 2.36.5-1.el7      rhel-7-server-rpms       567 k
+ graphite2              x86_64 1.3.10-1.el7_3    rhel-7-server-rpms       115 k
  groff-base             x86_64 1.22.2-8.el7      rhel-7-server-rpms       942 k
- gtk2                   x86_64 2.24.28-8.el7     rhel-7-server-rpms       3.4 M
- harfbuzz               x86_64 0.9.36-1.el7      rhel-7-server-rpms       157 k
+ gtk-update-icon-cache  x86_64 3.22.10-4.el7     rhel-7-server-rpms        28 k
+ gtk2                   x86_64 2.24.31-1.el7     rhel-7-server-rpms       3.4 M
+ harfbuzz               x86_64 1.3.2-1.el7       rhel-7-server-rpms       177 k
  hicolor-icon-theme     noarch 0.12-7.el7        rhel-7-server-rpms        43 k
- hwdata                 x86_64 0.252-8.4.el7     rhel-7-server-rpms       2.1 M
- jasper-libs            x86_64 1.900.1-29.el7    rhel-7-server-rpms       149 k
+ hwdata                 x86_64 0.252-8.6.el7     rhel-7-server-rpms       2.2 M
+ jasper-libs            x86_64 1.900.1-31.el7    rhel-7-server-rpms       150 k
+ java-1.8.0-openjdk-headless
+                        x86_64 1:1.8.0.144-0.b01.el7_4
+                                                 rhel-7-server-rpms        32 M
  javapackages-tools     noarch 3.4.1-11.el7      rhel-7-server-rpms        73 k
  jbigkit-libs           x86_64 2.0-11.el7        rhel-7-server-rpms        46 k
- libX11                 x86_64 1.6.3-3.el7       rhel-7-server-rpms       606 k
- libX11-common          noarch 1.6.3-3.el7       rhel-7-server-rpms       162 k
+ libX11                 x86_64 1.6.5-1.el7       rhel-7-server-rpms       606 k
+ libX11-common          noarch 1.6.5-1.el7       rhel-7-server-rpms       164 k
  libXau                 x86_64 1.0.8-2.1.el7     rhel-7-server-rpms        29 k
  libXcomposite          x86_64 0.4.4-4.1.el7     rhel-7-server-rpms        22 k
- libXcursor             x86_64 1.1.14-2.1.el7    rhel-7-server-rpms        30 k
+ libXcursor             x86_64 1.1.14-8.el7      rhel-7-server-rpms        30 k
  libXdamage             x86_64 1.1.4-4.1.el7     rhel-7-server-rpms        20 k
  libXext                x86_64 1.3.3-3.el7       rhel-7-server-rpms        39 k
- libXfixes              x86_64 5.0.1-2.1.el7     rhel-7-server-rpms        18 k
+ libXfixes              x86_64 5.0.3-1.el7       rhel-7-server-rpms        18 k
  libXft                 x86_64 2.3.2-2.el7       rhel-7-server-rpms        58 k
- libXi                  x86_64 1.7.4-2.el7       rhel-7-server-rpms        40 k
+ libXi                  x86_64 1.7.9-1.el7       rhel-7-server-rpms        40 k
  libXinerama            x86_64 1.1.3-2.1.el7     rhel-7-server-rpms        14 k
- libXrandr              x86_64 1.4.2-2.el7       rhel-7-server-rpms        26 k
- libXrender             x86_64 0.9.8-2.1.el7     rhel-7-server-rpms        26 k
- libXtst                x86_64 1.2.2-2.1.el7     rhel-7-server-rpms        20 k
- libXxf86vm             x86_64 1.1.3-2.1.el7     rhel-7-server-rpms        18 k
- libcgroup              x86_64 0.41-11.el7       rhel-7-server-rpms        65 k
- libdrm                 x86_64 2.4.67-3.el7      rhel-7-server-rpms       141 k
+ libXrandr              x86_64 1.5.1-2.el7       rhel-7-server-rpms        27 k
+ libXrender             x86_64 0.9.10-1.el7      rhel-7-server-rpms        26 k
+ libXtst                x86_64 1.2.3-1.el7       rhel-7-server-rpms        20 k
+ libXxf86vm             x86_64 1.1.4-1.el7       rhel-7-server-rpms        18 k
+ libcgroup              x86_64 0.41-13.el7       rhel-7-server-rpms        65 k
+ libdrm                 x86_64 2.4.74-1.el7      rhel-7-server-rpms       146 k
  libjpeg-turbo          x86_64 1.2.90-5.el7      rhel-7-server-rpms       134 k
  libpciaccess           x86_64 0.13.4-3.el7_3    rhel-7-server-rpms        26 k
  libpng                 x86_64 2:1.5.13-7.el7_2  rhel-7-server-rpms       213 k
- libselinux-python      x86_64 2.5-6.el7         rhel-7-server-rpms       234 k
- libselinux-utils       x86_64 2.5-6.el7         rhel-7-server-rpms       151 k
- libsemanage-python     x86_64 2.5-5.1.el7_3     rhel-7-server-rpms       104 k
+ libselinux-python      x86_64 2.5-11.el7        rhel-7-server-rpms       234 k
+ libselinux-utils       x86_64 2.5-11.el7        rhel-7-server-rpms       151 k
+ libsemanage-python     x86_64 2.5-8.el7         rhel-7-server-rpms       104 k
  libthai                x86_64 0.1.14-9.el7      rhel-7-server-rpms       187 k
  libtiff                x86_64 4.0.3-27.el7_3    rhel-7-server-rpms       170 k
- libxcb                 x86_64 1.11-4.el7        rhel-7-server-rpms       189 k
+ libxcb                 x86_64 1.12-1.el7        rhel-7-server-rpms       211 k
  libxshmfence           x86_64 1.2-1.el7         rhel-7-server-rpms       7.1 k
  libxslt                x86_64 1.1.28-5.el7      rhel-7-server-rpms       242 k
- mesa-libEGL            x86_64 11.2.2-2.20160614.el7
-                                                 rhel-7-server-rpms        85 k
- mesa-libGL             x86_64 11.2.2-2.20160614.el7
-                                                 rhel-7-server-rpms       162 k
- mesa-libgbm            x86_64 11.2.2-2.20160614.el7
-                                                 rhel-7-server-rpms        42 k
- mesa-libglapi          x86_64 11.2.2-2.20160614.el7
-                                                 rhel-7-server-rpms        40 k
- pango                  x86_64 1.36.8-2.el7      rhel-7-server-rpms       287 k
- perl                   x86_64 4:5.16.3-291.el7  rhel-7-server-rpms       8.0 M
+ lksctp-tools           x86_64 1.0.17-2.el7      rhel-7-server-rpms        88 k
+ mesa-libEGL            x86_64 17.0.1-6.20170307.el7
+                                                 rhel-7-server-rpms        82 k
+ mesa-libGL             x86_64 17.0.1-6.20170307.el7
+                                                 rhel-7-server-rpms       155 k
+ mesa-libgbm            x86_64 17.0.1-6.20170307.el7
+                                                 rhel-7-server-rpms        32 k
+ mesa-libglapi          x86_64 17.0.1-6.20170307.el7
+                                                 rhel-7-server-rpms        41 k
+ pango                  x86_64 1.40.4-1.el7      rhel-7-server-rpms       275 k
+ perl                   x86_64 4:5.16.3-292.el7  rhel-7-server-rpms       8.0 M
  perl-Carp              noarch 1.26-244.el7      rhel-7-server-rpms        19 k
  perl-Encode            x86_64 2.51-7.el7        rhel-7-server-rpms       1.5 M
  perl-Exporter          noarch 5.68-3.el7        rhel-7-server-rpms        28 k
@@ -408,7 +408,7 @@ Installing for dependencies:
  perl-Getopt-Long       noarch 2.40-2.el7        rhel-7-server-rpms        56 k
  perl-HTTP-Tiny         noarch 0.033-3.el7       rhel-7-server-rpms        38 k
  perl-PathTools         x86_64 3.40-5.el7        rhel-7-server-rpms        83 k
- perl-Pod-Escapes       noarch 1:1.04-291.el7    rhel-7-server-rpms        51 k
+ perl-Pod-Escapes       noarch 1:1.04-292.el7    rhel-7-server-rpms        51 k
  perl-Pod-Perldoc       noarch 3.20-4.el7        rhel-7-server-rpms        87 k
  perl-Pod-Simple        noarch 1:3.28-4.el7      rhel-7-server-rpms       216 k
  perl-Pod-Usage         noarch 1.63-3.el7        rhel-7-server-rpms        27 k
@@ -419,23 +419,23 @@ Installing for dependencies:
  perl-Time-HiRes        x86_64 4:1.9725-3.el7    rhel-7-server-rpms        45 k
  perl-Time-Local        noarch 1.2300-2.el7      rhel-7-server-rpms        24 k
  perl-constant          noarch 1.27-2.el7        rhel-7-server-rpms        19 k
- perl-libs              x86_64 4:5.16.3-291.el7  rhel-7-server-rpms       688 k
- perl-macros            x86_64 4:5.16.3-291.el7  rhel-7-server-rpms        43 k
+ perl-libs              x86_64 4:5.16.3-292.el7  rhel-7-server-rpms       688 k
+ perl-macros            x86_64 4:5.16.3-292.el7  rhel-7-server-rpms        43 k
  perl-parent            noarch 1:0.225-244.el7   rhel-7-server-rpms        12 k
  perl-podlators         noarch 2.5.1-3.el7       rhel-7-server-rpms       112 k
  perl-threads           x86_64 1.87-4.el7        rhel-7-server-rpms        49 k
  perl-threads-shared    x86_64 1.43-6.el7        rhel-7-server-rpms        39 k
  pixman                 x86_64 0.34.0-1.el7      rhel-7-server-rpms       248 k
- policycoreutils        x86_64 2.5-11.el7_3      rhel-7-server-rpms       842 k
- policycoreutils-python x86_64 2.5-11.el7_3      rhel-7-server-rpms       445 k
+ policycoreutils        x86_64 2.5-17.1.el7      rhel-7-server-rpms       858 k
+ policycoreutils-python x86_64 2.5-17.1.el7      rhel-7-server-rpms       446 k
  python-IPy             noarch 0.75-6.el7        rhel-7-server-rpms        32 k
  python-javapackages    noarch 3.4.1-11.el7      rhel-7-server-rpms        31 k
  python-lxml            x86_64 3.2.1-4.el7       rhel-7-server-rpms       758 k
  rh-java-common-PyXB    noarch 1.2.4-1.4.el7     rhel-server-rhscl-7-rpms 506 k
  rh-java-common-javapackages-tools
-                        noarch 4.3.2-1.11.el7    rhel-server-rhscl-7-rpms  95 k
+                        noarch 4.3.2-1.14.el7    rhel-server-rhscl-7-rpms  95 k
  rh-java-common-python-javapackages
-                        noarch 4.3.2-1.11.el7    rhel-server-rhscl-7-rpms  86 k
+                        noarch 4.3.2-1.14.el7    rhel-server-rhscl-7-rpms  87 k
  rh-java-common-runtime x86_64 1.1-47.el7        rhel-server-rhscl-7-rpms  31 k
  rh-mongodb26-gperftools-libs
                         x86_64 2.2.1-4.el7       rhel-server-rhscl-7-rpms 278 k
@@ -444,328 +444,343 @@ Installing for dependencies:
  rh-mongodb26-libunwind x86_64 1.1-4.el7         rhel-server-rhscl-7-rpms  62 k
  rh-mongodb26-runtime   x86_64 2.0-19.el7        rhel-server-rhscl-7-rpms 1.2 M
  rh-mongodb26-yaml-cpp  x86_64 0.5.1-9.el7       rhel-server-rhscl-7-rpms 177 k
- scl-utils              x86_64 20130529-17.el7_1 rhel-7-server-rpms        24 k
+ scl-utils              x86_64 20130529-18.el7_4 rhel-7-server-rpms        24 k
  setools-libs           x86_64 3.3.8-1.1.el7     rhel-7-server-rpms       610 k
  snappy                 x86_64 1.1.0-3.el7       rhel-7-server-rpms        40 k
+ stix-fonts             noarch 1.1.0-5.el7       rhel-7-server-rpms       1.3 M
+ tzdata-java            noarch 2017b-1.el7       rhel-7-server-rpms       182 k
  v8314-runtime          x86_64 2.1-1.el7         rhel-server-rhscl-7-rpms 1.1 M
  v8314-v8               x86_64 1:3.14.5.10-9.el7 rhel-server-rhscl-7-rpms 1.6 M
 
 Transaction Summary
 ================================================================================
-Install  3 Packages (+107 Dependent packages)
+Install  3 Packages (+112 Dependent packages)
 
-Total download size: 74 M
-Installed size: 237 M
+Total download size: 108 M
+Installed size: 343 M
 Downloading packages:
-[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/atk-2.14.0-1.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
-[0mPublic key for atk-2.14.0-1.el7.x86_64.rpm is not installed
-Public key for java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64.rpm is not installed
-Public key for rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarch.rpm is not installed
+[91mwarning: /var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages/alsa-lib-1.1.3-3.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID fd431d51: NOKEY
+[0mPublic key for alsa-lib-1.1.3-3.el7.x86_64.rpm is not installed
+Public key for rh-java-common-javapackages-tools-4.3.2-1.14.el7.noarch.rpm is not installed
+Public key for java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              3.2 MB/s |  74 MB  00:22     
+Total                                              618 kB/s | 108 MB  02:58     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [91mImporting GPG key 0xFD431D51:
  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
  Fingerprint: 567e 347a d004 4ade 55ba 8a5f 199e 2f91 fd43 1d51
- Package    : redhat-release-server-7.3-7.el7.x86_64 (@anaconda/7.3)
+ Package    : redhat-release-server-7.4-18.el7.x86_64 (@anaconda/7.4)
  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [0m[91mImporting GPG key 0x2FA658E0:
  Userid     : "Red Hat, Inc. (auxiliary key) <security@redhat.com>"
  Fingerprint: 43a6 e49c 4a38 f4be 9abf 2a53 4568 9c88 2fa6 58e0
- Package    : redhat-release-server-7.3-7.el7.x86_64 (@anaconda/7.3)
+ Package    : redhat-release-server-7.4-18.el7.x86_64 (@anaconda/7.4)
  From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [0mRunning transaction check
 Running transaction test
 Transaction test succeeded
 Running transaction
-  Installing : freetype-2.4.11-12.el7.x86_64                              1/110 
-  Installing : scl-utils-20130529-17.el7_1.x86_64                         2/110 
-  Installing : boost-system-1.53.0-26.el7.x86_64                          3/110 
-  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          4/110 
-  Installing : v8314-runtime-2.1-1.el7.x86_64                             5/110 
-  Installing : libselinux-utils-2.5-6.el7.x86_64                          6/110 
-  Installing : libxshmfence-1.2-1.el7.x86_64                              7/110 
-  Installing : libxslt-1.1.28-5.el7.x86_64                                8/110 
-  Installing : python-lxml-3.2.1-4.el7.x86_64                             9/110 
-  Installing : atk-2.14.0-1.el7.x86_64                                   10/110 
-  Installing : mesa-libglapi-11.2.2-2.20160614.el7.x86_64                11/110 
-  Installing : 2:libpng-1.5.13-7.el7_2.x86_64                            12/110 
-  Installing : python-javapackages-3.4.1-11.el7.noarch                   13/110 
-  Installing : javapackages-tools-3.4.1-11.el7.noarch                    14/110 
-  Installing : policycoreutils-2.5-11.el7_3.x86_64                       15/110 
-  Installing : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         16/110 
-  Installing : jasper-libs-1.900.1-29.el7.x86_64                         17/110 
-  Installing : boost-thread-1.53.0-26.el7.x86_64                         18/110 
-  Installing : boost-filesystem-1.53.0-26.el7.x86_64                     19/110 
-  Installing : setools-libs-3.3.8-1.1.el7.x86_64                         20/110 
-  Installing : boost-program-options-1.53.0-26.el7.x86_64                21/110 
-  Installing : libsemanage-python-2.5-5.1.el7_3.x86_64                   22/110 
-  Installing : jbigkit-libs-2.0-11.el7.x86_64                            23/110 
-  Installing : libtiff-4.0.3-27.el7_3.x86_64                             24/110 
-  Installing : 1:emacs-filesystem-24.3-18.el7.noarch                     25/110 
-  Installing : desktop-file-utils-0.22-1.el7.x86_64                      26/110 
-  Installing : copy-jdk-configs-1.2-1.el7.noarch                         27/110 
-  Installing : libthai-0.1.14-9.el7.x86_64                               28/110 
-  Installing : snappy-1.1.0-3.el7.x86_64                                 29/110 
-  Installing : hicolor-icon-theme-0.12-7.el7.noarch                      30/110 
-  Installing : fontpackages-filesystem-1.44-8.el7.noarch                 31/110 
-  Installing : fontconfig-2.10.95-10.el7.x86_64                          32/110 
-  Installing : libselinux-python-2.5-6.el7.x86_64                        33/110 
-  Installing : hwdata-0.252-8.4.el7.x86_64                               34/110 
-  Installing : libpciaccess-0.13.4-3.el7_3.x86_64                        35/110 
-  Installing : libdrm-2.4.67-3.el7.x86_64                                36/110 
-  Installing : mesa-libgbm-11.2.2-2.20160614.el7.x86_64                  37/110 
-  Installing : libX11-common-1.6.3-3.el7.noarch                          38/110 
-  Installing : graphite2-1.3.6-1.el7_2.x86_64                            39/110 
-  Installing : harfbuzz-0.9.36-1.el7.x86_64                              40/110 
-  Installing : pixman-0.34.0-1.el7.x86_64                                41/110 
-  Installing : audit-libs-python-2.6.5-3.el7.x86_64                      42/110 
-  Installing : python-IPy-0.75-6.el7.noarch                              43/110 
-  Installing : avahi-libs-0.6.31-17.el7.x86_64                           44/110 
-  Installing : 1:cups-libs-1.6.3-26.el7.x86_64                           45/110 
-  Installing : alsa-lib-1.1.1-1.el7.x86_64                               46/110 
-  Installing : checkpolicy-2.5-4.el7.x86_64                              47/110 
-  Installing : libcgroup-0.41-11.el7.x86_64                              48/110 
-  Installing : policycoreutils-python-2.5-11.el7_3.x86_64                49/110 
-  Installing : libXau-1.0.8-2.1.el7.x86_64                               50/110 
-  Installing : libxcb-1.11-4.el7.x86_64                                  51/110 
-  Installing : libX11-1.6.3-3.el7.x86_64                                 52/110 
-  Installing : libXext-1.3.3-3.el7.x86_64                                53/110 
-  Installing : libXrender-0.9.8-2.1.el7.x86_64                           54/110 
-  Installing : libXfixes-5.0.1-2.1.el7.x86_64                            55/110 
-  Installing : libXi-1.7.4-2.el7.x86_64                                  56/110 
-  Installing : libXdamage-1.1.4-4.1.el7.x86_64                           57/110 
-  Installing : libXxf86vm-1.1.3-2.1.el7.x86_64                           58/110 
-  Installing : mesa-libGL-11.2.2-2.20160614.el7.x86_64                   59/110 
-  Installing : gdk-pixbuf2-2.31.6-3.el7.x86_64                           60/110 
-  Installing : libXtst-1.2.2-2.1.el7.x86_64                              61/110 
-  Installing : libXcursor-1.1.14-2.1.el7.x86_64                          62/110 
-  Installing : libXrandr-1.4.2-2.el7.x86_64                              63/110 
-  Installing : libXft-2.3.2-2.el7.x86_64                                 64/110 
-  Installing : libXinerama-1.1.3-2.1.el7.x86_64                          65/110 
-  Installing : libXcomposite-0.4.4-4.1.el7.x86_64                        66/110 
-  Installing : mesa-libEGL-11.2.2-2.20160614.el7.x86_64                  67/110 
-  Installing : cairo-1.14.2-1.el7.x86_64                                 68/110 
-  Installing : pango-1.36.8-2.el7.x86_64                                 69/110 
-  Installing : gtk2-2.24.28-8.el7.x86_64                                 70/110 
-  Installing : groff-base-1.22.2-8.el7.x86_64                            71/110 
-  Installing : 1:perl-parent-0.225-244.el7.noarch                        72/110 
-  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                         73/110 
-  Installing : perl-podlators-2.5.1-3.el7.noarch                         74/110 
-  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                        75/110 
-  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                    76/110 
-  Installing : perl-Encode-2.51-7.el7.x86_64                             77/110 
-  Installing : 1:perl-Pod-Escapes-1.04-291.el7.noarch                    78/110 
-  Installing : perl-Pod-Usage-1.63-3.el7.noarch                          79/110 
-  Installing : 4:perl-macros-5.16.3-291.el7.x86_64                       80/110 
-  Installing : 4:perl-libs-5.16.3-291.el7.x86_64                         81/110 
-  Installing : perl-Socket-2.010-4.el7.x86_64                            82/110 
-  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     83/110 
-  Installing : perl-threads-1.87-4.el7.x86_64                            84/110 
-  Installing : perl-Storable-2.45-3.el7.x86_64                           85/110 
-  Installing : perl-Carp-1.26-244.el7.noarch                             86/110 
-  Installing : perl-Filter-1.49-3.el7.x86_64                             87/110 
-  Installing : perl-Exporter-5.68-3.el7.noarch                           88/110 
-  Installing : perl-constant-1.27-2.el7.noarch                           89/110 
-  Installing : perl-Time-Local-1.2300-2.el7.noarch                       90/110 
-  Installing : perl-threads-shared-1.43-6.el7.x86_64                     91/110 
-  Installing : perl-File-Temp-0.23.01-3.el7.noarch                       92/110 
-  Installing : perl-File-Path-2.09-2.el7.noarch                          93/110 
-  Installing : perl-PathTools-3.40-5.el7.x86_64                          94/110 
-  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                95/110 
-  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                       96/110 
-  Installing : perl-Getopt-Long-2.40-2.el7.noarch                        97/110 
-  Installing : 4:perl-5.16.3-291.el7.x86_64                              98/110 
-  Installing : 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64         99/110 
-  Installing : rh-java-common-python-javapackages-4.3.2-1.11.el7.noar   100/110 
-  Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                 101/110 
-  Installing : rh-java-common-runtime-1.1-47.el7.x86_64                 102/110 
-  Installing : rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarc   103/110 
-  Installing : rh-mongodb26-runtime-2.0-19.el7.x86_64                   104/110 
-  Installing : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64            105/110 
-  Installing : rh-mongodb26-libunwind-1.1-4.el7.x86_64                  106/110 
-  Installing : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64          107/110 
-  Installing : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                 108/110 
-  Installing : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64           109/110 
-  Installing : unzip-6.0-16.el7.x86_64                                  110/110 
-  Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/110 
-  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                          2/110 
-  Verifying  : libdrm-2.4.67-3.el7.x86_64                                 3/110 
-  Verifying  : rh-java-common-python-javapackages-4.3.2-1.11.el7.noar     4/110 
-  Verifying  : libXtst-1.2.2-2.1.el7.x86_64                               5/110 
-  Verifying  : python-lxml-3.2.1-4.el7.x86_64                             6/110 
-  Verifying  : mesa-libgbm-11.2.2-2.20160614.el7.x86_64                   7/110 
-  Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                             8/110 
-  Verifying  : policycoreutils-python-2.5-11.el7_3.x86_64                 9/110 
-  Verifying  : desktop-file-utils-0.22-1.el7.x86_64                      10/110 
-  Verifying  : python-javapackages-3.4.1-11.el7.noarch                   11/110 
-  Verifying  : groff-base-1.22.2-8.el7.x86_64                            12/110 
-  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                       13/110 
-  Verifying  : libXcomposite-0.4.4-4.1.el7.x86_64                        14/110 
-  Verifying  : mesa-libglapi-11.2.2-2.20160614.el7.x86_64                15/110 
-  Verifying  : perl-Socket-2.010-4.el7.x86_64                            16/110 
-  Verifying  : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64            17/110 
-  Verifying  : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  18/110 
-  Verifying  : 4:perl-macros-5.16.3-291.el7.x86_64                       19/110 
-  Verifying  : libXau-1.0.8-2.1.el7.x86_64                               20/110 
-  Verifying  : perl-File-Path-2.09-2.el7.noarch                          21/110 
-  Verifying  : libX11-1.6.3-3.el7.x86_64                                 22/110 
-  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    23/110 
-  Verifying  : libcgroup-0.41-11.el7.x86_64                              24/110 
-  Verifying  : checkpolicy-2.5-4.el7.x86_64                              25/110 
-  Verifying  : alsa-lib-1.1.1-1.el7.x86_64                               26/110 
-  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     27/110 
-  Verifying  : libxcb-1.11-4.el7.x86_64                                  28/110 
-  Verifying  : avahi-libs-0.6.31-17.el7.x86_64                           29/110 
-  Verifying  : unzip-6.0-16.el7.x86_64                                   30/110 
-  Verifying  : mesa-libGL-11.2.2-2.20160614.el7.x86_64                   31/110 
-  Verifying  : libpciaccess-0.13.4-3.el7_3.x86_64                        32/110 
-  Verifying  : python-IPy-0.75-6.el7.noarch                              33/110 
-  Verifying  : harfbuzz-0.9.36-1.el7.x86_64                              34/110 
-  Verifying  : audit-libs-python-2.6.5-3.el7.x86_64                      35/110 
-  Verifying  : pixman-0.34.0-1.el7.x86_64                                36/110 
-  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    37/110 
-  Verifying  : 4:perl-libs-5.16.3-291.el7.x86_64                         38/110 
-  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          39/110 
-  Verifying  : libXcursor-1.1.14-2.1.el7.x86_64                          40/110 
-  Verifying  : perl-Encode-2.51-7.el7.x86_64                             41/110 
-  Verifying  : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64           42/110 
-  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             43/110 
-  Verifying  : perl-threads-1.87-4.el7.x86_64                            44/110 
-  Verifying  : graphite2-1.3.6-1.el7_2.x86_64                            45/110 
-  Verifying  : libX11-common-1.6.3-3.el7.noarch                          46/110 
-  Verifying  : hwdata-0.252-8.4.el7.x86_64                               47/110 
-  Verifying  : boost-thread-1.53.0-26.el7.x86_64                         48/110 
-  Verifying  : fontconfig-2.10.95-10.el7.x86_64                          49/110 
-  Verifying  : libtiff-4.0.3-27.el7_3.x86_64                             50/110 
-  Verifying  : rh-java-common-runtime-1.1-47.el7.x86_64                  51/110 
-  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         52/110 
-  Verifying  : gtk2-2.24.28-8.el7.x86_64                                 53/110 
-  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     54/110 
-  Verifying  : perl-Storable-2.45-3.el7.x86_64                           55/110 
-  Verifying  : libselinux-python-2.5-6.el7.x86_64                        56/110 
-  Verifying  : libXxf86vm-1.1.3-2.1.el7.x86_64                           57/110 
-  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            58/110 
-  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 59/110 
-  Verifying  : gdk-pixbuf2-2.31.6-3.el7.x86_64                           60/110 
-  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      61/110 
-  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   62/110 
-  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        63/110 
-  Verifying  : snappy-1.1.0-3.el7.x86_64                                 64/110 
-  Verifying  : policycoreutils-2.5-11.el7_3.x86_64                       65/110 
-  Verifying  : atk-2.14.0-1.el7.x86_64                                   66/110 
-  Verifying  : libXrender-0.9.8-2.1.el7.x86_64                           67/110 
-  Verifying  : perl-Carp-1.26-244.el7.noarch                             68/110 
-  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         69/110 
-  Verifying  : libxslt-1.1.28-5.el7.x86_64                               70/110 
-  Verifying  : pango-1.36.8-2.el7.x86_64                                 71/110 
-  Verifying  : jasper-libs-1.900.1-29.el7.x86_64                         72/110 
-  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         73/110 
-  Verifying  : 1:java-1.8.0-oracle-1.8.0.121-1jpp.1.el7_3.x86_64         74/110 
-  Verifying  : freetype-2.4.11-12.el7.x86_64                             75/110 
-  Verifying  : libxshmfence-1.2-1.el7.x86_64                             76/110 
-  Verifying  : libXfixes-5.0.1-2.1.el7.x86_64                            77/110 
-  Verifying  : 4:perl-5.16.3-291.el7.x86_64                              78/110 
-  Verifying  : cairo-1.14.2-1.el7.x86_64                                 79/110 
-  Verifying  : perl-Filter-1.49-3.el7.x86_64                             80/110 
-  Verifying  : libXi-1.7.4-2.el7.x86_64                                  81/110 
-  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           82/110 
-  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          83/110 
-  Verifying  : perl-Exporter-5.68-3.el7.noarch                           84/110 
-  Verifying  : perl-constant-1.27-2.el7.noarch                           85/110 
-  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          86/110 
-  Verifying  : 1:perl-Pod-Escapes-1.04-291.el7.noarch                    87/110 
-  Verifying  : libselinux-utils-2.5-6.el7.x86_64                         88/110 
-  Verifying  : libXrandr-1.4.2-2.el7.x86_64                              89/110 
-  Verifying  : rh-mongodb26-runtime-2.0-19.el7.x86_64                    90/110 
-  Verifying  : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                  91/110 
-  Verifying  : 1:cups-libs-1.6.3-26.el7.x86_64                           92/110 
-  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                       93/110 
-  Verifying  : libthai-0.1.14-9.el7.x86_64                               94/110 
-  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                       95/110 
-  Verifying  : libXft-2.3.2-2.el7.x86_64                                 96/110 
-  Verifying  : rh-java-common-javapackages-tools-4.3.2-1.11.el7.noarc    97/110 
-  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                        98/110 
-  Verifying  : copy-jdk-configs-1.2-1.el7.noarch                         99/110 
-  Verifying  : 1:emacs-filesystem-24.3-18.el7.noarch                    100/110 
-  Verifying  : boost-system-1.53.0-26.el7.x86_64                        101/110 
-  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64               102/110 
-  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           103/110 
-  Verifying  : mesa-libEGL-11.2.2-2.20160614.el7.x86_64                 104/110 
-  Verifying  : perl-Getopt-Long-2.40-2.el7.noarch                       105/110 
-  Verifying  : libsemanage-python-2.5-5.1.el7_3.x86_64                  106/110 
-  Verifying  : boost-filesystem-1.53.0-26.el7.x86_64                    107/110 
-  Verifying  : boost-program-options-1.53.0-26.el7.x86_64               108/110 
-  Verifying  : scl-utils-20130529-17.el7_1.x86_64                       109/110 
-  Verifying  : setools-libs-3.3.8-1.1.el7.x86_64                        110/110 
+  Installing : freetype-2.4.11-15.el7.x86_64                              1/115 
+  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          2/115 
+  Installing : boost-system-1.53.0-27.el7.x86_64                          3/115 
+  Installing : scl-utils-20130529-18.el7_4.x86_64                         4/115 
+  Installing : v8314-runtime-2.1-1.el7.x86_64                             5/115 
+  Installing : atk-2.22.0-3.el7.x86_64                                    6/115 
+  Installing : libselinux-utils-2.5-11.el7.x86_64                         7/115 
+  Installing : libxshmfence-1.2-1.el7.x86_64                              8/115 
+  Installing : libxslt-1.1.28-5.el7.x86_64                                9/115 
+  Installing : python-lxml-3.2.1-4.el7.x86_64                            10/115 
+  Installing : fontpackages-filesystem-1.44-8.el7.noarch                 11/115 
+  Installing : copy-jdk-configs-2.2-3.el7.noarch                         12/115 
+  Installing : mesa-libglapi-17.0.1-6.20170307.el7.x86_64                13/115 
+  Installing : 2:libpng-1.5.13-7.el7_2.x86_64                            14/115 
+  Installing : stix-fonts-1.1.0-5.el7.noarch                             15/115 
+  Installing : fontconfig-2.10.95-11.el7.x86_64                          16/115 
+  Installing : python-javapackages-3.4.1-11.el7.noarch                   17/115 
+  Installing : javapackages-tools-3.4.1-11.el7.noarch                    18/115 
+  Installing : policycoreutils-2.5-17.1.el7.x86_64                       19/115 
+  Installing : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         20/115 
+  Installing : boost-thread-1.53.0-27.el7.x86_64                         21/115 
+  Installing : boost-filesystem-1.53.0-27.el7.x86_64                     22/115 
+  Installing : jasper-libs-1.900.1-31.el7.x86_64                         23/115 
+  Installing : setools-libs-3.3.8-1.1.el7.x86_64                         24/115 
+  Installing : hwdata-0.252-8.6.el7.x86_64                               25/115 
+  Installing : libpciaccess-0.13.4-3.el7_3.x86_64                        26/115 
+  Installing : libdrm-2.4.74-1.el7.x86_64                                27/115 
+  Installing : mesa-libgbm-17.0.1-6.20170307.el7.x86_64                  28/115 
+  Installing : jbigkit-libs-2.0-11.el7.x86_64                            29/115 
+  Installing : libtiff-4.0.3-27.el7_3.x86_64                             30/115 
+  Installing : libthai-0.1.14-9.el7.x86_64                               31/115 
+  Installing : graphite2-1.3.10-1.el7_3.x86_64                           32/115 
+  Installing : harfbuzz-1.3.2-1.el7.x86_64                               33/115 
+  Installing : libX11-common-1.6.5-1.el7.noarch                          34/115 
+  Installing : tzdata-java-2017b-1.el7.noarch                            35/115 
+  Installing : boost-program-options-1.53.0-27.el7.x86_64                36/115 
+  Installing : snappy-1.1.0-3.el7.x86_64                                 37/115 
+  Installing : hicolor-icon-theme-0.12-7.el7.noarch                      38/115 
+  Installing : libselinux-python-2.5-11.el7.x86_64                       39/115 
+  Installing : alsa-lib-1.1.3-3.el7.x86_64                               40/115 
+  Installing : pixman-0.34.0-1.el7.x86_64                                41/115 
+  Installing : python-IPy-0.75-6.el7.noarch                              42/115 
+  Installing : avahi-libs-0.6.31-17.el7.x86_64                           43/115 
+  Installing : 1:cups-libs-1.6.3-29.el7.x86_64                           44/115 
+  Installing : checkpolicy-2.5-4.el7.x86_64                              45/115 
+  Installing : audit-libs-python-2.7.6-3.el7.x86_64                      46/115 
+  Installing : libXau-1.0.8-2.1.el7.x86_64                               47/115 
+  Installing : libxcb-1.12-1.el7.x86_64                                  48/115 
+  Installing : libX11-1.6.5-1.el7.x86_64                                 49/115 
+  Installing : libXext-1.3.3-3.el7.x86_64                                50/115 
+  Installing : libXrender-0.9.10-1.el7.x86_64                            51/115 
+  Installing : libXfixes-5.0.3-1.el7.x86_64                              52/115 
+  Installing : libXi-1.7.9-1.el7.x86_64                                  53/115 
+  Installing : gdk-pixbuf2-2.36.5-1.el7.x86_64                           54/115 
+  Installing : libXdamage-1.1.4-4.1.el7.x86_64                           55/115 
+  Installing : libXxf86vm-1.1.4-1.el7.x86_64                             56/115 
+  Installing : mesa-libGL-17.0.1-6.20170307.el7.x86_64                   57/115 
+  Installing : gtk-update-icon-cache-3.22.10-4.el7.x86_64                58/115 
+  Installing : libXtst-1.2.3-1.el7.x86_64                                59/115 
+  Installing : libXcursor-1.1.14-8.el7.x86_64                            60/115 
+  Installing : libXrandr-1.5.1-2.el7.x86_64                              61/115 
+  Installing : libXft-2.3.2-2.el7.x86_64                                 62/115 
+  Installing : libXinerama-1.1.3-2.1.el7.x86_64                          63/115 
+  Installing : libXcomposite-0.4.4-4.1.el7.x86_64                        64/115 
+  Installing : mesa-libEGL-17.0.1-6.20170307.el7.x86_64                  65/115 
+  Installing : cairo-1.14.8-2.el7.x86_64                                 66/115 
+  Installing : pango-1.40.4-1.el7.x86_64                                 67/115 
+  Installing : gtk2-2.24.31-1.el7.x86_64                                 68/115 
+  Installing : 1:emacs-filesystem-24.3-20.el7_4.noarch                   69/115 
+  Installing : desktop-file-utils-0.23-1.el7.x86_64                      70/115 
+  Installing : libsemanage-python-2.5-8.el7.x86_64                       71/115 
+  Installing : lksctp-tools-1.0.17-2.el7.x86_64                          72/115 
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.144-0.b01.el7_4.x8    73/115 
+  Installing : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  74/115 
+  Installing : rh-java-common-javapackages-tools-4.3.2-1.14.el7.noarc    75/115 
+  Installing : rh-java-common-runtime-1.1-47.el7.x86_64                  76/115 
+  Installing : rh-java-common-python-javapackages-4.3.2-1.14.el7.noar    77/115 
+  Installing : libcgroup-0.41-13.el7.x86_64                              78/115 
+  Installing : policycoreutils-python-2.5-17.1.el7.x86_64                79/115 
+  Installing : rh-mongodb26-runtime-2.0-19.el7.x86_64                    80/115 
+  Installing : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             81/115 
+  Installing : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   82/115 
+  Installing : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64           83/115 
+  Installing : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                  84/115 
+  Installing : groff-base-1.22.2-8.el7.x86_64                            85/115 
+  Installing : 1:perl-parent-0.225-244.el7.noarch                        86/115 
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                         87/115 
+  Installing : perl-podlators-2.5.1-3.el7.noarch                         88/115 
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                        89/115 
+  Installing : 1:perl-Pod-Escapes-1.04-292.el7.noarch                    90/115 
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                    91/115 
+  Installing : perl-Encode-2.51-7.el7.x86_64                             92/115 
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                          93/115 
+  Installing : 4:perl-libs-5.16.3-292.el7.x86_64                         94/115 
+  Installing : 4:perl-macros-5.16.3-292.el7.x86_64                       95/115 
+  Installing : perl-Socket-2.010-4.el7.x86_64                            96/115 
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     97/115 
+  Installing : perl-threads-1.87-4.el7.x86_64                            98/115 
+  Installing : perl-Storable-2.45-3.el7.x86_64                           99/115 
+  Installing : perl-Carp-1.26-244.el7.noarch                            100/115 
+  Installing : perl-Filter-1.49-3.el7.x86_64                            101/115 
+  Installing : perl-Exporter-5.68-3.el7.noarch                          102/115 
+  Installing : perl-constant-1.27-2.el7.noarch                          103/115 
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                      104/115 
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                    105/115 
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                      106/115 
+  Installing : perl-File-Path-2.09-2.el7.noarch                         107/115 
+  Installing : perl-PathTools-3.40-5.el7.x86_64                         108/115 
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64               109/115 
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                      110/115 
+  Installing : perl-Getopt-Long-2.40-2.el7.noarch                       111/115 
+  Installing : 4:perl-5.16.3-292.el7.x86_64                             112/115 
+  Installing : 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64        113/115 
+  Installing : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64           114/115 
+  Installing : unzip-6.0-16.el7.x86_64                                  115/115 
+  Verifying  : libXext-1.3.3-3.el7.x86_64                                 1/115 
+  Verifying  : scl-utils-20130529-18.el7_4.x86_64                         2/115 
+  Verifying  : libXi-1.7.9-1.el7.x86_64                                   3/115 
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                          4/115 
+  Verifying  : rh-java-common-javapackages-tools-4.3.2-1.14.el7.noarc     5/115 
+  Verifying  : libXrender-0.9.10-1.el7.x86_64                             6/115 
+  Verifying  : 1:cups-libs-1.6.3-29.el7.x86_64                            7/115 
+  Verifying  : python-lxml-3.2.1-4.el7.x86_64                             8/115 
+  Verifying  : 2:libpng-1.5.13-7.el7_2.x86_64                             9/115 
+  Verifying  : 4:perl-5.16.3-292.el7.x86_64                              10/115 
+  Verifying  : python-javapackages-3.4.1-11.el7.noarch                   11/115 
+  Verifying  : groff-base-1.22.2-8.el7.x86_64                            12/115 
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                       13/115 
+  Verifying  : libXcomposite-0.4.4-4.1.el7.x86_64                        14/115 
+  Verifying  : libcgroup-0.41-13.el7.x86_64                              15/115 
+  Verifying  : boost-thread-1.53.0-27.el7.x86_64                         16/115 
+  Verifying  : desktop-file-utils-0.23-1.el7.x86_64                      17/115 
+  Verifying  : lksctp-tools-1.0.17-2.el7.x86_64                          18/115 
+  Verifying  : perl-Socket-2.010-4.el7.x86_64                            19/115 
+  Verifying  : rh-mongodb26-mongodb-server-2.6.9-1.el7.x86_64            20/115 
+  Verifying  : libsemanage-python-2.5-8.el7.x86_64                       21/115 
+  Verifying  : pango-1.40.4-1.el7.x86_64                                 22/115 
+  Verifying  : rh-java-common-PyXB-1.2.4-1.4.el7.noarch                  23/115 
+  Verifying  : mesa-libglapi-17.0.1-6.20170307.el7.x86_64                24/115 
+  Verifying  : 1:perl-Pod-Escapes-1.04-292.el7.noarch                    25/115 
+  Verifying  : 1:emacs-filesystem-24.3-20.el7_4.noarch                   26/115 
+  Verifying  : libXau-1.0.8-2.1.el7.x86_64                               27/115 
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                          28/115 
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                    29/115 
+  Verifying  : libdrm-2.4.74-1.el7.x86_64                                30/115 
+  Verifying  : audit-libs-python-2.7.6-3.el7.x86_64                      31/115 
+  Verifying  : checkpolicy-2.5-4.el7.x86_64                              32/115 
+  Verifying  : libX11-1.6.5-1.el7.x86_64                                 33/115 
+  Verifying  : boost-system-1.53.0-27.el7.x86_64                         34/115 
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                     35/115 
+  Verifying  : harfbuzz-1.3.2-1.el7.x86_64                               36/115 
+  Verifying  : avahi-libs-0.6.31-17.el7.x86_64                           37/115 
+  Verifying  : unzip-6.0-16.el7.x86_64                                   38/115 
+  Verifying  : mesa-libgbm-17.0.1-6.20170307.el7.x86_64                  39/115 
+  Verifying  : 1:java-1.8.0-oracle-1.8.0.141-1jpp.1.el7_3.x86_64         40/115 
+  Verifying  : stix-fonts-1.1.0-5.el7.noarch                             41/115 
+  Verifying  : libpciaccess-0.13.4-3.el7_3.x86_64                        42/115 
+  Verifying  : copy-jdk-configs-2.2-3.el7.noarch                         43/115 
+  Verifying  : python-IPy-0.75-6.el7.noarch                              44/115 
+  Verifying  : libXtst-1.2.3-1.el7.x86_64                                45/115 
+  Verifying  : 4:perl-libs-5.16.3-292.el7.x86_64                         46/115 
+  Verifying  : policycoreutils-2.5-17.1.el7.x86_64                       47/115 
+  Verifying  : libxcb-1.12-1.el7.x86_64                                  48/115 
+  Verifying  : mesa-libGL-17.0.1-6.20170307.el7.x86_64                   49/115 
+  Verifying  : pixman-0.34.0-1.el7.x86_64                                50/115 
+  Verifying  : javapackages-tools-3.4.1-11.el7.noarch                    51/115 
+  Verifying  : rh-java-common-python-javapackages-4.3.2-1.14.el7.noar    52/115 
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                          53/115 
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                             54/115 
+  Verifying  : rh-mongodb26-gperftools-libs-2.2.1-4.el7.x86_64           55/115 
+  Verifying  : rh-mongodb26-libstemmer-0-4.585svn.el7.x86_64             56/115 
+  Verifying  : fontconfig-2.10.95-11.el7.x86_64                          57/115 
+  Verifying  : perl-threads-1.87-4.el7.x86_64                            58/115 
+  Verifying  : libXfixes-5.0.3-1.el7.x86_64                              59/115 
+  Verifying  : alsa-lib-1.1.3-3.el7.x86_64                               60/115 
+  Verifying  : libtiff-4.0.3-27.el7_3.x86_64                             61/115 
+  Verifying  : rh-java-common-runtime-1.1-47.el7.x86_64                  62/115 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                         63/115 
+  Verifying  : libselinux-python-2.5-11.el7.x86_64                       64/115 
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                     65/115 
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                           66/115 
+  Verifying  : policycoreutils-python-2.5-17.1.el7.x86_64                67/115 
+  Verifying  : 4:perl-macros-5.16.3-292.el7.x86_64                       68/115 
+  Verifying  : v8314-runtime-2.1-1.el7.x86_64                            69/115 
+  Verifying  : fontpackages-filesystem-1.44-8.el7.noarch                 70/115 
+  Verifying  : hicolor-icon-theme-0.12-7.el7.noarch                      71/115 
+  Verifying  : rh-mongodb26-libunwind-1.1-4.el7.x86_64                   72/115 
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                        73/115 
+  Verifying  : snappy-1.1.0-3.el7.x86_64                                 74/115 
+  Verifying  : jasper-libs-1.900.1-31.el7.x86_64                         75/115 
+  Verifying  : boost-program-options-1.53.0-27.el7.x86_64                76/115 
+  Verifying  : boost-filesystem-1.53.0-27.el7.x86_64                     77/115 
+  Verifying  : perl-Carp-1.26-244.el7.noarch                             78/115 
+  Verifying  : mesa-libEGL-17.0.1-6.20170307.el7.x86_64                  79/115 
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                         80/115 
+  Verifying  : libxslt-1.1.28-5.el7.x86_64                               81/115 
+  Verifying  : tzdata-java-2017b-1.el7.noarch                            82/115 
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.144-0.b01.el7_4.x8    83/115 
+  Verifying  : libXrandr-1.5.1-2.el7.x86_64                              84/115 
+  Verifying  : 1:v8314-v8-3.14.5.10-9.el7.x86_64                         85/115 
+  Verifying  : libX11-common-1.6.5-1.el7.noarch                          86/115 
+  Verifying  : libxshmfence-1.2-1.el7.x86_64                             87/115 
+  Verifying  : libselinux-utils-2.5-11.el7.x86_64                        88/115 
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                             89/115 
+  Verifying  : libXdamage-1.1.4-4.1.el7.x86_64                           90/115 
+  Verifying  : atk-2.22.0-3.el7.x86_64                                   91/115 
+  Verifying  : libXinerama-1.1.3-2.1.el7.x86_64                          92/115 
+  Verifying  : libXxf86vm-1.1.4-1.el7.x86_64                             93/115 
+  Verifying  : graphite2-1.3.10-1.el7_3.x86_64                           94/115 
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                           95/115 
+  Verifying  : perl-constant-1.27-2.el7.noarch                           96/115 
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                          97/115 
+  Verifying  : freetype-2.4.11-15.el7.x86_64                             98/115 
+  Verifying  : gtk2-2.24.31-1.el7.x86_64                                 99/115 
+  Verifying  : cairo-1.14.8-2.el7.x86_64                                100/115 
+  Verifying  : rh-mongodb26-runtime-2.0-19.el7.x86_64                   101/115 
+  Verifying  : rh-mongodb26-yaml-cpp-0.5.1-9.el7.x86_64                 102/115 
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                      103/115 
+  Verifying  : libthai-0.1.14-9.el7.x86_64                              104/115 
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                      105/115 
+  Verifying  : libXft-2.3.2-2.el7.x86_64                                106/115 
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                       107/115 
+  Verifying  : gtk-update-icon-cache-3.22.10-4.el7.x86_64               108/115 
+  Verifying  : libXcursor-1.1.14-8.el7.x86_64                           109/115 
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64               110/115 
+  Verifying  : jbigkit-libs-2.0-11.el7.x86_64                           111/115 
+  Verifying  : gdk-pixbuf2-2.36.5-1.el7.x86_64                          112/115 
+  Verifying  : perl-Getopt-Long-2.40-2.el7.noarch                       113/115 
+  Verifying  : hwdata-0.252-8.6.el7.x86_64                              114/115 
+  Verifying  : setools-libs-3.3.8-1.1.el7.x86_64                        115/115 
 
 Installed:
-  java-1.8.0-oracle.x86_64 1:1.8.0.121-1jpp.1.el7_3                             
+  java-1.8.0-oracle.x86_64 1:1.8.0.141-1jpp.1.el7_3                             
   rh-mongodb26-mongodb-server.x86_64 0:2.6.9-1.el7                              
   unzip.x86_64 0:6.0-16.el7                                                     
 
 Dependency Installed:
-  alsa-lib.x86_64 0:1.1.1-1.el7                                                 
-  atk.x86_64 0:2.14.0-1.el7                                                     
-  audit-libs-python.x86_64 0:2.6.5-3.el7                                        
+  alsa-lib.x86_64 0:1.1.3-3.el7                                                 
+  atk.x86_64 0:2.22.0-3.el7                                                     
+  audit-libs-python.x86_64 0:2.7.6-3.el7                                        
   avahi-libs.x86_64 0:0.6.31-17.el7                                             
-  boost-filesystem.x86_64 0:1.53.0-26.el7                                       
-  boost-program-options.x86_64 0:1.53.0-26.el7                                  
-  boost-system.x86_64 0:1.53.0-26.el7                                           
-  boost-thread.x86_64 0:1.53.0-26.el7                                           
-  cairo.x86_64 0:1.14.2-1.el7                                                   
+  boost-filesystem.x86_64 0:1.53.0-27.el7                                       
+  boost-program-options.x86_64 0:1.53.0-27.el7                                  
+  boost-system.x86_64 0:1.53.0-27.el7                                           
+  boost-thread.x86_64 0:1.53.0-27.el7                                           
+  cairo.x86_64 0:1.14.8-2.el7                                                   
   checkpolicy.x86_64 0:2.5-4.el7                                                
-  copy-jdk-configs.noarch 0:1.2-1.el7                                           
-  cups-libs.x86_64 1:1.6.3-26.el7                                               
-  desktop-file-utils.x86_64 0:0.22-1.el7                                        
-  emacs-filesystem.noarch 1:24.3-18.el7                                         
-  fontconfig.x86_64 0:2.10.95-10.el7                                            
+  copy-jdk-configs.noarch 0:2.2-3.el7                                           
+  cups-libs.x86_64 1:1.6.3-29.el7                                               
+  desktop-file-utils.x86_64 0:0.23-1.el7                                        
+  emacs-filesystem.noarch 1:24.3-20.el7_4                                       
+  fontconfig.x86_64 0:2.10.95-11.el7                                            
   fontpackages-filesystem.noarch 0:1.44-8.el7                                   
-  freetype.x86_64 0:2.4.11-12.el7                                               
-  gdk-pixbuf2.x86_64 0:2.31.6-3.el7                                             
-  graphite2.x86_64 0:1.3.6-1.el7_2                                              
+  freetype.x86_64 0:2.4.11-15.el7                                               
+  gdk-pixbuf2.x86_64 0:2.36.5-1.el7                                             
+  graphite2.x86_64 0:1.3.10-1.el7_3                                             
   groff-base.x86_64 0:1.22.2-8.el7                                              
-  gtk2.x86_64 0:2.24.28-8.el7                                                   
-  harfbuzz.x86_64 0:0.9.36-1.el7                                                
+  gtk-update-icon-cache.x86_64 0:3.22.10-4.el7                                  
+  gtk2.x86_64 0:2.24.31-1.el7                                                   
+  harfbuzz.x86_64 0:1.3.2-1.el7                                                 
   hicolor-icon-theme.noarch 0:0.12-7.el7                                        
-  hwdata.x86_64 0:0.252-8.4.el7                                                 
-  jasper-libs.x86_64 0:1.900.1-29.el7                                           
+  hwdata.x86_64 0:0.252-8.6.el7                                                 
+  jasper-libs.x86_64 0:1.900.1-31.el7                                           
+  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.144-0.b01.el7_4                    
   javapackages-tools.noarch 0:3.4.1-11.el7                                      
   jbigkit-libs.x86_64 0:2.0-11.el7                                              
-  libX11.x86_64 0:1.6.3-3.el7                                                   
-  libX11-common.noarch 0:1.6.3-3.el7                                            
+  libX11.x86_64 0:1.6.5-1.el7                                                   
+  libX11-common.noarch 0:1.6.5-1.el7                                            
   libXau.x86_64 0:1.0.8-2.1.el7                                                 
   libXcomposite.x86_64 0:0.4.4-4.1.el7                                          
-  libXcursor.x86_64 0:1.1.14-2.1.el7                                            
+  libXcursor.x86_64 0:1.1.14-8.el7                                              
   libXdamage.x86_64 0:1.1.4-4.1.el7                                             
   libXext.x86_64 0:1.3.3-3.el7                                                  
-  libXfixes.x86_64 0:5.0.1-2.1.el7                                              
+  libXfixes.x86_64 0:5.0.3-1.el7                                                
   libXft.x86_64 0:2.3.2-2.el7                                                   
-  libXi.x86_64 0:1.7.4-2.el7                                                    
+  libXi.x86_64 0:1.7.9-1.el7                                                    
   libXinerama.x86_64 0:1.1.3-2.1.el7                                            
-  libXrandr.x86_64 0:1.4.2-2.el7                                                
-  libXrender.x86_64 0:0.9.8-2.1.el7                                             
-  libXtst.x86_64 0:1.2.2-2.1.el7                                                
-  libXxf86vm.x86_64 0:1.1.3-2.1.el7                                             
-  libcgroup.x86_64 0:0.41-11.el7                                                
-  libdrm.x86_64 0:2.4.67-3.el7                                                  
+  libXrandr.x86_64 0:1.5.1-2.el7                                                
+  libXrender.x86_64 0:0.9.10-1.el7                                              
+  libXtst.x86_64 0:1.2.3-1.el7                                                  
+  libXxf86vm.x86_64 0:1.1.4-1.el7                                               
+  libcgroup.x86_64 0:0.41-13.el7                                                
+  libdrm.x86_64 0:2.4.74-1.el7                                                  
   libjpeg-turbo.x86_64 0:1.2.90-5.el7                                           
   libpciaccess.x86_64 0:0.13.4-3.el7_3                                          
   libpng.x86_64 2:1.5.13-7.el7_2                                                
-  libselinux-python.x86_64 0:2.5-6.el7                                          
-  libselinux-utils.x86_64 0:2.5-6.el7                                           
-  libsemanage-python.x86_64 0:2.5-5.1.el7_3                                     
+  libselinux-python.x86_64 0:2.5-11.el7                                         
+  libselinux-utils.x86_64 0:2.5-11.el7                                          
+  libsemanage-python.x86_64 0:2.5-8.el7                                         
   libthai.x86_64 0:0.1.14-9.el7                                                 
   libtiff.x86_64 0:4.0.3-27.el7_3                                               
-  libxcb.x86_64 0:1.11-4.el7                                                    
+  libxcb.x86_64 0:1.12-1.el7                                                    
   libxshmfence.x86_64 0:1.2-1.el7                                               
   libxslt.x86_64 0:1.1.28-5.el7                                                 
-  mesa-libEGL.x86_64 0:11.2.2-2.20160614.el7                                    
-  mesa-libGL.x86_64 0:11.2.2-2.20160614.el7                                     
-  mesa-libgbm.x86_64 0:11.2.2-2.20160614.el7                                    
-  mesa-libglapi.x86_64 0:11.2.2-2.20160614.el7                                  
-  pango.x86_64 0:1.36.8-2.el7                                                   
-  perl.x86_64 4:5.16.3-291.el7                                                  
+  lksctp-tools.x86_64 0:1.0.17-2.el7                                            
+  mesa-libEGL.x86_64 0:17.0.1-6.20170307.el7                                    
+  mesa-libGL.x86_64 0:17.0.1-6.20170307.el7                                     
+  mesa-libgbm.x86_64 0:17.0.1-6.20170307.el7                                    
+  mesa-libglapi.x86_64 0:17.0.1-6.20170307.el7                                  
+  pango.x86_64 0:1.40.4-1.el7                                                   
+  perl.x86_64 4:5.16.3-292.el7                                                  
   perl-Carp.noarch 0:1.26-244.el7                                               
   perl-Encode.x86_64 0:2.51-7.el7                                               
   perl-Exporter.noarch 0:5.68-3.el7                                             
@@ -775,7 +790,7 @@ Dependency Installed:
   perl-Getopt-Long.noarch 0:2.40-2.el7                                          
   perl-HTTP-Tiny.noarch 0:0.033-3.el7                                           
   perl-PathTools.x86_64 0:3.40-5.el7                                            
-  perl-Pod-Escapes.noarch 1:1.04-291.el7                                        
+  perl-Pod-Escapes.noarch 1:1.04-292.el7                                        
   perl-Pod-Perldoc.noarch 0:3.20-4.el7                                          
   perl-Pod-Simple.noarch 1:3.28-4.el7                                           
   perl-Pod-Usage.noarch 0:1.63-3.el7                                            
@@ -786,70 +801,55 @@ Dependency Installed:
   perl-Time-HiRes.x86_64 4:1.9725-3.el7                                         
   perl-Time-Local.noarch 0:1.2300-2.el7                                         
   perl-constant.noarch 0:1.27-2.el7                                             
-  perl-libs.x86_64 4:5.16.3-291.el7                                             
-  perl-macros.x86_64 4:5.16.3-291.el7                                           
+  perl-libs.x86_64 4:5.16.3-292.el7                                             
+  perl-macros.x86_64 4:5.16.3-292.el7                                           
   perl-parent.noarch 1:0.225-244.el7                                            
   perl-podlators.noarch 0:2.5.1-3.el7                                           
   perl-threads.x86_64 0:1.87-4.el7                                              
   perl-threads-shared.x86_64 0:1.43-6.el7                                       
   pixman.x86_64 0:0.34.0-1.el7                                                  
-  policycoreutils.x86_64 0:2.5-11.el7_3                                         
-  policycoreutils-python.x86_64 0:2.5-11.el7_3                                  
+  policycoreutils.x86_64 0:2.5-17.1.el7                                         
+  policycoreutils-python.x86_64 0:2.5-17.1.el7                                  
   python-IPy.noarch 0:0.75-6.el7                                                
   python-javapackages.noarch 0:3.4.1-11.el7                                     
   python-lxml.x86_64 0:3.2.1-4.el7                                              
   rh-java-common-PyXB.noarch 0:1.2.4-1.4.el7                                    
-  rh-java-common-javapackages-tools.noarch 0:4.3.2-1.11.el7                     
-  rh-java-common-python-javapackages.noarch 0:4.3.2-1.11.el7                    
+  rh-java-common-javapackages-tools.noarch 0:4.3.2-1.14.el7                     
+  rh-java-common-python-javapackages.noarch 0:4.3.2-1.14.el7                    
   rh-java-common-runtime.x86_64 0:1.1-47.el7                                    
   rh-mongodb26-gperftools-libs.x86_64 0:2.2.1-4.el7                             
   rh-mongodb26-libstemmer.x86_64 0:0-4.585svn.el7                               
   rh-mongodb26-libunwind.x86_64 0:1.1-4.el7                                     
   rh-mongodb26-runtime.x86_64 0:2.0-19.el7                                      
   rh-mongodb26-yaml-cpp.x86_64 0:0.5.1-9.el7                                    
-  scl-utils.x86_64 0:20130529-17.el7_1                                          
+  scl-utils.x86_64 0:20130529-18.el7_4                                          
   setools-libs.x86_64 0:3.3.8-1.1.el7                                           
   snappy.x86_64 0:1.1.0-3.el7                                                   
+  stix-fonts.noarch 0:1.1.0-5.el7                                               
+  tzdata-java.noarch 0:2017b-1.el7                                              
   v8314-runtime.x86_64 0:2.1-1.el7                                              
   v8314-v8.x86_64 1:3.14.5.10-9.el7                                             
 
 Complete!
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
-Cleaning repos: rhel-7-fast-datapath-htb-rpms rhel-7-fast-datapath-rpms
-              : rhel-7-server-aus-rpms rhel-7-server-eus-rpms
-              : rhel-7-server-htb-rpms rhel-7-server-nfv-rpms rhel-7-server-rpms
+Cleaning repos: rhel-7-rc-rpms rhel-7-server-aus-rpms rhel-7-server-htb-rpms
+              : rhel-7-server-nfv-rpms rhel-7-server-rpms
               : rhel-7-server-rt-beta-rpms rhel-7-server-rt-htb-rpms
               : rhel-7-server-rt-rpms rhel-7-server-tus-rpms
-              : rhel-ha-for-rhel-7-server-eus-rpms
-              : rhel-ha-for-rhel-7-server-htb-rpms
-              : rhel-ha-for-rhel-7-server-rpms
-              : rhel-lb-for-rhel-7-server-htb-rpms
-              : rhel-rs-for-rhel-7-server-eus-rpms
-              : rhel-rs-for-rhel-7-server-htb-rpms
-              : rhel-rs-for-rhel-7-server-rpms
-              : rhel-sap-for-rhel-7-server-eus-rpms
-              : rhel-sap-for-rhel-7-server-rpms
-              : rhel-sap-hana-for-rhel-7-server-eus-rpms
-              : rhel-sap-hana-for-rhel-7-server-rpms
-              : rhel-sjis-for-rhel-7-server-aus-debug-rpms
-              : rhel-sjis-for-rhel-7-server-aus-rpms
-              : rhel-sjis-for-rhel-7-server-aus-source-rpms
-              : rhel-sjis-for-rhel-7-server-debug-rpms
-              : rhel-sjis-for-rhel-7-server-rpms
-              : rhel-sjis-for-rhel-7-server-source-rpms
 Cleaning up everything
- ---> fb6652527222
-Removing intermediate container fe8416bcf8bc
+Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
+ ---> 03117911a1c7
+Removing intermediate container 576e52d88918
 Step 9 : RUN ln -s /opt/rh/rh-mongodb26/root/usr/bin/mongod /usr/bin/mongod
- ---> Running in 7e5b877d7fd5
- ---> 55470075f0e6
-Removing intermediate container 7e5b877d7fd5
+ ---> Running in 241109c330b6
+ ---> 882a3721de5d
+Removing intermediate container 241109c330b6
 Step 10 : USER unifi
- ---> Running in 28ce649cc9f3
- ---> 0ee90b2439ee
-Removing intermediate container 28ce649cc9f3
+ ---> Running in 3314c5763655
+ ---> 312dfeed7731
+Removing intermediate container 3314c5763655
 Step 11 : RUN unzip -d /opt/ /opt/UniFi/UniFi.unix.zip && rm /opt/UniFi/UniFi.unix.zip
- ---> Running in bdcbca7e2c10
+ ---> Running in a8c9946e4d59
 Archive:  /opt/UniFi/UniFi.unix.zip
    creating: /opt/UniFi/bin/
     linking: /opt/UniFi/bin/mongod   -> /usr/bin/mongod 
@@ -858,38 +858,41 @@ Archive:  /opt/UniFi/UniFi.unix.zip
    creating: /opt/UniFi/dl/firmware/
   inflating: /opt/UniFi/dl/firmware/bundles.json  
    creating: /opt/UniFi/dl/firmware/BZ2/
-   creating: /opt/UniFi/dl/firmware/BZ2/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/BZ2/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/BZ2/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/BZ2/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/p2N/
    creating: /opt/UniFi/dl/firmware/p2N/3.3.22.4024/
   inflating: /opt/UniFi/dl/firmware/p2N/3.3.22.4024/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U2HSR/
-   creating: /opt/UniFi/dl/firmware/U2HSR/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U2HSR/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U2HSR/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U2HSR/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U2IW/
-   creating: /opt/UniFi/dl/firmware/U2IW/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U2IW/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U2IW/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U2IW/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U2Sv2/
-   creating: /opt/UniFi/dl/firmware/U2Sv2/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U2Sv2/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U2Sv2/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U2Sv2/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U7E/
-   creating: /opt/UniFi/dl/firmware/U7E/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U7E/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7E/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U7E/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U7HD/
-   creating: /opt/UniFi/dl/firmware/U7HD/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U7HD/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7HD/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U7HD/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U7P/
-   creating: /opt/UniFi/dl/firmware/U7P/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U7P/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7P/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U7P/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/U7PG2/
-   creating: /opt/UniFi/dl/firmware/U7PG2/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/U7PG2/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/U7PG2/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/U7PG2/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/US24P250/
-   creating: /opt/UniFi/dl/firmware/US24P250/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/US24P250/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/US24P250/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/US24P250/3.8.6.6650/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/US24PL2/
+   creating: /opt/UniFi/dl/firmware/US24PL2/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/US24PL2/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/dl/firmware/USXG/
-   creating: /opt/UniFi/dl/firmware/USXG/3.7.37.6065/
-  inflating: /opt/UniFi/dl/firmware/USXG/3.7.37.6065/firmware.bin  
+   creating: /opt/UniFi/dl/firmware/USXG/3.8.6.6650/
+  inflating: /opt/UniFi/dl/firmware/USXG/3.8.6.6650/firmware.bin  
    creating: /opt/UniFi/lib/
   inflating: /opt/UniFi/lib/ace.jar  
   inflating: /opt/UniFi/lib/annotations-2.0.0.jar  
@@ -917,7 +920,7 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/lib/jackson-annotations-2.1.1.jar  
   inflating: /opt/UniFi/lib/jackson-core-2.1.1.jar  
   inflating: /opt/UniFi/lib/jackson-databind-2.1.1.jar  
-  inflating: /opt/UniFi/lib/Java-WebSocket-1.3.0-44-gbf2af15.jar  
+  inflating: /opt/UniFi/lib/Java-WebSocket-1.3.0-45-gf96ce50.jar  
   inflating: /opt/UniFi/lib/jedis-2.8.1.jar  
   inflating: /opt/UniFi/lib/jmdns-3.4.1.jar  
   inflating: /opt/UniFi/lib/joda-time-2.9.4.jar  
@@ -931,32 +934,32 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/lib/mongo-java-driver-2.14.3.jar  
    creating: /opt/UniFi/lib/native/
    creating: /opt/UniFi/lib/native/Linux/
-   creating: /opt/UniFi/lib/native/Linux/amd64/
-  inflating: /opt/UniFi/lib/native/Linux/amd64/libubnt_webrtc_jni.so  
    creating: /opt/UniFi/lib/native/Linux/armhf/
   inflating: /opt/UniFi/lib/native/Linux/armhf/libubnt_webrtc_jni.so  
+   creating: /opt/UniFi/lib/native/Linux/x86_64/
+  inflating: /opt/UniFi/lib/native/Linux/x86_64/libubnt_webrtc_jni.so  
    creating: /opt/UniFi/lib/native/Mac/
    creating: /opt/UniFi/lib/native/Mac/x86_64/
   inflating: /opt/UniFi/lib/native/Mac/x86_64/libubnt_webrtc_jni.jnilib  
    creating: /opt/UniFi/lib/native/Windows/
-   creating: /opt/UniFi/lib/native/Windows/amd64/
-  inflating: /opt/UniFi/lib/native/Windows/amd64/ubnt_webrtc_jni.dll  
+   creating: /opt/UniFi/lib/native/Windows/x86_64/
+  inflating: /opt/UniFi/lib/native/Windows/x86_64/ubnt_webrtc_jni.dll  
   inflating: /opt/UniFi/lib/servo-core-0.9.4.jar  
   inflating: /opt/UniFi/lib/servo-graphite-0.9.4.jar  
   inflating: /opt/UniFi/lib/slf4j-api-1.7.6.jar  
   inflating: /opt/UniFi/lib/slf4j-log4j12-1.7.6.jar  
-  inflating: /opt/UniFi/lib/snappy-java-1.0.5.jar  
+  inflating: /opt/UniFi/lib/snappy-java-1.1.2.6.jar  
   inflating: /opt/UniFi/lib/spring-beans-3.2.8.RELEASE.jar  
   inflating: /opt/UniFi/lib/spring-context-3.2.8.RELEASE.jar  
   inflating: /opt/UniFi/lib/spring-core-3.2.8.RELEASE.jar  
   inflating: /opt/UniFi/lib/spring-expression-3.2.8.RELEASE.jar  
   inflating: /opt/UniFi/lib/spring-test-3.2.8.RELEASE.jar  
   inflating: /opt/UniFi/lib/sshj-0.9.0.jar  
-  inflating: /opt/UniFi/lib/tomcat-embed-core-7.0.73.jar  
-  inflating: /opt/UniFi/lib/tomcat-embed-el-7.0.73.jar  
-  inflating: /opt/UniFi/lib/tomcat-embed-jasper-7.0.73.jar  
-  inflating: /opt/UniFi/lib/tomcat-embed-logging-juli-7.0.73.jar  
-  inflating: /opt/UniFi/lib/tomcat-embed-logging-log4j-7.0.73.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-core-7.0.79.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-el-7.0.79.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-jasper-7.0.79.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-logging-juli-7.0.79.jar  
+  inflating: /opt/UniFi/lib/tomcat-embed-logging-log4j-7.0.79.jar  
   inflating: /opt/UniFi/lib/urlrewritefilter-4.0.4.jar  
   inflating: /opt/UniFi/readme.txt   
    creating: /opt/UniFi/webapps/
@@ -969,94 +972,94 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/css/app.css  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/find_controller.html  
    creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/css/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/css/lato.css  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/css/lato.min.css  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Black.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Black.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Black.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Black.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BlackItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BlackItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BlackItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BlackItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Bold.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Bold.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Bold.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Bold.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BoldItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BoldItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BoldItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-BoldItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Hairline.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Hairline.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Hairline.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Hairline.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HairlineItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HairlineItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HairlineItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HairlineItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Heavy.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Heavy.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Heavy.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Heavy.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HeavyItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HeavyItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HeavyItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-HeavyItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Italic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Italic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Italic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Italic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Light.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Light.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Light.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Light.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-LightItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-LightItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-LightItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-LightItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Medium.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Medium.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Medium.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Medium.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-MediumItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-MediumItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-MediumItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-MediumItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Regular.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Regular.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Regular.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Regular.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Semibold.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Semibold.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Semibold.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Semibold.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-SemiboldItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-SemiboldItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-SemiboldItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-SemiboldItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Thin.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Thin.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Thin.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-Thin.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-ThinItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-ThinItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-ThinItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/lato/fonts/Lato-ThinItalic.woff2  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/ubnt.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/ubnt.svg  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/ubnt.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/ubnt.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/fonts/ubnt.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-icon/style.css  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-lato/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.4.11.2/ubnt-lato/style.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/css/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/css/lato.css  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/css/lato.min.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Black.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Black.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Black.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Black.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BlackItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BlackItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BlackItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BlackItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Bold.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Bold.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Bold.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Bold.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BoldItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BoldItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BoldItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-BoldItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Hairline.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Hairline.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Hairline.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Hairline.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HairlineItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HairlineItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HairlineItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HairlineItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Heavy.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Heavy.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Heavy.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Heavy.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HeavyItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HeavyItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HeavyItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-HeavyItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Italic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Italic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Italic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Italic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Light.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Light.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Light.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Light.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-LightItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-LightItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-LightItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-LightItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Medium.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Medium.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Medium.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Medium.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-MediumItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-MediumItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-MediumItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-MediumItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Regular.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Regular.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Regular.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Regular.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Semibold.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Semibold.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Semibold.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Semibold.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-SemiboldItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-SemiboldItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-SemiboldItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-SemiboldItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Thin.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Thin.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Thin.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-Thin.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-ThinItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-ThinItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-ThinItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/lato/fonts/Lato-ThinItalic.woff2  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/ubnt.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/ubnt.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/ubnt.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/ubnt.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/fonts/ubnt.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-icon/style.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-lato/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.5.24.0/ubnt-lato/style.css  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.eot  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.svg  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.ttf  
@@ -1136,6 +1139,13 @@ Archive:  /opt/UniFi/UniFi.unix.zip
  extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IW/static@2x.png  
  extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IW/success.png  
  extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IW/success@2x.png  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/danger.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/danger@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/static.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/static@2x.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/success.png  
+ extracting: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7IWP/success@2x.png  
    creating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7MSH/
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7MSH/danger.png  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/devices/uap/U7MSH/danger@2x.png  
@@ -1239,7 +1249,10 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-mirror.svg  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-poe-plus.svg  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-poe.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-spacer-round.png  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-spacer.png  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-uplink.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/diagrams/port-warning.svg  
    creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/
    creating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/amazon.com/
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/images/dpi/amazon.com/favicon.ico  
@@ -1339,10 +1352,6 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.manage.js  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.overview.js  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/main.wizard.js  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.hotspot.js  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.manage.js  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.overview.js  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/js/vendor.wizard.js  
    creating: /opt/UniFi/webapps/ROOT/app-unifi/locales/
    creating: /opt/UniFi/webapps/ROOT/app-unifi/locales/ca/
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/ca/account.json  
@@ -1796,6 +1805,7 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/zh_CN/transactions.json  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/zh_CN/vouchers.json  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/locales/zh_CN/wizard.json  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/migration.html  
    creating: /opt/UniFi/webapps/ROOT/pages/
   inflating: /opt/UniFi/webapps/ROOT/pages/voucher.jsp  
    creating: /opt/UniFi/webapps/ROOT/WEB-INF/
@@ -1804,38 +1814,34 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/WEB-INF/web.xml  
 finishing deferred symbolic links:
   /opt/UniFi/bin/mongod  -> /usr/bin/mongod
- ---> 1df1b4645cfb
-Removing intermediate container bdcbca7e2c10
+ ---> a6e68c09f6f5
+Removing intermediate container a8c9946e4d59
 Step 12 : VOLUME /opt/UniFi/data
- ---> Running in aa558051b5c4
- ---> 61e4c19753d3
-Removing intermediate container aa558051b5c4
+ ---> Running in 299ce1d747cf
+ ---> 56c8898e23d1
+Removing intermediate container 299ce1d747cf
 Step 13 : VOLUME /opt/UniFi/logs
- ---> Running in 4d198298dd17
- ---> d27aca42dcb3
-Removing intermediate container 4d198298dd17
+ ---> Running in 80d43c28776a
+ ---> 2fa33f567be1
+Removing intermediate container 80d43c28776a
 Step 14 : WORKDIR /opt/UniFi
- ---> Running in 05fd2f88a729
- ---> c55e8381754b
-Removing intermediate container 05fd2f88a729
-Step 15 : ENV TZ UTC
- ---> Running in 10348ab5d055
- ---> 50f1a1605fc7
-Removing intermediate container 10348ab5d055
+ ---> Running in 7125ca1f7ab5
+ ---> 0384ff04d8a6
+Removing intermediate container 7125ca1f7ab5
+Step 15 : EXPOSE 8080/tcp 8443/tcp 3478/udp
+ ---> Running in cde8da938257
+ ---> 3573e099b095
+Removing intermediate container cde8da938257
 Step 16 : ENV TERM xterm-256color
- ---> Running in 876c0f0d6bfc
- ---> ec37914ab67c
-Removing intermediate container 876c0f0d6bfc
-Step 17 : EXPOSE 8080/tcp 8443/tcp 3478/udp
- ---> Running in e75fb7c8a646
- ---> 5ab43c468aed
-Removing intermediate container e75fb7c8a646
-Step 18 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
- ---> Running in e3b85ecb06a5
- ---> 52982204ad32
-Removing intermediate container e3b85ecb06a5
-Step 19 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
- ---> Running in 14fc393e637e
- ---> d442c55652a9
-Removing intermediate container 14fc393e637e
-Successfully built d442c55652a9
+ ---> Running in 22ae982ea8dc
+ ---> 7a457f5afe98
+Removing intermediate container 22ae982ea8dc
+Step 17 : ENTRYPOINT /usr/bin/scl enable rh-mongodb26 --
+ ---> Running in b374d480fb2e
+ ---> 88b39b251a63
+Removing intermediate container b374d480fb2e
+Step 18 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
+ ---> Running in 0aec70061205
+ ---> 5c403e6716b2
+Removing intermediate container 0aec70061205
+Successfully built 5c403e6716b2
