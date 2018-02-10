@@ -1,8 +1,8 @@
 FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
-LABEL com.ubnt.controller="5.6.22-1"
+LABEL com.ubnt.controller="5.6.30"
 
-ADD https://dl.ubnt.com/unifi/5.6.22/UniFi.unix.zip /opt/UniFi/
+ADD https://dl.ubnt.com/unifi/5.6.30/UniFi.unix.zip /opt/UniFi/
 
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/article_attachments/115024095828/mongo_prune_js.js /opt/UniFi/

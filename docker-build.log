@@ -2,50 +2,54 @@ Sending build context to Docker daemon 5.632 kB
 Step 1 : FROM registry.access.redhat.com/rhel7:latest
 Trying to pull repository registry.access.redhat.com/rhel7 ... 
 latest: Pulling from registry.access.redhat.com/rhel7
-243dc7b9e786: Already exists
-550516fb1c76: Already exists
-Digest: sha256:a744ef5b58472bccfa7c606efcc6b126a164eee4b7057f85cb8be46c481ee954
- ---> db7a70a0414e
+9a32f102e677: Pulling fs layer
+b8aa42cec17a: Pulling fs layer
+b8aa42cec17a: Download complete
+9a32f102e677: Verifying Checksum
+9a32f102e677: Download complete
+9a32f102e677: Pull complete
+b8aa42cec17a: Pull complete
+Digest: sha256:66bf4409e707da5c08fd0f03c653d0954ade3b6d9dfadd07edf7a0cb1bd9c42f
+ ---> d01d4f01d3c4
 Step 2 : MAINTAINER John Call <johnsimcall@gmail.com>
- ---> Running in 326be50d544b
- ---> 42c24901e45d
-Removing intermediate container 326be50d544b
-Step 3 : LABEL com.ubnt.controller "5.6.22-1"
- ---> Running in 7419973a4cc5
- ---> 2ff504b1d032
-Removing intermediate container 7419973a4cc5
-Step 4 : ADD https://dl.ubnt.com/unifi/5.6.22/UniFi.unix.zip /opt/UniFi/
+ ---> Running in 3f50244b91cf
+ ---> 23079ec04b47
+Removing intermediate container 3f50244b91cf
+Step 3 : LABEL com.ubnt.controller "5.6.30"
+ ---> Running in df9920f02582
+ ---> 2926c6f88f89
+Removing intermediate container df9920f02582
+Step 4 : ADD https://dl.ubnt.com/unifi/5.6.30/UniFi.unix.zip /opt/UniFi/
 
- ---> e2d746dc8c9f
-Removing intermediate container b005cc2b7293
+ ---> a6d5bd4adf8a
+Removing intermediate container 501c93b5b92e
 Step 5 : ADD https://help.ubnt.com/hc/article_attachments/115024095828/mongo_prune_js.js /opt/UniFi/
 
 
- ---> b7887b0ac8de
-Removing intermediate container 3bee210eb45c
+ ---> 5937d98c673f
+Removing intermediate container b0649bd438db
 Step 6 : ADD shutdown-unifi.sh /opt/UniFi/
- ---> 56f922c658d9
-Removing intermediate container c379791fb692
+ ---> a6de4230326d
+Removing intermediate container 074e4496a8f1
 Step 7 : RUN ln -f -s /usr/share/zoneinfo/America/Denver /etc/localtime &&     useradd unifi --comment "UniFi Controller" --uid 201 --system --home-dir /opt/UniFi/ &&     yum clean all &&     yum -y --disablerepo="*"       --enablerepo=rhel-7-server-rpms       --enablerepo=rhel-server-rhscl-7-rpms       install unzip java-1.8.0-openjdk-headless rh-mongodb34-mongodb rh-mongodb34-mongodb-server &&     ln -s /opt/rh/rh-mongodb34/root/usr/bin/mongod /usr/bin/mongod &&     unzip -d /opt/ /opt/UniFi/UniFi.unix.zip &&     mkdir /opt/UniFi/data && mkdir /opt/UniFi/logs && chown -Rv unifi:unifi /opt/UniFi/ &&     yum clean all && rm -rvf /var/cache/yum /opt/UniFi/UniFi.unix.zip
- ---> Running in 7f71378a4bf0
+ ---> Running in 9879780e79a3
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Cleaning repos: rhel-7-rc-rpms rhel-7-server-aus-rpms rhel-7-server-htb-rpms
-              : rhel-7-server-nfv-rpms rhel-7-server-rpms
-              : rhel-7-server-rt-beta-rpms rhel-7-server-rt-htb-rpms
-              : rhel-7-server-rt-rpms rhel-7-server-tus-rpms
+              : rhel-7-server-nfv-rpms rhel-7-server-rpms rhel-7-server-rt-rpms
+              : rhel-7-server-tus-rpms
 Cleaning up everything
 Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Resolving Dependencies
 --> Running transaction check
----> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.151-1.b12.el7_4 will be installed
---> Processing Dependency: copy-jdk-configs >= 2.2 for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
---> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
+---> Package java-1.8.0-openjdk-headless.x86_64 1:1.8.0.161-0.b14.el7_4 will be installed
+--> Processing Dependency: copy-jdk-configs >= 2.2 for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: tzdata-java >= 2015d for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: jpackage-utils for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: libjpeg.so.62(LIBJPEG_6.2)(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: lksctp-tools(x86-64) for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: libfreetype.so.6()(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
+--> Processing Dependency: libjpeg.so.62()(64bit) for package: 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_64
 ---> Package rh-mongodb34-mongodb.x86_64 0:3.4.9-1.el7 will be installed
 --> Processing Dependency: rh-mongodb34-runtime for package: rh-mongodb34-mongodb-3.4.9-1.el7.x86_64
 --> Processing Dependency: libboost_chrono.so.rh-mongodb34-1.60.0()(64bit) for package: rh-mongodb34-mongodb-3.4.9-1.el7.x86_64
@@ -62,7 +66,7 @@ Resolving Dependencies
 ---> Package rh-mongodb34-mongodb-server.x86_64 0:3.4.9-1.el7 will be installed
 ---> Package unzip.x86_64 0:6.0-16.el7 will be installed
 --> Running transaction check
----> Package copy-jdk-configs.noarch 0:2.2-3.el7 will be installed
+---> Package copy-jdk-configs.noarch 0:2.2-5.el7_4 will be installed
 ---> Package freetype.x86_64 0:2.4.11-15.el7 will be installed
 ---> Package javapackages-tools.noarch 0:3.4.1-11.el7 will be installed
 --> Processing Dependency: python-javapackages = 3.4.1-11.el7 for package: javapackages-tools-3.4.1-11.el7.noarch
@@ -88,7 +92,7 @@ Resolving Dependencies
 --> Processing Dependency: scl-utils for package: rh-mongodb34-runtime-3.0-14.el7.x86_64
 ---> Package rh-mongodb34-yaml-cpp.x86_64 0:0.5.3-1.el7 will be installed
 ---> Package snappy.x86_64 0:1.1.0-3.el7 will be installed
----> Package tzdata-java.noarch 0:2017c-1.el7 will be installed
+---> Package tzdata-java.noarch 0:2018c-1.el7 will be installed
 --> Running transaction check
 ---> Package libicu.x86_64 0:50.1.2-15.el7 will be installed
 ---> Package libselinux-utils.x86_64 0:2.5-11.el7 will be installed
@@ -130,7 +134,7 @@ Dependencies Resolved
 ================================================================================
 Installing:
  java-1.8.0-openjdk-headless
-                           x86_64 1:1.8.0.151-1.b12.el7_4
+                           x86_64 1:1.8.0.161-0.b14.el7_4
                                                  rhel-7-server-rpms        32 M
  rh-mongodb34-mongodb      x86_64 3.4.9-1.el7    rhel-server-rhscl-7-rpms  22 M
  rh-mongodb34-mongodb-server
@@ -139,7 +143,7 @@ Installing:
 Installing for dependencies:
  audit-libs-python         x86_64 2.7.6-3.el7    rhel-7-server-rpms        73 k
  checkpolicy               x86_64 2.5-4.el7      rhel-7-server-rpms       290 k
- copy-jdk-configs          noarch 2.2-3.el7      rhel-7-server-rpms        19 k
+ copy-jdk-configs          noarch 2.2-5.el7_4    rhel-7-server-rpms        19 k
  freetype                  x86_64 2.4.11-15.el7  rhel-7-server-rpms       392 k
  javapackages-tools        noarch 3.4.1-11.el7   rhel-7-server-rpms        73 k
  libcgroup                 x86_64 0.41-13.el7    rhel-7-server-rpms        65 k
@@ -175,7 +179,7 @@ Installing for dependencies:
                                                  rhel-7-server-rpms        24 k
  setools-libs              x86_64 3.3.8-1.1.el7  rhel-7-server-rpms       610 k
  snappy                    x86_64 1.1.0-3.el7    rhel-7-server-rpms        40 k
- tzdata-java               noarch 2017c-1.el7    rhel-7-server-rpms       183 k
+ tzdata-java               noarch 2018c-1.el7    rhel-7-server-rpms       183 k
 
 Transaction Summary
 ================================================================================
@@ -188,7 +192,7 @@ Downloading packages:
 [0mPublic key for audit-libs-python-2.7.6-3.el7.x86_64.rpm is not installed
 Public key for rh-mongodb34-boost-chrono-1.60.0-2.el7.x86_64.rpm is not installed
 --------------------------------------------------------------------------------
-Total                                              6.4 MB/s |  88 MB  00:13     
+Total                                              6.8 MB/s |  88 MB  00:12     
 Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
 [91mImporting GPG key 0xFD431D51:
  Userid     : "Red Hat, Inc. (release key 2) <security@redhat.com>"
@@ -214,17 +218,17 @@ Running transaction
   Installing : setools-libs-3.3.8-1.1.el7.x86_64                           8/38 
   Installing : checkpolicy-2.5-4.el7.x86_64                                9/38 
   Installing : audit-libs-python-2.7.6-3.el7.x86_64                       10/38 
-  Installing : tzdata-java-2017c-1.el7.noarch                             11/38 
-  Installing : libsemanage-python-2.5-8.el7.x86_64                        12/38 
-  Installing : lksctp-tools-1.0.17-2.el7.x86_64                           13/38 
-  Installing : libcgroup-0.41-13.el7.x86_64                               14/38 
-  Installing : copy-jdk-configs-2.2-3.el7.noarch                          15/38 
-  Installing : python-IPy-0.75-6.el7.noarch                               16/38 
-  Installing : freetype-2.4.11-15.el7.x86_64                              17/38 
-  Installing : libselinux-python-2.5-11.el7.x86_64                        18/38 
-  Installing : policycoreutils-python-2.5-17.1.el7.x86_64                 19/38 
-  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          20/38 
-  Installing : libicu-50.1.2-15.el7.x86_64                                21/38 
+  Installing : libsemanage-python-2.5-8.el7.x86_64                        11/38 
+  Installing : lksctp-tools-1.0.17-2.el7.x86_64                           12/38 
+  Installing : libcgroup-0.41-13.el7.x86_64                               13/38 
+  Installing : python-IPy-0.75-6.el7.noarch                               14/38 
+  Installing : freetype-2.4.11-15.el7.x86_64                              15/38 
+  Installing : libselinux-python-2.5-11.el7.x86_64                        16/38 
+  Installing : policycoreutils-python-2.5-17.1.el7.x86_64                 17/38 
+  Installing : libjpeg-turbo-1.2.90-5.el7.x86_64                          18/38 
+  Installing : tzdata-java-2018c-1.el7.noarch                             19/38 
+  Installing : libicu-50.1.2-15.el7.x86_64                                20/38 
+  Installing : copy-jdk-configs-2.2-5.el7_4.noarch                        21/38 
   Installing : scl-utils-20130529-18.el7_4.x86_64                         22/38 
   Installing : rh-mongodb34-runtime-3.0-14.el7.x86_64                     23/38 
   Installing : rh-mongodb34-boost-system-1.60.0-2.el7.x86_64              24/38 
@@ -240,25 +244,25 @@ Running transaction
   Installing : rh-mongodb34-gperftools-libs-2.5-4.el7.x86_64              34/38 
   Installing : rh-mongodb34-mongodb-server-3.4.9-1.el7.x86_64             35/38 
   Installing : rh-mongodb34-mongodb-3.4.9-1.el7.x86_64                    36/38 
-  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_   37/38 
+  Installing : 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_   37/38 
   Installing : unzip-6.0-16.el7.x86_64                                    38/38 
   Verifying  : scl-utils-20130529-18.el7_4.x86_64                          1/38 
-  Verifying  : libselinux-utils-2.5-11.el7.x86_64                          2/38 
+  Verifying  : copy-jdk-configs-2.2-5.el7_4.noarch                         2/38 
   Verifying  : libicu-50.1.2-15.el7.x86_64                                 3/38 
   Verifying  : rh-mongodb34-mongodb-server-3.4.9-1.el7.x86_64              4/38 
-  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                           5/38 
-  Verifying  : libselinux-python-2.5-11.el7.x86_64                         6/38 
-  Verifying  : python-lxml-3.2.1-4.el7.x86_64                              7/38 
-  Verifying  : policycoreutils-python-2.5-17.1.el7.x86_64                  8/38 
-  Verifying  : freetype-2.4.11-15.el7.x86_64                               9/38 
-  Verifying  : unzip-6.0-16.el7.x86_64                                    10/38 
-  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_   11/38 
-  Verifying  : snappy-1.1.0-3.el7.x86_64                                  12/38 
-  Verifying  : python-IPy-0.75-6.el7.noarch                               13/38 
-  Verifying  : rh-mongodb34-boost-chrono-1.60.0-2.el7.x86_64              14/38 
-  Verifying  : python-javapackages-3.4.1-11.el7.noarch                    15/38 
-  Verifying  : rh-mongodb34-mongodb-3.4.9-1.el7.x86_64                    16/38 
-  Verifying  : copy-jdk-configs-2.2-3.el7.noarch                          17/38 
+  Verifying  : tzdata-java-2018c-1.el7.noarch                              5/38 
+  Verifying  : libjpeg-turbo-1.2.90-5.el7.x86_64                           6/38 
+  Verifying  : libselinux-python-2.5-11.el7.x86_64                         7/38 
+  Verifying  : libselinux-utils-2.5-11.el7.x86_64                          8/38 
+  Verifying  : python-lxml-3.2.1-4.el7.x86_64                              9/38 
+  Verifying  : policycoreutils-python-2.5-17.1.el7.x86_64                 10/38 
+  Verifying  : freetype-2.4.11-15.el7.x86_64                              11/38 
+  Verifying  : unzip-6.0-16.el7.x86_64                                    12/38 
+  Verifying  : snappy-1.1.0-3.el7.x86_64                                  13/38 
+  Verifying  : python-IPy-0.75-6.el7.noarch                               14/38 
+  Verifying  : rh-mongodb34-boost-chrono-1.60.0-2.el7.x86_64              15/38 
+  Verifying  : python-javapackages-3.4.1-11.el7.noarch                    16/38 
+  Verifying  : rh-mongodb34-mongodb-3.4.9-1.el7.x86_64                    17/38 
   Verifying  : rh-mongodb34-libunwind-1.2-3.el7.x86_64                    18/38 
   Verifying  : libcgroup-0.41-13.el7.x86_64                               19/38 
   Verifying  : rh-mongodb34-gperftools-libs-2.5-4.el7.x86_64              20/38 
@@ -271,18 +275,18 @@ Running transaction
   Verifying  : libxslt-1.1.28-5.el7.x86_64                                27/38 
   Verifying  : javapackages-tools-3.4.1-11.el7.noarch                     28/38 
   Verifying  : rh-mongodb34-boost-filesystem-1.60.0-2.el7.x86_64          29/38 
-  Verifying  : tzdata-java-2017c-1.el7.noarch                             30/38 
-  Verifying  : rh-mongodb34-runtime-3.0-14.el7.x86_64                     31/38 
-  Verifying  : audit-libs-python-2.7.6-3.el7.x86_64                       32/38 
-  Verifying  : rh-mongodb34-boost-regex-1.60.0-2.el7.x86_64               33/38 
-  Verifying  : policycoreutils-2.5-17.1.el7.x86_64                        34/38 
-  Verifying  : rh-mongodb34-yaml-cpp-0.5.3-1.el7.x86_64                   35/38 
+  Verifying  : rh-mongodb34-runtime-3.0-14.el7.x86_64                     30/38 
+  Verifying  : audit-libs-python-2.7.6-3.el7.x86_64                       31/38 
+  Verifying  : rh-mongodb34-boost-regex-1.60.0-2.el7.x86_64               32/38 
+  Verifying  : policycoreutils-2.5-17.1.el7.x86_64                        33/38 
+  Verifying  : rh-mongodb34-yaml-cpp-0.5.3-1.el7.x86_64                   34/38 
+  Verifying  : 1:java-1.8.0-openjdk-headless-1.8.0.161-0.b14.el7_4.x86_   35/38 
   Verifying  : rh-mongodb34-boost-program-options-1.60.0-2.el7.x86_64     36/38 
   Verifying  : checkpolicy-2.5-4.el7.x86_64                               37/38 
   Verifying  : setools-libs-3.3.8-1.1.el7.x86_64                          38/38 
 
 Installed:
-  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.151-1.b12.el7_4                    
+  java-1.8.0-openjdk-headless.x86_64 1:1.8.0.161-0.b14.el7_4                    
   rh-mongodb34-mongodb.x86_64 0:3.4.9-1.el7                                     
   rh-mongodb34-mongodb-server.x86_64 0:3.4.9-1.el7                              
   unzip.x86_64 0:6.0-16.el7                                                     
@@ -290,7 +294,7 @@ Installed:
 Dependency Installed:
   audit-libs-python.x86_64 0:2.7.6-3.el7                                        
   checkpolicy.x86_64 0:2.5-4.el7                                                
-  copy-jdk-configs.noarch 0:2.2-3.el7                                           
+  copy-jdk-configs.noarch 0:2.2-5.el7_4                                         
   freetype.x86_64 0:2.4.11-15.el7                                               
   javapackages-tools.noarch 0:3.4.1-11.el7                                      
   libcgroup.x86_64 0:0.41-13.el7                                                
@@ -321,7 +325,7 @@ Dependency Installed:
   scl-utils.x86_64 0:20130529-18.el7_4                                          
   setools-libs.x86_64 0:3.3.8-1.1.el7                                           
   snappy.x86_64 0:1.1.0-3.el7                                                   
-  tzdata-java.noarch 0:2017c-1.el7                                              
+  tzdata-java.noarch 0:2018c-1.el7                                              
 
 Complete!
 Archive:  /opt/UniFi/UniFi.unix.zip
@@ -412,94 +416,94 @@ Archive:  /opt/UniFi/UniFi.unix.zip
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/css/app.css  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/find_controller.html  
    creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css/lato.css  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css/lato.min.css  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.woff2  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.eot  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.svg  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.ttf  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.woff  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.woff2  
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/style.css  
-   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-lato/
-  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-lato/style.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css/lato.css  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css/lato.min.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.woff2  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.eot  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.svg  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.ttf  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.woff  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.woff2  
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/style.css  
+   creating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-lato/
+  inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-lato/style.css  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.eot  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.svg  
   inflating: /opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.ttf  
@@ -1507,94 +1511,94 @@ changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/config' from root:root t
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/css/app.css' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/css' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/find_controller.html' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css/lato.css' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css/lato.min.css' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/css' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Black.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BlackItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Bold.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-BoldItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Hairline.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HairlineItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Heavy.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-HeavyItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Italic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Light.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-LightItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Medium.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-MediumItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Regular.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Semibold.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-SemiboldItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-Thin.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts/Lato-ThinItalic.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato/fonts' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/lato' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.eot' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.svg' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.ttf' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.woff' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts/ubnt.woff2' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/fonts' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon/style.css' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-icon' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-lato/style.css' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0/ubnt-lato' from root:root to unifi:unifi
-changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.22.0' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css/lato.css' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css/lato.min.css' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/css' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Black.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BlackItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Bold.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-BoldItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Hairline.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HairlineItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Heavy.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-HeavyItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Italic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Light.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-LightItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Medium.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-MediumItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Regular.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Semibold.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-SemiboldItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-Thin.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts/Lato-ThinItalic.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato/fonts' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/lato' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.eot' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.svg' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.ttf' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.woff' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts/ubnt.woff2' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/fonts' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon/style.css' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-icon' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-lato/style.css' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0/ubnt-lato' from root:root to unifi:unifi
+changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/5.6.30.0' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.eot' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.svg' from root:root to unifi:unifi
 changed ownership of '/opt/UniFi/webapps/ROOT/app-unifi/fonts/fontawesome-webfont.ttf' from root:root to unifi:unifi
@@ -2527,9 +2531,8 @@ changed ownership of '/opt/UniFi/mongo_prune_js.js' from root:root to unifi:unif
 changed ownership of '/opt/UniFi/' from root:root to unifi:unifi
 Loaded plugins: ovl, product-id, search-disabled-repos, subscription-manager
 Cleaning repos: rhel-7-rc-rpms rhel-7-server-aus-rpms rhel-7-server-htb-rpms
-              : rhel-7-server-nfv-rpms rhel-7-server-rpms
-              : rhel-7-server-rt-beta-rpms rhel-7-server-rt-htb-rpms
-              : rhel-7-server-rt-rpms rhel-7-server-tus-rpms
+              : rhel-7-server-nfv-rpms rhel-7-server-rpms rhel-7-server-rt-rpms
+              : rhel-7-server-tus-rpms
 Cleaning up everything
 Maybe you want: rm -rf /var/cache/yum, to also free up space taken by orphaned data from disabled or removed repos
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-rc-rpms/gen'
@@ -2548,12 +2551,6 @@ removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rpms/gen'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rpms/packages'
 removed '/var/cache/yum/x86_64/7Server/rhel-7-server-rpms/productid'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rpms'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-beta-rpms/gen'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-beta-rpms/packages'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-beta-rpms'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-htb-rpms/gen'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-htb-rpms/packages'
-removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-htb-rpms'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-rpms/gen'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-rpms/packages'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-7-server-rt-rpms'
@@ -2566,8 +2563,8 @@ removed directory: '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/packa
 removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/repomd.xml'
 removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/cachecookie'
 removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/fbecca9e03f6e988b833143039e9583454cc84f7-comps.xml'
-removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/94bc75c53e71b2ae37685e832ad5704f4addc17713831ddbad7e580f5ede8d48-updateinfo.xml.gz'
-removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/03977204efd3cda8f5c3d621c80eae0d659867c3-primary.sqlite.bz2'
+removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/9bf2951e93f47ba8eeb06910b2c472ce24bafad4d5e4ef06e7e89132924a12d9-updateinfo.xml.gz'
+removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/0b8d64c3ab8efc49d5d0e109eb0741ac93984a7e-primary.sqlite.bz2'
 removed '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms/productid'
 removed directory: '/var/cache/yum/x86_64/7Server/rhel-server-rhscl-7-rpms'
 removed '/var/cache/yum/x86_64/7Server/timedhosts'
@@ -2575,38 +2572,38 @@ removed directory: '/var/cache/yum/x86_64/7Server'
 removed directory: '/var/cache/yum/x86_64'
 removed directory: '/var/cache/yum'
 removed '/opt/UniFi/UniFi.unix.zip'
- ---> cc7c00faa7ad
-Removing intermediate container 7f71378a4bf0
+ ---> e8a3c384911a
+Removing intermediate container 9879780e79a3
 Step 8 : VOLUME /opt/UniFi/data
- ---> Running in c4b0926e3617
- ---> 81d8fd721078
-Removing intermediate container c4b0926e3617
+ ---> Running in 7ebc0369883a
+ ---> 5a84ed93bc30
+Removing intermediate container 7ebc0369883a
 Step 9 : VOLUME /opt/UniFi/logs
- ---> Running in 2a0161df2d17
- ---> e6fb1b8de711
-Removing intermediate container 2a0161df2d17
+ ---> Running in 72a74414fc04
+ ---> 2e957920ddcf
+Removing intermediate container 72a74414fc04
 Step 10 : WORKDIR /opt/UniFi
- ---> Running in ad38f494206a
- ---> 4edaf8b25051
-Removing intermediate container ad38f494206a
+ ---> Running in f05e5ba79396
+ ---> 7324b757df31
+Removing intermediate container f05e5ba79396
 Step 11 : EXPOSE 8443/tcp 8080/tcp 3478/udp 27117/tcp
- ---> Running in 77630870fe19
- ---> 12a7db24a7c6
-Removing intermediate container 77630870fe19
+ ---> Running in f3b18141c730
+ ---> 0fb58477ba29
+Removing intermediate container f3b18141c730
 Step 12 : USER unifi
- ---> Running in 0c4bdb6437ed
- ---> 8bacddbf3cc7
-Removing intermediate container 0c4bdb6437ed
+ ---> Running in 31d883ad9aba
+ ---> 0234c2655941
+Removing intermediate container 31d883ad9aba
 Step 13 : ENV TERM xterm-256color
- ---> Running in 8775005ebc6e
- ---> 8d20f35085a5
-Removing intermediate container 8775005ebc6e
+ ---> Running in d327fea3cdc3
+ ---> c4aff3f7936f
+Removing intermediate container d327fea3cdc3
 Step 14 : ENTRYPOINT /usr/bin/scl enable rh-mongodb34 --
- ---> Running in d17d2af1fb58
- ---> fcc1ea63379f
-Removing intermediate container d17d2af1fb58
+ ---> Running in 9278c37c2db4
+ ---> 63ed5759c4d2
+Removing intermediate container 9278c37c2db4
 Step 15 : CMD /usr/bin/java -Xmx1024M -jar lib/ace.jar start
- ---> Running in 82434c137b50
- ---> b483c9653f32
-Removing intermediate container 82434c137b50
-Successfully built b483c9653f32
+ ---> Running in 57bffd97fb83
+ ---> ed5f6cf272f6
+Removing intermediate container 57bffd97fb83
+Successfully built ed5f6cf272f6
