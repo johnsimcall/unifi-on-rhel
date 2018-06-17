@@ -1,8 +1,9 @@
 FROM registry.access.redhat.com/rhel7:latest
 MAINTAINER John Call <johnsimcall@gmail.com>
-LABEL com.ubnt.controller="5.6.30"
+LABEL com.ubnt.controller="5.8.22"
 
-ADD https://dl.ubnt.com/unifi/5.6.30/UniFi.unix.zip /opt/UniFi/
+#ADD https://dl.ubnt.com/unifi/5.7.28/UniFi.unix.zip /opt/UniFi/
+ADD https://dl.ubnt.com/unifi/5.8.22-f98a1c4f48/UniFi.unix.zip /opt/UniFi/
 
 # https://help.ubnt.com/hc/en-us/articles/204911424-UniFi-Remove-prune-older-data-and-adjust-mongo-database-size
 ADD https://help.ubnt.com/hc/article_attachments/115024095828/mongo_prune_js.js /opt/UniFi/
@@ -30,8 +31,3 @@ ENV TERM=xterm-256color
 # /usr/bin/scl enable rh-mongodb34 -- /usr/bin/java -Xmx1024M -jar lib/ace.jar start
 ENTRYPOINT ["/usr/bin/scl", "enable", "rh-mongodb34", "--"]
 CMD ["/usr/bin/java", "-Xmx1024M", "-jar", "lib/ace.jar", "start"]
-
-# ---- Notes and TODO ----
-# Capture the output (stdout/stderr?) from java -jar ... to a file
-# http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
-# java -jar ... | awk '{ print strftime("%c: "), $0; fflush(); }' | tee logs/java-output.log

@@ -17,3 +17,8 @@ Import the data
 sudo docker cp ./data unifi-new:/opt/UniFi/
 
 Start the container as usual
+
+# ---- TODO ----
+# Capture the output (stdout/stderr?) from java -jar ... to a file
+# http://stackoverflow.com/questions/21098382/bash-how-to-add-timestamp-while-redirecting-stdout-to-file
+# java -jar ... | awk '{ print strftime("%c: "), $0; fflush(); }' | tee logs/java-output.log
