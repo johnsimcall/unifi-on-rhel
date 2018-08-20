@@ -1,5 +1,5 @@
 //BUILDING
-sudo docker build --pull=true --no-cache -t home.lab/unifi:5.6.30 . | tee ./docker-build.log
+sudo docker build --pull=true --no-cache -t home.lab/unifi:5.8.22 . | tee ./docker-build.log
 
 //RUNNING
 sudo docker run --name=unifi --hostname=unifi \
