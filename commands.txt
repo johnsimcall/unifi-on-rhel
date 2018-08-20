@@ -1,19 +1,19 @@
 //BUILDING
-sudo docker build --pull=true --no-cache -t home.lab/unifi:5.8.22 . | tee ./docker-build.log
+sudo docker build --pull=true --no-cache -t home.lab/unifi:5.8.28 . | tee ./docker-build.log
 
 //RUNNING
 sudo docker run --name=unifi --hostname=unifi \
  -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -p 27117:27117/tcp \
  -v /nas/UniFi/data:/opt/UniFi/data:z \
  -v /nas/UniFi/logs:/opt/UniFi/logs:z \
- -d home.lab/unifi:5.8.22
+ -d home.lab/unifi:5.8.28
 
 //DEBUGGING
 sudo docker run --name=unifi-test --hostname=unifi-test \
   -p 3478:3478/udp -p 8080:8080/tcp -p 8443:8443/tcp -p 27117:27117/tcp \
   -v /nas/UniFi/data:/opt/UniFi/data:z \
   -v /nas/UniFi/logs:/opt/UniFi/logs:z \
-  -it --entrypoint /bin/bash home.lab/unifi:5.8.22
+  -it --entrypoint /bin/bash home.lab/unifi:5.8.28
 
 //TROUBLESHOOTING
 sudo docker exec -it unifi "/usr/bin/bash"
