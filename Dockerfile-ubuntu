@@ -1,0 +1,35 @@
+## BUILD USING podman
+## JSVC requires `podman run` with: --cap-add=DAC_READ_SEARCH
+
+FROM docker.io/library/ubuntu
+MAINTAINER John Call <johnsimcall@gmail.com>
+LABEL com.ubnt.controller="5.10.24"
+
+ADD shutdown-unifi.sh /
+
+# https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-and-Update-via-APT-on-Debian-or-Ubuntu
+# https://community.ubnt.com/t5/UniFi-Wireless/UniFi-Installation-Scripts-UniFi-Easy-Update-Scripts-Ubuntu-18/td-p/2375150
+RUN apt-get update && apt-get install curl -y
+###RUN ln -f -s /usr/share/zoneinfo/America/Denver /etc/localtime && \
+###    useradd unifi --comment "UniFi Controller" --uid 201 --system --home-dir /opt/UniFi/
+
+###RUN mkdir /opt/UniFi/data && \
+###    mkdir /opt/UniFi/logs && \
+###    chown -Rv unifi:unifi /opt/UniFi/
+
+# https://help.ubnt.com/hc/en-us/articles/218506997-UniFi-Ports-Used
+EXPOSE 1900/udp 3478/udp 5656-5699/udp 10001/udp
+EXPOSE 2711/tcp 6789/tcp 8080/tcp 8443/tcp 8880/tcp 8843/tcp
+
+#VOLUME ["/opt/UniFi/data"]
+#VOLUME ["/opt/UniFi/logs"]
+
+ENV TERM=xterm-256color
+#USER unifi
+WORKDIR /
+
+# /usr/bin/scl enable rh-mongodb34 -- /usr/bin/java -Xmx1024M -jar lib/ace.jar start
+#ENTRYPOINT ["/usr/bin/scl", "enable", "rh-mongodb34", "--"]
+#CMD ["/usr/bin/java", "-Xmx1024M", "-Djava.awt.headless=true", "-Dfile.encoding=UTF-8", "-jar", "lib/ace.jar", "start"]
+# -Djava.awt.headless=true -Dfile.encoding=UTF-8
+CMD ["/bin/bash"]
